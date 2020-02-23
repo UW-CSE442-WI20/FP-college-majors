@@ -14,30 +14,59 @@
 
     <div id="categories">
       <h3>Compare Categories of Majors</h3>
-      <select>
-        <option value="median pay">Median Pay</option>
-        <option value="unemployment">Unemployment Rate</option>
+      <select id="factorsForCategories">
+        <option value="Median">Median Pay</option>
+        <option value="Unemployment_rate">Unemployment Rate</option>
+        <option value="ShareWomen">Percentage of Women</option>
       </select>
     </div>
 
     <div id="top5">
       <button id="backButton">Back to Major Categories</button>
-      <select>
-        <option value="median pay">Median Pay</option>
-        <option value="unemployment">Unemployment Rate</option>
+      <select id="factorsForTopFive">
+        <option value="Median">Median Pay</option>
+        <option value="Unemployment_rate">Unemployment Rate</option>
+        <option value="ShareWomen">Percentage of Women</option>
       </select>
-      <select>
+      <select id="categoriesForTopFive">
         <option value="business">Business</option>
         <option value="engineering">Engineering</option>
       </select>
     </div>
 
     <div id="chooseMajors">
-      <h3>Choose your own Majors to Compare</h3>
+      <h3>Choose up to 5 Majors to Compare</h3>
+      <select multiple id="majorsForChooseMajors">
+        <option value="computer science">Computer Science</option>
+        <option value="finance">Finance</option>
+        <option value="biology">Biology</option>
+      </select>
+      <select id="factorsForChooseMajors">
+        <option value="Median">Median Pay</option>
+        <option value="Unemployment_rate">Unemployment Rate</option>
+        <option value="ShareWomen">Percentage of Women</option>
+      </select>
     </div>
 
     <div id="multipleFactors">
-      <h3>Select Multiple Factors to Compare Majors By</h3>
+      <h3>Select Multiple Factors to Compare up to 5 Majors By</h3>
+      <select multiple id="majorsForSelectFactors">
+        <option value="computer science">Computer Science</option>
+        <option value="finance">Finance</option>
+        <option value="biology">Biology</option>
+      </select>
+      <p>Factor 1 (x-axis):</p>
+      <select id="xFactor">
+        <option value="Median">Median Pay</option>
+        <option value="Unemployment_rate">Unemployment Rate</option>
+        <option value="ShareWomen">Percentage of Women</option>
+      </select>
+      <p>Factor 2 (y-axis):</p>
+      <select id="yFactor">
+        <option value="Median">Median Pay</option>
+        <option value="Unemployment_rate">Unemployment Rate</option>
+        <option value="ShareWomen">Percentage of Women</option>
+      </select>
     </div>
 
     <script src="./index.js"></script>
