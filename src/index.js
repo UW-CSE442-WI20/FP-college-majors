@@ -1,8 +1,7 @@
 
-
-// You can require libraries
 const d3 = require('d3')
 
+/* Sample code provided to us:
 // You can include local JS files:
 const MyClass = require('./my-class');
 const myClassInstance = new MyClass();
@@ -21,4 +20,10 @@ d3.csv('carbon-emissions.csv')
   .then((data) => {
     console.log('Dynamically loaded CSV data', data);
   })
+*/
+
+document.getElementById("backButton").onclick = () => {
+  document.getElementById("top5").classList.add("hidden");
+  document.getElementById("categories").classList.remove("hidden");
+}
 
