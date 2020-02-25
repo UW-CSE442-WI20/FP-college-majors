@@ -22,6 +22,26 @@ d3.csv('carbon-emissions.csv')
   })
 */
 
+
+
+
+const majorCategories = ["Business", "Engineering", "Science"];
+const factorInfo = {
+  "Median": {
+    "units": "$",
+    "axis name": "Median Pay ($)"
+  },
+  "Unemployment_rate": {
+    "units": "%",
+    "axis name": "Unemployment Rate (%)"
+  },
+  "ShareWomen": {
+    "units": "%",
+    "axis name": "Percent who are Women"
+  }
+};
+
+
 document.getElementById("backButton").onclick = () => {
   document.getElementById("top5").classList.add("hidden");
   document.getElementById("categories").classList.remove("hidden");
@@ -116,8 +136,6 @@ function updateCategoriesChart(factor) {
     }
   };
 
-  const majorCategories = ["Business", "Engineering", "Science"];
-
   var maxValue = 1;
   for (var i = 0; i < majorCategories.length; i++) {
     maxValue = Math.max(maxValue, data[majorCategories[i]][factor]);
@@ -131,6 +149,8 @@ function updateCategoriesChart(factor) {
   w = w.substring(0, w.length - 2);
   h = h.substring(0, h.length - 2);
   const padding = w * 0.15;
+
+  document.querySelector("#categoriesChart svg").innerHTML = "";
 
   const xScale = d3
     .scaleLinear()
@@ -149,6 +169,17 @@ function updateCategoriesChart(factor) {
   const svg = d3
     .select("#categoriesChart")
     .select("svg");
+
+  const tooltip = d3.select("body")
+      .append("div")
+      .style("position", "absolute")
+      .style("z-index", "10")
+      .style("color", "#fff5e6")
+      .style("background-color", "#3f546c")
+      .style("padding", "6px 10px")
+      .style("font-family", "formular-light")
+      .style("font-size", "0.8rem")
+      .style("visibility", "hidden");
 
   svg
     .selectAll("rect")
@@ -170,6 +201,27 @@ function updateCategoriesChart(factor) {
       document.getElementById("categories").classList.add("hidden");
       document.getElementById("top5").classList.remove("hidden");
       updateTopFiveChart(factor, d);
+    })
+    .on("mouseover", function (d) {
+      d3.select(this).transition()
+        .duration('50')
+        .attr('opacity', '.85');
+      var text = "" + data[d][factor];
+      if (factor == "Median") {
+        text = factorInfo[factor]["units"] + addCommasToNumber(text);
+      } else {
+        text = text + factorInfo[factor]["units"];
+      }
+      return tooltip.style("visibility", "visible").html("<div>" + text + "</div>");
+    })
+    .on("mousemove", function () {
+      return tooltip.style("top", (event.pageY - 10) + "px").style("left", (event.pageX + 10) + "px");
+    })
+    .on("mouseout", function () {
+      d3.select(this).transition()
+        .duration('50')
+        .attr('opacity', '1');
+      return tooltip.style("visibility", "hidden");
     });
 
   svg
@@ -183,6 +235,14 @@ function updateCategoriesChart(factor) {
     .attr("id", "y-axis")
     .attr("transform", "translate(" + padding + ",0)")
     .call(yAxis);
+
+  svg
+    .append("text")
+    .attr("y", h - padding / 2)
+    .attr("x", (w - padding) / 2)
+    .attr("id", "x-axis-label");
+
+  document.getElementById("x-axis-label").innerHTML = factorInfo[factor]["axis name"];
 
 }
 
@@ -206,5 +266,19 @@ function updateChooseFactorsChart(majors, factorXAxis, factorYAxis) {
   }
 
   // TODO
+}
+
+function addCommasToNumber(text) {
+  var result = "";
+  var num = 0;
+  for (var i = text.length - 1; i >= 0; i--) {
+    result = text[i] + result;
+    num += 1;
+    if (num == 3 && i != 0) {
+      result = "," + result;
+      num = 0;
+    }
+  }
+  return result;
 }
 
