@@ -4,7 +4,7 @@
          {
             "Rank": 1,
             "Major_code": 2419,
-            "Major": "PETROLEUM ENGINEERING",
+            "Major": "Petroleum Engineering",
             "Total": 2339,
             "Men": 2057,
             "Women": 282,
@@ -26,7 +26,7 @@
          {
             "Rank": 2,
             "Major_code": 2416,
-            "Major": "MINING AND MINERAL ENGINEERING",
+            "Major": "Mining And Mineral Engineering",
             "Total": 756,
             "Men": 679,
             "Women": 77,
@@ -48,7 +48,7 @@
          {
             "Rank": 3,
             "Major_code": 2415,
-            "Major": "METALLURGICAL ENGINEERING",
+            "Major": "Metallurgical Engineering",
             "Total": 856,
             "Men": 725,
             "Women": 131,
@@ -70,7 +70,7 @@
          {
             "Rank": 4,
             "Major_code": 2417,
-            "Major": "NAVAL ARCHITECTURE AND MARINE ENGINEERING",
+            "Major": "Naval Architecture And Marine Engineering",
             "Total": 1258,
             "Men": 1123,
             "Women": 135,
@@ -92,7 +92,7 @@
          {
             "Rank": 5,
             "Major_code": 2405,
-            "Major": "CHEMICAL ENGINEERING",
+            "Major": "Chemical Engineering",
             "Total": 32260,
             "Men": 21239,
             "Women": 11021,
@@ -114,7 +114,7 @@
          {
             "Rank": 6,
             "Major_code": 2418,
-            "Major": "NUCLEAR ENGINEERING",
+            "Major": "Nuclear Engineering",
             "Total": 2573,
             "Men": 2200,
             "Women": 373,
@@ -136,7 +136,7 @@
          {
             "Rank": 9,
             "Major_code": 2414,
-            "Major": "MECHANICAL ENGINEERING",
+            "Major": "Mechanical Engineering",
             "Total": 91227,
             "Men": 80320,
             "Women": 10907,
@@ -158,7 +158,7 @@
          {
             "Rank": 10,
             "Major_code": 2408,
-            "Major": "ELECTRICAL ENGINEERING",
+            "Major": "Electrical Engineering",
             "Total": 81527,
             "Men": 65511,
             "Women": 16016,
@@ -180,7 +180,7 @@
          {
             "Rank": 11,
             "Major_code": 2407,
-            "Major": "COMPUTER ENGINEERING",
+            "Major": "Computer Engineering",
             "Total": 41542,
             "Men": 33258,
             "Women": 8284,
@@ -202,7 +202,7 @@
          {
             "Rank": 12,
             "Major_code": 2401,
-            "Major": "AEROSPACE ENGINEERING",
+            "Major": "Aerospace Engineering",
             "Total": 15058,
             "Men": 12953,
             "Women": 2105,
@@ -224,7 +224,7 @@
          {
             "Rank": 13,
             "Major_code": 2404,
-            "Major": "BIOMEDICAL ENGINEERING",
+            "Major": "Biomedical Engineering",
             "Total": 14955,
             "Men": 8407,
             "Women": 6548,
@@ -246,7 +246,7 @@
          {
             "Rank": 14,
             "Major_code": 5008,
-            "Major": "MATERIALS SCIENCE",
+            "Major": "Materials Science",
             "Total": 4279,
             "Men": 2949,
             "Women": 1330,
@@ -268,7 +268,7 @@
          {
             "Rank": 15,
             "Major_code": 2409,
-            "Major": "ENGINEERING MECHANICS PHYSICS AND SCIENCE",
+            "Major": "Engineering Mechanics Physics And Science",
             "Total": 4321,
             "Men": 3526,
             "Women": 795,
@@ -290,7 +290,7 @@
          {
             "Rank": 16,
             "Major_code": 2402,
-            "Major": "BIOLOGICAL ENGINEERING",
+            "Major": "Biological Engineering",
             "Total": 8925,
             "Men": 6062,
             "Women": 2863,
@@ -312,7 +312,7 @@
          {
             "Rank": 17,
             "Major_code": 2412,
-            "Major": "INDUSTRIAL AND MANUFACTURING ENGINEERING",
+            "Major": "Industrial And Manufacturing Engineering",
             "Total": 18968,
             "Men": 12453,
             "Women": 6515,
@@ -334,7 +334,7 @@
          {
             "Rank": 18,
             "Major_code": 2400,
-            "Major": "GENERAL ENGINEERING",
+            "Major": "General Engineering",
             "Total": 61152,
             "Men": 45683,
             "Women": 15469,
@@ -356,7 +356,7 @@
          {
             "Rank": 19,
             "Major_code": 2403,
-            "Major": "ARCHITECTURAL ENGINEERING",
+            "Major": "Architectural Engineering",
             "Total": 2825,
             "Men": 1835,
             "Women": 990,
@@ -378,7 +378,7 @@
          {
             "Rank": 23,
             "Major_code": 2502,
-            "Major": "ELECTRICAL ENGINEERING TECHNOLOGY",
+            "Major": "Electrical Engineering Technology",
             "Total": 11565,
             "Men": 8181,
             "Women": 3384,
@@ -400,7 +400,7 @@
          {
             "Rank": 24,
             "Major_code": 2413,
-            "Major": "MATERIALS ENGINEERING AND MATERIALS SCIENCE",
+            "Major": "Materials Engineering And Materials Science",
             "Total": 2993,
             "Men": 2020,
             "Women": 973,
@@ -422,7 +422,7 @@
          {
             "Rank": 26,
             "Major_code": 2406,
-            "Major": "CIVIL ENGINEERING",
+            "Major": "Civil Engineering",
             "Total": 53153,
             "Men": 41081,
             "Women": 12072,
@@ -444,7 +444,7 @@
          {
             "Rank": 29,
             "Major_code": 2499,
-            "Major": "MISCELLANEOUS ENGINEERING",
+            "Major": "Miscellaneous Engineering",
             "Total": 9133,
             "Men": 7398,
             "Women": 1735,
@@ -466,7 +466,7 @@
          {
             "Rank": 31,
             "Major_code": 2410,
-            "Major": "ENVIRONMENTAL ENGINEERING",
+            "Major": "Environmental Engineering",
             "Total": 4047,
             "Men": 2662,
             "Women": 1385,
@@ -488,7 +488,7 @@
          {
             "Rank": 32,
             "Major_code": 2500,
-            "Major": "ENGINEERING TECHNOLOGIES",
+            "Major": "Engineering Technologies",
             "Total": 3600,
             "Men": 2695,
             "Women": 905,
@@ -510,7 +510,7 @@
          {
             "Rank": 34,
             "Major_code": 2411,
-            "Major": "GEOLOGICAL AND GEOPHYSICAL ENGINEERING",
+            "Major": "Geological And Geophysical Engineering",
             "Total": 720,
             "Men": 488,
             "Women": 232,
@@ -532,7 +532,7 @@
          {
             "Rank": 39,
             "Major_code": 2503,
-            "Major": "INDUSTRIAL PRODUCTION TECHNOLOGIES",
+            "Major": "Industrial Production Technologies",
             "Total": 4631,
             "Men": 3477,
             "Women": 1154,
@@ -554,7 +554,7 @@
          {
             "Rank": 51,
             "Major_code": 2501,
-            "Major": "ENGINEERING AND INDUSTRIAL MANAGEMENT",
+            "Major": "Engineering And Industrial Management",
             "Total": 2906,
             "Men": 2400,
             "Women": 506,
@@ -576,7 +576,7 @@
          {
             "Rank": 59,
             "Major_code": 1401,
-            "Major": "ARCHITECTURE",
+            "Major": "Architecture",
             "Total": 46420,
             "Men": 25463,
             "Women": 20957,
@@ -598,7 +598,7 @@
          {
             "Rank": 66,
             "Major_code": 2599,
-            "Major": "MISCELLANEOUS ENGINEERING TECHNOLOGIES",
+            "Major": "Miscellaneous Engineering Technologies",
             "Total": 8804,
             "Men": 7043,
             "Women": 1761,
@@ -620,7 +620,7 @@
          {
             "Rank": 67,
             "Major_code": 2504,
-            "Major": "MECHANICAL ENGINEERING RELATED TECHNOLOGIES",
+            "Major": "Mechanical Engineering Related Technologies",
             "Total": 4790,
             "Men": 4419,
             "Women": 371,
@@ -644,7 +644,7 @@
          {
             "Rank": 7,
             "Major_code": 6202,
-            "Major": "ACTUARIAL SCIENCE",
+            "Major": "Actuarial Science",
             "Total": 3777,
             "Men": 2110,
             "Women": 1667,
@@ -666,7 +666,7 @@
          {
             "Rank": 25,
             "Major_code": 6212,
-            "Major": "MANAGEMENT INFORMATION SYSTEMS AND STATISTICS",
+            "Major": "Management Information Systems And Statistics",
             "Total": 18713,
             "Men": 13496,
             "Women": 5217,
@@ -688,7 +688,7 @@
          {
             "Rank": 28,
             "Major_code": 6204,
-            "Major": "OPERATIONS LOGISTICS AND E-COMMERCE",
+            "Major": "Operations Logistics And E-Commerce",
             "Total": 11732,
             "Men": 7921,
             "Women": 3811,
@@ -710,7 +710,7 @@
          {
             "Rank": 36,
             "Major_code": 6207,
-            "Major": "FINANCE",
+            "Major": "Finance",
             "Total": 174506,
             "Men": 115030,
             "Women": 59476,
@@ -732,7 +732,7 @@
          {
             "Rank": 38,
             "Major_code": 6205,
-            "Major": "BUSINESS ECONOMICS",
+            "Major": "Business Economics",
             "Total": 13302,
             "Men": 7575,
             "Women": 5727,
@@ -754,7 +754,7 @@
          {
             "Rank": 41,
             "Major_code": 6201,
-            "Major": "ACCOUNTING",
+            "Major": "Accounting",
             "Total": 198633,
             "Men": 94519,
             "Women": 104114,
@@ -776,7 +776,7 @@
          {
             "Rank": 58,
             "Major_code": 6200,
-            "Major": "GENERAL BUSINESS",
+            "Major": "General Business",
             "Total": 234590,
             "Men": 132238,
             "Women": 102352,
@@ -798,7 +798,7 @@
          {
             "Rank": 60,
             "Major_code": 6210,
-            "Major": "INTERNATIONAL BUSINESS",
+            "Major": "International Business",
             "Total": 25894,
             "Men": 10624,
             "Women": 15270,
@@ -820,7 +820,7 @@
          {
             "Rank": 63,
             "Major_code": 6299,
-            "Major": "MISCELLANEOUS BUSINESS & MEDICAL ADMINISTRATION",
+            "Major": "Miscellaneous Business & Medical Administration",
             "Total": 17947,
             "Men": 10285,
             "Women": 7662,
@@ -842,7 +842,7 @@
          {
             "Rank": 77,
             "Major_code": 6203,
-            "Major": "BUSINESS MANAGEMENT AND ADMINISTRATION",
+            "Major": "Business Management And Administration",
             "Total": 329927,
             "Men": 173809,
             "Women": 156118,
@@ -864,7 +864,7 @@
          {
             "Rank": 78,
             "Major_code": 6206,
-            "Major": "MARKETING AND MARKETING RESEARCH",
+            "Major": "Marketing And Marketing Research",
             "Total": 205211,
             "Men": 78857,
             "Women": 126354,
@@ -886,7 +886,7 @@
          {
             "Rank": 87,
             "Major_code": 6209,
-            "Major": "HUMAN RESOURCES AND PERSONNEL MANAGEMENT",
+            "Major": "Human Resources And Personnel Management",
             "Total": 24497,
             "Men": 6184,
             "Women": 18313,
@@ -908,7 +908,7 @@
          {
             "Rank": 128,
             "Major_code": 6211,
-            "Major": "HOSPITALITY MANAGEMENT",
+            "Major": "Hospitality Management",
             "Total": 43647,
             "Men": 15204,
             "Women": 28443,
@@ -932,7 +932,7 @@
          {
             "Rank": 8,
             "Major_code": 5001,
-            "Major": "ASTRONOMY AND ASTROPHYSICS",
+            "Major": "Astronomy And Astrophysics",
             "Total": 1792,
             "Men": 832,
             "Women": 960,
@@ -954,7 +954,7 @@
          {
             "Rank": 40,
             "Major_code": 5102,
-            "Major": "NUCLEAR, INDUSTRIAL RADIOLOGY, AND BIOLOGICAL TECHNOLOGIES",
+            "Major": "Nuclear, Industrial Radiology, And Biological Technologies",
             "Total": 2116,
             "Men": 528,
             "Women": 1588,
@@ -976,7 +976,7 @@
          {
             "Rank": 44,
             "Major_code": 5007,
-            "Major": "PHYSICS",
+            "Major": "Physics",
             "Total": 32142,
             "Men": 23080,
             "Women": 9062,
@@ -998,7 +998,7 @@
          {
             "Rank": 50,
             "Major_code": 5006,
-            "Major": "OCEANOGRAPHY",
+            "Major": "Oceanography",
             "Total": 2418,
             "Men": 752,
             "Women": 1666,
@@ -1020,7 +1020,7 @@
          {
             "Rank": 73,
             "Major_code": 5000,
-            "Major": "PHYSICAL SCIENCES",
+            "Major": "Physical Sciences",
             "Total": 1436,
             "Men": 894,
             "Women": 542,
@@ -1042,7 +1042,7 @@
          {
             "Rank": 75,
             "Major_code": 5003,
-            "Major": "CHEMISTRY",
+            "Major": "Chemistry",
             "Total": 66530,
             "Men": 32923,
             "Women": 33607,
@@ -1064,7 +1064,7 @@
          {
             "Rank": 86,
             "Major_code": 5004,
-            "Major": "GEOLOGY AND EARTH SCIENCE",
+            "Major": "Geology And Earth Science",
             "Total": 10972,
             "Men": 5813,
             "Women": 5159,
@@ -1086,7 +1086,7 @@
          {
             "Rank": 91,
             "Major_code": 5005,
-            "Major": "GEOSCIENCES",
+            "Major": "Geosciences",
             "Total": 1978,
             "Men": 809,
             "Women": 1169,
@@ -1108,7 +1108,7 @@
          {
             "Rank": 98,
             "Major_code": 5098,
-            "Major": "MULTI-DISCIPLINARY OR GENERAL SCIENCE",
+            "Major": "Multi-Disciplinary Or General Science",
             "Total": 62052,
             "Men": 27015,
             "Women": 35037,
@@ -1130,7 +1130,7 @@
          {
             "Rank": 111,
             "Major_code": 5002,
-            "Major": "ATMOSPHERIC SCIENCES AND METEOROLOGY",
+            "Major": "Atmospheric Sciences And Meteorology",
             "Total": 4043,
             "Men": 2744,
             "Women": 1299,
@@ -1154,7 +1154,7 @@
          {
             "Rank": 20,
             "Major_code": 3201,
-            "Major": "COURT REPORTING",
+            "Major": "Court Reporting",
             "Total": 1148,
             "Men": 877,
             "Women": 271,
@@ -1176,7 +1176,7 @@
          {
             "Rank": 30,
             "Major_code": 5402,
-            "Major": "PUBLIC POLICY",
+            "Major": "Public Policy",
             "Total": 5978,
             "Men": 2639,
             "Women": 3339,
@@ -1198,7 +1198,7 @@
          {
             "Rank": 88,
             "Major_code": 3202,
-            "Major": "PRE-LAW AND LEGAL STUDIES",
+            "Major": "Pre-Law And Legal Studies",
             "Total": 13528,
             "Men": 4435,
             "Women": 9093,
@@ -1220,7 +1220,7 @@
          {
             "Rank": 90,
             "Major_code": 5401,
-            "Major": "PUBLIC ADMINISTRATION",
+            "Major": "Public Administration",
             "Total": 5629,
             "Men": 2947,
             "Women": 2682,
@@ -1242,7 +1242,7 @@
          {
             "Rank": 95,
             "Major_code": 5301,
-            "Major": "CRIMINAL JUSTICE AND FIRE PROTECTION",
+            "Major": "Criminal Justice And Fire Protection",
             "Total": 152824,
             "Men": 80231,
             "Women": 72593,
@@ -1266,7 +1266,7 @@
          {
             "Rank": 21,
             "Major_code": 2102,
-            "Major": "COMPUTER SCIENCE",
+            "Major": "Computer Science",
             "Total": 128319,
             "Men": 99743,
             "Women": 28576,
@@ -1288,7 +1288,7 @@
          {
             "Rank": 42,
             "Major_code": 3700,
-            "Major": "MATHEMATICS",
+            "Major": "Mathematics",
             "Total": 72397,
             "Men": 39956,
             "Women": 32441,
@@ -1310,7 +1310,7 @@
          {
             "Rank": 43,
             "Major_code": 2100,
-            "Major": "COMPUTER AND INFORMATION SYSTEMS",
+            "Major": "Computer And Information Systems",
             "Total": 36698,
             "Men": 27392,
             "Women": 9306,
@@ -1332,7 +1332,7 @@
          {
             "Rank": 46,
             "Major_code": 2105,
-            "Major": "INFORMATION SCIENCES",
+            "Major": "Information Sciences",
             "Total": 11913,
             "Men": 9005,
             "Women": 2908,
@@ -1354,7 +1354,7 @@
          {
             "Rank": 47,
             "Major_code": 3702,
-            "Major": "STATISTICS AND DECISION SCIENCE",
+            "Major": "Statistics And Decision Science",
             "Total": 6251,
             "Men": 2960,
             "Women": 3291,
@@ -1376,7 +1376,7 @@
          {
             "Rank": 48,
             "Major_code": 3701,
-            "Major": "APPLIED MATHEMATICS",
+            "Major": "Applied Mathematics",
             "Total": 4939,
             "Men": 2794,
             "Women": 2145,
@@ -1398,7 +1398,7 @@
          {
             "Rank": 53,
             "Major_code": 4005,
-            "Major": "MATHEMATICS AND COMPUTER SCIENCE",
+            "Major": "Mathematics And Computer Science",
             "Total": 609,
             "Men": 500,
             "Women": 109,
@@ -1420,7 +1420,7 @@
          {
             "Rank": 54,
             "Major_code": 2101,
-            "Major": "COMPUTER PROGRAMMING AND DATA PROCESSING",
+            "Major": "Computer Programming And Data Processing",
             "Total": 4168,
             "Men": 3046,
             "Women": 1122,
@@ -1442,7 +1442,7 @@
          {
             "Rank": 82,
             "Major_code": 2106,
-            "Major": "COMPUTER ADMINISTRATION MANAGEMENT AND SECURITY",
+            "Major": "Computer Administration Management And Security",
             "Total": 8066,
             "Men": 6607,
             "Women": 1459,
@@ -1464,7 +1464,7 @@
          {
             "Rank": 85,
             "Major_code": 2107,
-            "Major": "COMPUTER NETWORKING AND TELECOMMUNICATIONS",
+            "Major": "Computer Networking And Telecommunications",
             "Total": 7613,
             "Men": 5291,
             "Women": 2322,
@@ -1486,7 +1486,7 @@
          {
             "Rank": 106,
             "Major_code": 2001,
-            "Major": "COMMUNICATION TECHNOLOGIES",
+            "Major": "Communication Technologies",
             "Total": 18035,
             "Men": 11431,
             "Women": 6604,
@@ -1510,7 +1510,7 @@
          {
             "Rank": 22,
             "Major_code": 1104,
-            "Major": "FOOD SCIENCE",
+            "Major": "Food Science",
             "Total": null,
             "Men": null,
             "Women": null,
@@ -1532,7 +1532,7 @@
          {
             "Rank": 64,
             "Major_code": 1101,
-            "Major": "AGRICULTURE PRODUCTION AND MANAGEMENT",
+            "Major": "Agriculture Production And Management",
             "Total": 14240,
             "Men": 9658,
             "Women": 4582,
@@ -1554,7 +1554,7 @@
          {
             "Rank": 65,
             "Major_code": 1100,
-            "Major": "GENERAL AGRICULTURE",
+            "Major": "General Agriculture",
             "Total": 10399,
             "Men": 6053,
             "Women": 4346,
@@ -1576,7 +1576,7 @@
          {
             "Rank": 72,
             "Major_code": 1102,
-            "Major": "AGRICULTURAL ECONOMICS",
+            "Major": "Agricultural Economics",
             "Total": 2439,
             "Men": 1749,
             "Women": 690,
@@ -1598,7 +1598,7 @@
          {
             "Rank": 108,
             "Major_code": 1303,
-            "Major": "NATURAL RESOURCES MANAGEMENT",
+            "Major": "Natural Resources Management",
             "Total": 13773,
             "Men": 8617,
             "Women": 5156,
@@ -1620,7 +1620,7 @@
          {
             "Rank": 112,
             "Major_code": 1302,
-            "Major": "FORESTRY",
+            "Major": "Forestry",
             "Total": 3607,
             "Men": 3156,
             "Women": 451,
@@ -1642,7 +1642,7 @@
          {
             "Rank": 113,
             "Major_code": 1106,
-            "Major": "SOIL SCIENCE",
+            "Major": "Soil Science",
             "Total": 685,
             "Men": 476,
             "Women": 209,
@@ -1664,7 +1664,7 @@
          {
             "Rank": 144,
             "Major_code": 1105,
-            "Major": "PLANT SCIENCE AND AGRONOMY",
+            "Major": "Plant Science And Agronomy",
             "Total": 7416,
             "Men": 4897,
             "Women": 2519,
@@ -1686,7 +1686,7 @@
          {
             "Rank": 153,
             "Major_code": 1103,
-            "Major": "ANIMAL SCIENCES",
+            "Major": "Animal Sciences",
             "Total": 21573,
             "Men": 5347,
             "Women": 16226,
@@ -1708,7 +1708,7 @@
          {
             "Rank": 162,
             "Major_code": 1199,
-            "Major": "MISCELLANEOUS AGRICULTURE",
+            "Major": "Miscellaneous Agriculture",
             "Total": 1488,
             "Men": 404,
             "Women": 1084,
@@ -1732,7 +1732,7 @@
          {
             "Rank": 27,
             "Major_code": 5601,
-            "Major": "CONSTRUCTION SERVICES",
+            "Major": "Construction Services",
             "Total": 18498,
             "Men": 16820,
             "Women": 1678,
@@ -1754,7 +1754,7 @@
          {
             "Rank": 74,
             "Major_code": 3801,
-            "Major": "MILITARY TECHNOLOGIES",
+            "Major": "Military Technologies",
             "Total": 124,
             "Men": 124,
             "Women": 0,
@@ -1776,7 +1776,7 @@
          {
             "Rank": 76,
             "Major_code": 5701,
-            "Major": "ELECTRICAL, MECHANICAL, AND PRECISION TECHNOLOGIES AND PRODUCTION",
+            "Major": "Electrical, Mechanical, And Precision Technologies And Production",
             "Total": 2435,
             "Men": 1869,
             "Women": 566,
@@ -1798,7 +1798,7 @@
          {
             "Rank": 107,
             "Major_code": 5901,
-            "Major": "TRANSPORTATION SCIENCES AND TECHNOLOGIES",
+            "Major": "Transportation Sciences And Technologies",
             "Total": 15150,
             "Men": 13257,
             "Women": 1893,
@@ -1820,7 +1820,7 @@
          {
             "Rank": 140,
             "Major_code": 4101,
-            "Major": "PHYSICAL FITNESS PARKS RECREATION AND LEISURE",
+            "Major": "Physical Fitness Parks Recreation And Leisure",
             "Total": 125074,
             "Men": 62181,
             "Women": 62893,
@@ -1842,7 +1842,7 @@
          {
             "Rank": 151,
             "Major_code": 2901,
-            "Major": "FAMILY AND CONSUMER SCIENCES",
+            "Major": "Family And Consumer Sciences",
             "Total": 58001,
             "Men": 5166,
             "Women": 52835,
@@ -1864,7 +1864,7 @@
          {
             "Rank": 161,
             "Major_code": 2201,
-            "Major": "COSMETOLOGY SERVICES AND CULINARY ARTS",
+            "Major": "Cosmetology Services And Culinary Arts",
             "Total": 10510,
             "Men": 4364,
             "Women": 6146,
@@ -1888,7 +1888,7 @@
          {
             "Rank": 33,
             "Major_code": 6099,
-            "Major": "MISCELLANEOUS FINE ARTS",
+            "Major": "Miscellaneous Fine Arts",
             "Total": 3340,
             "Men": 1970,
             "Women": 1370,
@@ -1910,7 +1910,7 @@
          {
             "Rank": 96,
             "Major_code": 6004,
-            "Major": "COMMERCIAL ART AND GRAPHIC DESIGN",
+            "Major": "Commercial Art And Graphic Design",
             "Total": 103480,
             "Men": 32041,
             "Women": 71439,
@@ -1932,7 +1932,7 @@
          {
             "Rank": 142,
             "Major_code": 6005,
-            "Major": "FILM VIDEO AND PHOTOGRAPHIC ARTS",
+            "Major": "Film Video And Photographic Arts",
             "Total": 38761,
             "Men": 22357,
             "Women": 16404,
@@ -1954,7 +1954,7 @@
          {
             "Rank": 147,
             "Major_code": 6002,
-            "Major": "MUSIC",
+            "Major": "Music",
             "Total": 60633,
             "Men": 29909,
             "Women": 30724,
@@ -1976,7 +1976,7 @@
          {
             "Rank": 150,
             "Major_code": 6000,
-            "Major": "FINE ARTS",
+            "Major": "Fine Arts",
             "Total": 74440,
             "Men": 24786,
             "Women": 49654,
@@ -1998,7 +1998,7 @@
          {
             "Rank": 154,
             "Major_code": 6003,
-            "Major": "VISUAL AND PERFORMING ARTS",
+            "Major": "Visual And Performing Arts",
             "Total": 16250,
             "Men": 4133,
             "Women": 12117,
@@ -2020,7 +2020,7 @@
          {
             "Rank": 160,
             "Major_code": 6007,
-            "Major": "STUDIO ARTS",
+            "Major": "Studio Arts",
             "Total": 16977,
             "Men": 4754,
             "Women": 12223,
@@ -2042,7 +2042,7 @@
          {
             "Rank": 167,
             "Major_code": 6001,
-            "Major": "DRAMA AND THEATER ARTS",
+            "Major": "Drama And Theater Arts",
             "Total": 43249,
             "Men": 14440,
             "Women": 28809,
@@ -2066,7 +2066,7 @@
          {
             "Rank": 35,
             "Major_code": 6107,
-            "Major": "NURSING",
+            "Major": "Nursing",
             "Total": 209394,
             "Men": 21773,
             "Women": 187621,
@@ -2088,7 +2088,7 @@
          {
             "Rank": 45,
             "Major_code": 6105,
-            "Major": "MEDICAL TECHNOLOGIES TECHNICIANS",
+            "Major": "Medical Technologies Technicians",
             "Total": 15914,
             "Men": 3916,
             "Women": 11998,
@@ -2110,7 +2110,7 @@
          {
             "Rank": 52,
             "Major_code": 6104,
-            "Major": "MEDICAL ASSISTING SERVICES",
+            "Major": "Medical Assisting Services",
             "Total": 11123,
             "Men": 803,
             "Women": 10320,
@@ -2132,7 +2132,7 @@
          {
             "Rank": 61,
             "Major_code": 6108,
-            "Major": "PHARMACY PHARMACEUTICAL SCIENCES AND ADMINISTRATION",
+            "Major": "Pharmacy Pharmaceutical Sciences And Administration",
             "Total": 23551,
             "Men": 8697,
             "Women": 14854,
@@ -2154,7 +2154,7 @@
          {
             "Rank": 89,
             "Major_code": 6199,
-            "Major": "MISCELLANEOUS HEALTH MEDICAL PROFESSIONS",
+            "Major": "Miscellaneous Health Medical Professions",
             "Total": 13386,
             "Men": 1589,
             "Women": 11797,
@@ -2176,7 +2176,7 @@
          {
             "Rank": 104,
             "Major_code": 4002,
-            "Major": "NUTRITION SCIENCES",
+            "Major": "Nutrition Sciences",
             "Total": 18909,
             "Men": 2563,
             "Women": 16346,
@@ -2198,7 +2198,7 @@
          {
             "Rank": 105,
             "Major_code": 6103,
-            "Major": "HEALTH AND MEDICAL ADMINISTRATIVE SERVICES",
+            "Major": "Health And Medical Administrative Services",
             "Total": 18109,
             "Men": 4266,
             "Women": 13843,
@@ -2220,7 +2220,7 @@
          {
             "Rank": 119,
             "Major_code": 6110,
-            "Major": "COMMUNITY AND PUBLIC HEALTH",
+            "Major": "Community And Public Health",
             "Total": 19735,
             "Men": 4103,
             "Women": 15632,
@@ -2242,7 +2242,7 @@
          {
             "Rank": 122,
             "Major_code": 6106,
-            "Major": "HEALTH AND MEDICAL PREPARATORY PROGRAMS",
+            "Major": "Health And Medical Preparatory Programs",
             "Total": 12740,
             "Men": 5521,
             "Women": 7219,
@@ -2264,7 +2264,7 @@
          {
             "Rank": 127,
             "Major_code": 6109,
-            "Major": "TREATMENT THERAPY PROFESSIONS",
+            "Major": "Treatment Therapy Professions",
             "Total": 48491,
             "Men": 13487,
             "Women": 35004,
@@ -2286,7 +2286,7 @@
          {
             "Rank": 135,
             "Major_code": 6100,
-            "Major": "GENERAL MEDICAL AND HEALTH SERVICES",
+            "Major": "General Medical And Health Services",
             "Total": 33599,
             "Men": 7574,
             "Women": 26025,
@@ -2308,7 +2308,7 @@
          {
             "Rank": 164,
             "Major_code": 6102,
-            "Major": "COMMUNICATION DISORDERS SCIENCES AND SERVICES",
+            "Major": "Communication Disorders Sciences And Services",
             "Total": 38279,
             "Men": 1225,
             "Women": 37054,
@@ -2332,7 +2332,7 @@
          {
             "Rank": 37,
             "Major_code": 5501,
-            "Major": "ECONOMICS",
+            "Major": "Economics",
             "Total": 139247,
             "Men": 89749,
             "Women": 49498,
@@ -2354,7 +2354,7 @@
          {
             "Rank": 57,
             "Major_code": 5505,
-            "Major": "INTERNATIONAL RELATIONS",
+            "Major": "International Relations",
             "Total": 28187,
             "Men": 10345,
             "Women": 17842,
@@ -2376,7 +2376,7 @@
          {
             "Rank": 69,
             "Major_code": 5599,
-            "Major": "MISCELLANEOUS SOCIAL SCIENCES",
+            "Major": "Miscellaneous Social Sciences",
             "Total": 3283,
             "Men": 1499,
             "Women": 1784,
@@ -2398,7 +2398,7 @@
          {
             "Rank": 79,
             "Major_code": 5506,
-            "Major": "POLITICAL SCIENCE AND GOVERNMENT",
+            "Major": "Political Science And Government",
             "Total": 182621,
             "Men": 93880,
             "Women": 88741,
@@ -2420,7 +2420,7 @@
          {
             "Rank": 80,
             "Major_code": 5504,
-            "Major": "GEOGRAPHY",
+            "Major": "Geography",
             "Total": 18480,
             "Men": 11404,
             "Women": 7076,
@@ -2442,7 +2442,7 @@
          {
             "Rank": 103,
             "Major_code": 5503,
-            "Major": "CRIMINOLOGY",
+            "Major": "Criminology",
             "Total": 19879,
             "Men": 10031,
             "Women": 9848,
@@ -2464,7 +2464,7 @@
          {
             "Rank": 125,
             "Major_code": 5507,
-            "Major": "SOCIOLOGY",
+            "Major": "Sociology",
             "Total": 115433,
             "Men": 32510,
             "Women": 82923,
@@ -2486,7 +2486,7 @@
          {
             "Rank": 132,
             "Major_code": 4007,
-            "Major": "INTERDISCIPLINARY SOCIAL SCIENCES",
+            "Major": "Interdisciplinary Social Sciences",
             "Total": 9916,
             "Men": 2337,
             "Women": 7579,
@@ -2508,7 +2508,7 @@
          {
             "Rank": 143,
             "Major_code": 5500,
-            "Major": "GENERAL SOCIAL SCIENCES",
+            "Major": "General Social Sciences",
             "Total": 12920,
             "Men": 5079,
             "Women": 7841,
@@ -2532,7 +2532,7 @@
          {
             "Rank": 49,
             "Major_code": 3607,
-            "Major": "PHARMACOLOGY",
+            "Major": "Pharmacology",
             "Total": 1762,
             "Men": 515,
             "Women": 1247,
@@ -2554,7 +2554,7 @@
          {
             "Rank": 55,
             "Major_code": 4006,
-            "Major": "COGNITIVE SCIENCE AND BIOPSYCHOLOGY",
+            "Major": "Cognitive Science And Biopsychology",
             "Total": 3831,
             "Men": 1667,
             "Women": 2164,
@@ -2576,7 +2576,7 @@
          {
             "Rank": 62,
             "Major_code": 3603,
-            "Major": "MOLECULAR BIOLOGY",
+            "Major": "Molecular Biology",
             "Total": 18300,
             "Men": 7426,
             "Women": 10874,
@@ -2598,7 +2598,7 @@
          {
             "Rank": 68,
             "Major_code": 3605,
-            "Major": "GENETICS",
+            "Major": "Genetics",
             "Total": 3635,
             "Men": 1761,
             "Women": 1874,
@@ -2620,7 +2620,7 @@
          {
             "Rank": 81,
             "Major_code": 3606,
-            "Major": "MICROBIOLOGY",
+            "Major": "Microbiology",
             "Total": 15232,
             "Men": 6383,
             "Women": 8849,
@@ -2642,7 +2642,7 @@
          {
             "Rank": 83,
             "Major_code": 3601,
-            "Major": "BIOCHEMICAL SCIENCES",
+            "Major": "Biochemical Sciences",
             "Total": 39107,
             "Men": 18951,
             "Women": 20156,
@@ -2664,7 +2664,7 @@
          {
             "Rank": 84,
             "Major_code": 3602,
-            "Major": "BOTANY",
+            "Major": "Botany",
             "Total": 1329,
             "Men": 626,
             "Women": 703,
@@ -2686,7 +2686,7 @@
          {
             "Rank": 93,
             "Major_code": 1301,
-            "Major": "ENVIRONMENTAL SCIENCE",
+            "Major": "Environmental Science",
             "Total": 25965,
             "Men": 10787,
             "Women": 15178,
@@ -2708,7 +2708,7 @@
          {
             "Rank": 102,
             "Major_code": 3608,
-            "Major": "PHYSIOLOGY",
+            "Major": "Physiology",
             "Total": 22060,
             "Men": 8422,
             "Women": 13638,
@@ -2730,7 +2730,7 @@
          {
             "Rank": 109,
             "Major_code": 3611,
-            "Major": "NEUROSCIENCE",
+            "Major": "Neuroscience",
             "Total": 13663,
             "Men": 4944,
             "Women": 8719,
@@ -2752,7 +2752,7 @@
          {
             "Rank": 123,
             "Major_code": 3699,
-            "Major": "MISCELLANEOUS BIOLOGY",
+            "Major": "Miscellaneous Biology",
             "Total": 10706,
             "Men": 4747,
             "Women": 5959,
@@ -2774,7 +2774,7 @@
          {
             "Rank": 124,
             "Major_code": 3600,
-            "Major": "BIOLOGY",
+            "Major": "Biology",
             "Total": 280709,
             "Men": 111762,
             "Women": 168947,
@@ -2796,7 +2796,7 @@
          {
             "Rank": 133,
             "Major_code": 3604,
-            "Major": "ECOLOGY",
+            "Major": "Ecology",
             "Total": 9154,
             "Men": 3878,
             "Women": 5276,
@@ -2818,7 +2818,7 @@
          {
             "Rank": 169,
             "Major_code": 3609,
-            "Major": "ZOOLOGY",
+            "Major": "Zoology",
             "Total": 8409,
             "Men": 3050,
             "Women": 5359,
@@ -2842,7 +2842,7 @@
          {
             "Rank": 56,
             "Major_code": 2303,
-            "Major": "SCHOOL STUDENT COUNSELING",
+            "Major": "School Student Counseling",
             "Total": 818,
             "Men": 119,
             "Women": 699,
@@ -2864,7 +2864,7 @@
          {
             "Rank": 101,
             "Major_code": 2310,
-            "Major": "SPECIAL NEEDS EDUCATION",
+            "Major": "Special Needs Education",
             "Total": 28739,
             "Men": 2682,
             "Women": 26057,
@@ -2886,7 +2886,7 @@
          {
             "Rank": 114,
             "Major_code": 2300,
-            "Major": "GENERAL EDUCATION",
+            "Major": "General Education",
             "Total": 143718,
             "Men": 26893,
             "Women": 116825,
@@ -2908,7 +2908,7 @@
          {
             "Rank": 118,
             "Major_code": 2311,
-            "Major": "SOCIAL SCIENCE OR HISTORY TEACHER EDUCATION",
+            "Major": "Social Science Or History Teacher Education",
             "Total": 20198,
             "Men": 9950,
             "Women": 10248,
@@ -2930,7 +2930,7 @@
          {
             "Rank": 120,
             "Major_code": 2305,
-            "Major": "MATHEMATICS TEACHER EDUCATION",
+            "Major": "Mathematics Teacher Education",
             "Total": 14237,
             "Men": 3872,
             "Women": 10365,
@@ -2952,7 +2952,7 @@
          {
             "Rank": 121,
             "Major_code": 2301,
-            "Major": "EDUCATIONAL ADMINISTRATION AND SUPERVISION",
+            "Major": "Educational Administration And Supervision",
             "Total": 804,
             "Men": 280,
             "Women": 524,
@@ -2974,7 +2974,7 @@
          {
             "Rank": 129,
             "Major_code": 2313,
-            "Major": "LANGUAGE AND DRAMA EDUCATION",
+            "Major": "Language And Drama Education",
             "Total": 30471,
             "Men": 3741,
             "Women": 26730,
@@ -2996,7 +2996,7 @@
          {
             "Rank": 131,
             "Major_code": 2399,
-            "Major": "MISCELLANEOUS EDUCATION",
+            "Major": "Miscellaneous Education",
             "Total": 10150,
             "Men": 3654,
             "Women": 6496,
@@ -3018,7 +3018,7 @@
          {
             "Rank": 134,
             "Major_code": 2309,
-            "Major": "SECONDARY TEACHER EDUCATION",
+            "Major": "Secondary Teacher Education",
             "Total": 17125,
             "Men": 6820,
             "Women": 10305,
@@ -3040,7 +3040,7 @@
          {
             "Rank": 137,
             "Major_code": 2314,
-            "Major": "ART AND MUSIC EDUCATION",
+            "Major": "Art And Music Education",
             "Total": 34181,
             "Men": 10732,
             "Women": 23449,
@@ -3062,7 +3062,7 @@
          {
             "Rank": 139,
             "Major_code": 2304,
-            "Major": "ELEMENTARY EDUCATION",
+            "Major": "Elementary Education",
             "Total": 170862,
             "Men": 13029,
             "Women": 157833,
@@ -3084,7 +3084,7 @@
          {
             "Rank": 145,
             "Major_code": 2308,
-            "Major": "SCIENCE AND COMPUTER TEACHER EDUCATION",
+            "Major": "Science And Computer Teacher Education",
             "Total": 6483,
             "Men": 2049,
             "Women": 4434,
@@ -3106,7 +3106,7 @@
          {
             "Rank": 148,
             "Major_code": 2306,
-            "Major": "PHYSICAL AND HEALTH EDUCATION TEACHING",
+            "Major": "Physical And Health Education Teaching",
             "Total": 28213,
             "Men": 15670,
             "Women": 12543,
@@ -3128,7 +3128,7 @@
          {
             "Rank": 155,
             "Major_code": 2312,
-            "Major": "TEACHER EDUCATION: MULTIPLE LEVELS",
+            "Major": "Teacher Education: Multiple Levels",
             "Total": 14443,
             "Men": 2734,
             "Women": 11709,
@@ -3150,7 +3150,7 @@
          {
             "Rank": 165,
             "Major_code": 2307,
-            "Major": "EARLY CHILDHOOD EDUCATION",
+            "Major": "Early Childhood Education",
             "Total": 37589,
             "Men": 1167,
             "Women": 36422,
@@ -3172,7 +3172,7 @@
          {
             "Rank": 173,
             "Major_code": 3501,
-            "Major": "LIBRARY SCIENCE",
+            "Major": "Library Science",
             "Total": 1098,
             "Men": 134,
             "Women": 964,
@@ -3196,7 +3196,7 @@
          {
             "Rank": 70,
             "Major_code": 6403,
-            "Major": "UNITED STATES HISTORY",
+            "Major": "United States History",
             "Total": 3079,
             "Men": 1756,
             "Women": 1323,
@@ -3218,7 +3218,7 @@
          {
             "Rank": 100,
             "Major_code": 1501,
-            "Major": "AREA ETHNIC AND CIVILIZATION STUDIES",
+            "Major": "Area Ethnic And Civilization Studies",
             "Total": 31195,
             "Men": 8739,
             "Women": 22456,
@@ -3240,7 +3240,7 @@
          {
             "Rank": 115,
             "Major_code": 6402,
-            "Major": "HISTORY",
+            "Major": "History",
             "Total": 141951,
             "Men": 78253,
             "Women": 63698,
@@ -3262,7 +3262,7 @@
          {
             "Rank": 116,
             "Major_code": 2602,
-            "Major": "FRENCH GERMAN LATIN AND OTHER COMMON FOREIGN LANGUAGE STUDIES",
+            "Major": "French German Latin And Other Common Foreign Language Studies",
             "Total": 48246,
             "Men": 12835,
             "Women": 35411,
@@ -3284,7 +3284,7 @@
          {
             "Rank": 117,
             "Major_code": 4001,
-            "Major": "INTERCULTURAL AND INTERNATIONAL STUDIES",
+            "Major": "Intercultural And International Studies",
             "Total": 24650,
             "Men": 8575,
             "Women": 16075,
@@ -3306,7 +3306,7 @@
          {
             "Rank": 130,
             "Major_code": 2601,
-            "Major": "LINGUISTICS AND COMPARATIVE LANGUAGE AND LITERATURE",
+            "Major": "Linguistics And Comparative Language And Literature",
             "Total": 16601,
             "Men": 4416,
             "Women": 12185,
@@ -3328,7 +3328,7 @@
          {
             "Rank": 136,
             "Major_code": 4801,
-            "Major": "PHILOSOPHY AND RELIGIOUS STUDIES",
+            "Major": "Philosophy And Religious Studies",
             "Total": 54814,
             "Men": 31967,
             "Women": 22847,
@@ -3350,7 +3350,7 @@
          {
             "Rank": 138,
             "Major_code": 3301,
-            "Major": "ENGLISH LANGUAGE AND LITERATURE",
+            "Major": "English Language And Literature",
             "Total": 194673,
             "Men": 58227,
             "Women": 136446,
@@ -3372,7 +3372,7 @@
          {
             "Rank": 141,
             "Major_code": 3401,
-            "Major": "LIBERAL ARTS",
+            "Major": "Liberal Arts",
             "Total": 71369,
             "Men": 22339,
             "Women": 49030,
@@ -3394,7 +3394,7 @@
          {
             "Rank": 149,
             "Major_code": 6006,
-            "Major": "ART HISTORY AND CRITICISM",
+            "Major": "Art History And Criticism",
             "Total": 21030,
             "Men": 3240,
             "Women": 17790,
@@ -3416,7 +3416,7 @@
          {
             "Rank": 158,
             "Major_code": 3402,
-            "Major": "HUMANITIES",
+            "Major": "Humanities",
             "Total": 6652,
             "Men": 2013,
             "Women": 4639,
@@ -3438,7 +3438,7 @@
          {
             "Rank": 159,
             "Major_code": 4901,
-            "Major": "THEOLOGY AND RELIGIOUS VOCATIONS",
+            "Major": "Theology And Religious Vocations",
             "Total": 30207,
             "Men": 18616,
             "Women": 11591,
@@ -3460,7 +3460,7 @@
          {
             "Rank": 163,
             "Major_code": 5502,
-            "Major": "ANTHROPOLOGY AND ARCHEOLOGY",
+            "Major": "Anthropology And Archeology",
             "Total": 38844,
             "Men": 11376,
             "Women": 27468,
@@ -3482,7 +3482,7 @@
          {
             "Rank": 166,
             "Major_code": 2603,
-            "Major": "OTHER FOREIGN LANGUAGES",
+            "Major": "Other Foreign Languages",
             "Total": 11204,
             "Men": 3472,
             "Women": 7732,
@@ -3504,7 +3504,7 @@
          {
             "Rank": 168,
             "Major_code": 3302,
-            "Major": "COMPOSITION AND RHETORIC",
+            "Major": "Composition And Rhetoric",
             "Total": 18953,
             "Men": 7022,
             "Women": 11931,
@@ -3528,7 +3528,7 @@
          {
             "Rank": 71,
             "Major_code": 5205,
-            "Major": "INDUSTRIAL AND ORGANIZATIONAL PSYCHOLOGY",
+            "Major": "Industrial And Organizational Psychology",
             "Total": 3014,
             "Men": 1075,
             "Women": 1939,
@@ -3550,7 +3550,7 @@
          {
             "Rank": 92,
             "Major_code": 5206,
-            "Major": "SOCIAL PSYCHOLOGY",
+            "Major": "Social Psychology",
             "Total": 1386,
             "Men": 413,
             "Women": 973,
@@ -3572,7 +3572,7 @@
          {
             "Rank": 146,
             "Major_code": 5200,
-            "Major": "PSYCHOLOGY",
+            "Major": "Psychology",
             "Total": 393735,
             "Men": 86648,
             "Women": 307087,
@@ -3594,7 +3594,7 @@
          {
             "Rank": 152,
             "Major_code": 5404,
-            "Major": "SOCIAL WORK",
+            "Major": "Social Work",
             "Total": 53552,
             "Men": 5137,
             "Women": 48415,
@@ -3616,7 +3616,7 @@
          {
             "Rank": 156,
             "Major_code": 5299,
-            "Major": "MISCELLANEOUS PSYCHOLOGY",
+            "Major": "Miscellaneous Psychology",
             "Total": 9628,
             "Men": 1936,
             "Women": 7692,
@@ -3638,7 +3638,7 @@
          {
             "Rank": 157,
             "Major_code": 5403,
-            "Major": "HUMAN SERVICES AND COMMUNITY ORGANIZATION",
+            "Major": "Human Services And Community Organization",
             "Total": 9374,
             "Men": 885,
             "Women": 8489,
@@ -3660,7 +3660,7 @@
          {
             "Rank": 170,
             "Major_code": 5201,
-            "Major": "EDUCATIONAL PSYCHOLOGY",
+            "Major": "Educational Psychology",
             "Total": 2854,
             "Men": 522,
             "Women": 2332,
@@ -3682,7 +3682,7 @@
          {
             "Rank": 171,
             "Major_code": 5202,
-            "Major": "CLINICAL PSYCHOLOGY",
+            "Major": "Clinical Psychology",
             "Total": 2838,
             "Men": 568,
             "Women": 2270,
@@ -3704,7 +3704,7 @@
          {
             "Rank": 172,
             "Major_code": 5203,
-            "Major": "COUNSELING PSYCHOLOGY",
+            "Major": "Counseling Psychology",
             "Total": 4626,
             "Men": 931,
             "Women": 3695,
@@ -3728,7 +3728,7 @@
          {
             "Rank": 94,
             "Major_code": 1901,
-            "Major": "COMMUNICATIONS",
+            "Major": "Communications",
             "Total": 213996,
             "Men": 70619,
             "Women": 143377,
@@ -3750,7 +3750,7 @@
          {
             "Rank": 97,
             "Major_code": 1902,
-            "Major": "JOURNALISM",
+            "Major": "Journalism",
             "Total": 72619,
             "Men": 23736,
             "Women": 48883,
@@ -3772,7 +3772,7 @@
          {
             "Rank": 99,
             "Major_code": 1904,
-            "Major": "ADVERTISING AND PUBLIC RELATIONS",
+            "Major": "Advertising And Public Relations",
             "Total": 53162,
             "Men": 12862,
             "Women": 40300,
@@ -3794,7 +3794,7 @@
          {
             "Rank": 126,
             "Major_code": 1903,
-            "Major": "MASS MEDIA",
+            "Major": "Mass Media",
             "Total": 52824,
             "Men": 24704,
             "Women": 28120,
@@ -3818,7 +3818,7 @@
          {
             "Rank": 110,
             "Major_code": 4000,
-            "Major": "MULTI/INTERDISCIPLINARY STUDIES",
+            "Major": "Multi/Interdisciplinary Studies",
             "Total": 12296,
             "Men": 2817,
             "Women": 9479,
@@ -3840,7 +3840,7 @@
       ]
    },
    "majors": {
-      "PETROLEUM ENGINEERING": {
+      "Petroleum Engineering": {
          "Rank": 1,
          "Major_code": 2419,
          "Total": 2339,
@@ -3862,7 +3862,7 @@
          "Non_college_jobs": 364,
          "Low_wage_jobs": 193
       },
-      "MINING AND MINERAL ENGINEERING": {
+      "Mining And Mineral Engineering": {
          "Rank": 2,
          "Major_code": 2416,
          "Total": 756,
@@ -3884,7 +3884,7 @@
          "Non_college_jobs": 257,
          "Low_wage_jobs": 50
       },
-      "METALLURGICAL ENGINEERING": {
+      "Metallurgical Engineering": {
          "Rank": 3,
          "Major_code": 2415,
          "Total": 856,
@@ -3906,7 +3906,7 @@
          "Non_college_jobs": 176,
          "Low_wage_jobs": 0
       },
-      "NAVAL ARCHITECTURE AND MARINE ENGINEERING": {
+      "Naval Architecture And Marine Engineering": {
          "Rank": 4,
          "Major_code": 2417,
          "Total": 1258,
@@ -3928,7 +3928,7 @@
          "Non_college_jobs": 102,
          "Low_wage_jobs": 0
       },
-      "CHEMICAL ENGINEERING": {
+      "Chemical Engineering": {
          "Rank": 5,
          "Major_code": 2405,
          "Total": 32260,
@@ -3950,7 +3950,7 @@
          "Non_college_jobs": 4440,
          "Low_wage_jobs": 972
       },
-      "NUCLEAR ENGINEERING": {
+      "Nuclear Engineering": {
          "Rank": 6,
          "Major_code": 2418,
          "Total": 2573,
@@ -3972,7 +3972,7 @@
          "Non_college_jobs": 657,
          "Low_wage_jobs": 244
       },
-      "ACTUARIAL SCIENCE": {
+      "Actuarial Science": {
          "Rank": 7,
          "Major_code": 6202,
          "Total": 3777,
@@ -3994,7 +3994,7 @@
          "Non_college_jobs": 314,
          "Low_wage_jobs": 259
       },
-      "ASTRONOMY AND ASTROPHYSICS": {
+      "Astronomy And Astrophysics": {
          "Rank": 8,
          "Major_code": 5001,
          "Total": 1792,
@@ -4016,7 +4016,7 @@
          "Non_college_jobs": 500,
          "Low_wage_jobs": 220
       },
-      "MECHANICAL ENGINEERING": {
+      "Mechanical Engineering": {
          "Rank": 9,
          "Major_code": 2414,
          "Total": 91227,
@@ -4038,7 +4038,7 @@
          "Non_college_jobs": 16384,
          "Low_wage_jobs": 3253
       },
-      "ELECTRICAL ENGINEERING": {
+      "Electrical Engineering": {
          "Rank": 10,
          "Major_code": 2408,
          "Total": 81527,
@@ -4060,7 +4060,7 @@
          "Non_college_jobs": 10874,
          "Low_wage_jobs": 3170
       },
-      "COMPUTER ENGINEERING": {
+      "Computer Engineering": {
          "Rank": 11,
          "Major_code": 2407,
          "Total": 41542,
@@ -4082,7 +4082,7 @@
          "Non_college_jobs": 5721,
          "Low_wage_jobs": 980
       },
-      "AEROSPACE ENGINEERING": {
+      "Aerospace Engineering": {
          "Rank": 12,
          "Major_code": 2401,
          "Total": 15058,
@@ -4104,7 +4104,7 @@
          "Non_college_jobs": 2425,
          "Low_wage_jobs": 372
       },
-      "BIOMEDICAL ENGINEERING": {
+      "Biomedical Engineering": {
          "Rank": 13,
          "Major_code": 2404,
          "Total": 14955,
@@ -4126,7 +4126,7 @@
          "Non_college_jobs": 2471,
          "Low_wage_jobs": 789
       },
-      "MATERIALS SCIENCE": {
+      "Materials Science": {
          "Rank": 14,
          "Major_code": 5008,
          "Total": 4279,
@@ -4148,7 +4148,7 @@
          "Non_college_jobs": 391,
          "Low_wage_jobs": 81
       },
-      "ENGINEERING MECHANICS PHYSICS AND SCIENCE": {
+      "Engineering Mechanics Physics And Science": {
          "Rank": 15,
          "Major_code": 2409,
          "Total": 4321,
@@ -4170,7 +4170,7 @@
          "Non_college_jobs": 947,
          "Low_wage_jobs": 263
       },
-      "BIOLOGICAL ENGINEERING": {
+      "Biological Engineering": {
          "Rank": 16,
          "Major_code": 2402,
          "Total": 8925,
@@ -4192,7 +4192,7 @@
          "Non_college_jobs": 1595,
          "Low_wage_jobs": 524
       },
-      "INDUSTRIAL AND MANUFACTURING ENGINEERING": {
+      "Industrial And Manufacturing Engineering": {
          "Rank": 17,
          "Major_code": 2412,
          "Total": 18968,
@@ -4214,7 +4214,7 @@
          "Non_college_jobs": 3235,
          "Low_wage_jobs": 640
       },
-      "GENERAL ENGINEERING": {
+      "General Engineering": {
          "Rank": 18,
          "Major_code": 2400,
          "Total": 61152,
@@ -4236,7 +4236,7 @@
          "Non_college_jobs": 11734,
          "Low_wage_jobs": 3192
       },
-      "ARCHITECTURAL ENGINEERING": {
+      "Architectural Engineering": {
          "Rank": 19,
          "Major_code": 2403,
          "Total": 2825,
@@ -4258,7 +4258,7 @@
          "Non_college_jobs": 649,
          "Low_wage_jobs": 137
       },
-      "COURT REPORTING": {
+      "Court Reporting": {
          "Rank": 20,
          "Major_code": 3201,
          "Total": 1148,
@@ -4280,7 +4280,7 @@
          "Non_college_jobs": 528,
          "Low_wage_jobs": 144
       },
-      "COMPUTER SCIENCE": {
+      "Computer Science": {
          "Rank": 21,
          "Major_code": 2102,
          "Total": 128319,
@@ -4302,7 +4302,7 @@
          "Non_college_jobs": 25667,
          "Low_wage_jobs": 5144
       },
-      "FOOD SCIENCE": {
+      "Food Science": {
          "Rank": 22,
          "Major_code": 1104,
          "Total": null,
@@ -4324,7 +4324,7 @@
          "Non_college_jobs": 1274,
          "Low_wage_jobs": 485
       },
-      "ELECTRICAL ENGINEERING TECHNOLOGY": {
+      "Electrical Engineering Technology": {
          "Rank": 23,
          "Major_code": 2502,
          "Total": 11565,
@@ -4346,7 +4346,7 @@
          "Non_college_jobs": 2686,
          "Low_wage_jobs": 696
       },
-      "MATERIALS ENGINEERING AND MATERIALS SCIENCE": {
+      "Materials Engineering And Materials Science": {
          "Rank": 24,
          "Major_code": 2413,
          "Total": 2993,
@@ -4368,7 +4368,7 @@
          "Non_college_jobs": 305,
          "Low_wage_jobs": 70
       },
-      "MANAGEMENT INFORMATION SYSTEMS AND STATISTICS": {
+      "Management Information Systems And Statistics": {
          "Rank": 25,
          "Major_code": 6212,
          "Total": 18713,
@@ -4390,7 +4390,7 @@
          "Non_college_jobs": 5741,
          "Low_wage_jobs": 708
       },
-      "CIVIL ENGINEERING": {
+      "Civil Engineering": {
          "Rank": 26,
          "Major_code": 2406,
          "Total": 53153,
@@ -4412,7 +4412,7 @@
          "Non_college_jobs": 9356,
          "Low_wage_jobs": 2899
       },
-      "CONSTRUCTION SERVICES": {
+      "Construction Services": {
          "Rank": 27,
          "Major_code": 5601,
          "Total": 18498,
@@ -4434,7 +4434,7 @@
          "Non_college_jobs": 5351,
          "Low_wage_jobs": 703
       },
-      "OPERATIONS LOGISTICS AND E-COMMERCE": {
+      "Operations Logistics And E-Commerce": {
          "Rank": 28,
          "Major_code": 6204,
          "Total": 11732,
@@ -4456,7 +4456,7 @@
          "Non_college_jobs": 3629,
          "Low_wage_jobs": 285
       },
-      "MISCELLANEOUS ENGINEERING": {
+      "Miscellaneous Engineering": {
          "Rank": 29,
          "Major_code": 2499,
          "Total": 9133,
@@ -4478,7 +4478,7 @@
          "Non_college_jobs": 2426,
          "Low_wage_jobs": 365
       },
-      "PUBLIC POLICY": {
+      "Public Policy": {
          "Rank": 30,
          "Major_code": 5402,
          "Total": 5978,
@@ -4500,7 +4500,7 @@
          "Non_college_jobs": 1871,
          "Low_wage_jobs": 340
       },
-      "ENVIRONMENTAL ENGINEERING": {
+      "Environmental Engineering": {
          "Rank": 31,
          "Major_code": 2410,
          "Total": 4047,
@@ -4522,7 +4522,7 @@
          "Non_college_jobs": 830,
          "Low_wage_jobs": 260
       },
-      "ENGINEERING TECHNOLOGIES": {
+      "Engineering Technologies": {
          "Rank": 32,
          "Major_code": 2500,
          "Total": 3600,
@@ -4544,7 +4544,7 @@
          "Non_college_jobs": 1269,
          "Low_wage_jobs": 142
       },
-      "MISCELLANEOUS FINE ARTS": {
+      "Miscellaneous Fine Arts": {
          "Rank": 33,
          "Major_code": 6099,
          "Total": 3340,
@@ -4566,7 +4566,7 @@
          "Non_college_jobs": 1714,
          "Low_wage_jobs": 755
       },
-      "GEOLOGICAL AND GEOPHYSICAL ENGINEERING": {
+      "Geological And Geophysical Engineering": {
          "Rank": 34,
          "Major_code": 2411,
          "Total": 720,
@@ -4588,7 +4588,7 @@
          "Non_college_jobs": 50,
          "Low_wage_jobs": 49
       },
-      "NURSING": {
+      "Nursing": {
          "Rank": 35,
          "Major_code": 6107,
          "Total": 209394,
@@ -4610,7 +4610,7 @@
          "Non_college_jobs": 26146,
          "Low_wage_jobs": 6193
       },
-      "FINANCE": {
+      "Finance": {
          "Rank": 36,
          "Major_code": 6207,
          "Total": 174506,
@@ -4632,7 +4632,7 @@
          "Non_college_jobs": 48447,
          "Low_wage_jobs": 9910
       },
-      "ECONOMICS": {
+      "Economics": {
          "Rank": 37,
          "Major_code": 5501,
          "Total": 139247,
@@ -4654,7 +4654,7 @@
          "Non_college_jobs": 37057,
          "Low_wage_jobs": 10653
       },
-      "BUSINESS ECONOMICS": {
+      "Business Economics": {
          "Rank": 38,
          "Major_code": 6205,
          "Total": 13302,
@@ -4676,7 +4676,7 @@
          "Non_college_jobs": 4612,
          "Low_wage_jobs": 1284
       },
-      "INDUSTRIAL PRODUCTION TECHNOLOGIES": {
+      "Industrial Production Technologies": {
          "Rank": 39,
          "Major_code": 2503,
          "Total": 4631,
@@ -4698,7 +4698,7 @@
          "Non_college_jobs": 2454,
          "Low_wage_jobs": 480
       },
-      "NUCLEAR, INDUSTRIAL RADIOLOGY, AND BIOLOGICAL TECHNOLOGIES": {
+      "Nuclear, Industrial Radiology, And Biological Technologies": {
          "Rank": 40,
          "Major_code": 5102,
          "Total": 2116,
@@ -4720,7 +4720,7 @@
          "Non_college_jobs": 1475,
          "Low_wage_jobs": 124
       },
-      "ACCOUNTING": {
+      "Accounting": {
          "Rank": 41,
          "Major_code": 6201,
          "Total": 198633,
@@ -4742,7 +4742,7 @@
          "Non_college_jobs": 39323,
          "Low_wage_jobs": 10886
       },
-      "MATHEMATICS": {
+      "Mathematics": {
          "Rank": 42,
          "Major_code": 3700,
          "Total": 72397,
@@ -4764,7 +4764,7 @@
          "Non_college_jobs": 14829,
          "Low_wage_jobs": 4569
       },
-      "COMPUTER AND INFORMATION SYSTEMS": {
+      "Computer And Information Systems": {
          "Rank": 43,
          "Major_code": 2100,
          "Total": 36698,
@@ -4786,7 +4786,7 @@
          "Non_college_jobs": 11783,
          "Low_wage_jobs": 1672
       },
-      "PHYSICS": {
+      "Physics": {
          "Rank": 44,
          "Major_code": 5007,
          "Total": 32142,
@@ -4808,7 +4808,7 @@
          "Non_college_jobs": 4576,
          "Low_wage_jobs": 1823
       },
-      "MEDICAL TECHNOLOGIES TECHNICIANS": {
+      "Medical Technologies Technicians": {
          "Rank": 45,
          "Major_code": 6105,
          "Total": 15914,
@@ -4830,7 +4830,7 @@
          "Non_college_jobs": 7176,
          "Low_wage_jobs": 1002
       },
-      "INFORMATION SCIENCES": {
+      "Information Sciences": {
          "Rank": 46,
          "Major_code": 2105,
          "Total": 11913,
@@ -4852,7 +4852,7 @@
          "Non_college_jobs": 4102,
          "Low_wage_jobs": 608
       },
-      "STATISTICS AND DECISION SCIENCE": {
+      "Statistics And Decision Science": {
          "Rank": 47,
          "Major_code": 3702,
          "Total": 6251,
@@ -4874,7 +4874,7 @@
          "Non_college_jobs": 1200,
          "Low_wage_jobs": 343
       },
-      "APPLIED MATHEMATICS": {
+      "Applied Mathematics": {
          "Rank": 48,
          "Major_code": 3701,
          "Total": 4939,
@@ -4896,7 +4896,7 @@
          "Non_college_jobs": 803,
          "Low_wage_jobs": 357
       },
-      "PHARMACOLOGY": {
+      "Pharmacology": {
          "Rank": 49,
          "Major_code": 3607,
          "Total": 1762,
@@ -4918,7 +4918,7 @@
          "Non_college_jobs": 478,
          "Low_wage_jobs": 93
       },
-      "OCEANOGRAPHY": {
+      "Oceanography": {
          "Rank": 50,
          "Major_code": 5006,
          "Total": 2418,
@@ -4940,7 +4940,7 @@
          "Non_college_jobs": 996,
          "Low_wage_jobs": 186
       },
-      "ENGINEERING AND INDUSTRIAL MANAGEMENT": {
+      "Engineering And Industrial Management": {
          "Rank": 51,
          "Major_code": 2501,
          "Total": 2906,
@@ -4962,7 +4962,7 @@
          "Non_college_jobs": 844,
          "Low_wage_jobs": 245
       },
-      "MEDICAL ASSISTING SERVICES": {
+      "Medical Assisting Services": {
          "Rank": 52,
          "Major_code": 6104,
          "Total": 11123,
@@ -4984,7 +4984,7 @@
          "Non_college_jobs": 6948,
          "Low_wage_jobs": 1270
       },
-      "MATHEMATICS AND COMPUTER SCIENCE": {
+      "Mathematics And Computer Science": {
          "Rank": 53,
          "Major_code": 4005,
          "Total": 609,
@@ -5006,7 +5006,7 @@
          "Non_college_jobs": 67,
          "Low_wage_jobs": 25
       },
-      "COMPUTER PROGRAMMING AND DATA PROCESSING": {
+      "Computer Programming And Data Processing": {
          "Rank": 54,
          "Major_code": 2101,
          "Total": 4168,
@@ -5028,7 +5028,7 @@
          "Non_college_jobs": 1033,
          "Low_wage_jobs": 263
       },
-      "COGNITIVE SCIENCE AND BIOPSYCHOLOGY": {
+      "Cognitive Science And Biopsychology": {
          "Rank": 55,
          "Major_code": 4006,
          "Total": 3831,
@@ -5050,7 +5050,7 @@
          "Non_college_jobs": 921,
          "Low_wage_jobs": 135
       },
-      "SCHOOL STUDENT COUNSELING": {
+      "School Student Counseling": {
          "Rank": 56,
          "Major_code": 2303,
          "Total": 818,
@@ -5072,7 +5072,7 @@
          "Non_college_jobs": 221,
          "Low_wage_jobs": 0
       },
-      "INTERNATIONAL RELATIONS": {
+      "International Relations": {
          "Rank": 57,
          "Major_code": 5505,
          "Total": 28187,
@@ -5094,7 +5094,7 @@
          "Non_college_jobs": 9570,
          "Low_wage_jobs": 2499
       },
-      "GENERAL BUSINESS": {
+      "General Business": {
          "Rank": 58,
          "Major_code": 6200,
          "Total": 234590,
@@ -5116,7 +5116,7 @@
          "Non_college_jobs": 100831,
          "Low_wage_jobs": 27320
       },
-      "ARCHITECTURE": {
+      "Architecture": {
          "Rank": 59,
          "Major_code": 1401,
          "Total": 46420,
@@ -5138,7 +5138,7 @@
          "Non_college_jobs": 13724,
          "Low_wage_jobs": 4221
       },
-      "INTERNATIONAL BUSINESS": {
+      "International Business": {
          "Rank": 60,
          "Major_code": 6210,
          "Total": 25894,
@@ -5160,7 +5160,7 @@
          "Non_college_jobs": 9482,
          "Low_wage_jobs": 3046
       },
-      "PHARMACY PHARMACEUTICAL SCIENCES AND ADMINISTRATION": {
+      "Pharmacy Pharmaceutical Sciences And Administration": {
          "Rank": 61,
          "Major_code": 6108,
          "Total": 23551,
@@ -5182,7 +5182,7 @@
          "Non_college_jobs": 4493,
          "Low_wage_jobs": 1121
       },
-      "MOLECULAR BIOLOGY": {
+      "Molecular Biology": {
          "Rank": 62,
          "Major_code": 3603,
          "Total": 18300,
@@ -5204,7 +5204,7 @@
          "Non_college_jobs": 3145,
          "Low_wage_jobs": 1168
       },
-      "MISCELLANEOUS BUSINESS & MEDICAL ADMINISTRATION": {
+      "Miscellaneous Business & Medical Administration": {
          "Rank": 63,
          "Major_code": 6299,
          "Total": 17947,
@@ -5226,7 +5226,7 @@
          "Non_college_jobs": 8937,
          "Low_wage_jobs": 1758
       },
-      "AGRICULTURE PRODUCTION AND MANAGEMENT": {
+      "Agriculture Production And Management": {
          "Rank": 64,
          "Major_code": 1101,
          "Total": 14240,
@@ -5248,7 +5248,7 @@
          "Non_college_jobs": 6221,
          "Low_wage_jobs": 1362
       },
-      "GENERAL AGRICULTURE": {
+      "General Agriculture": {
          "Rank": 65,
          "Major_code": 1100,
          "Total": 10399,
@@ -5270,7 +5270,7 @@
          "Non_college_jobs": 4717,
          "Low_wage_jobs": 839
       },
-      "MISCELLANEOUS ENGINEERING TECHNOLOGIES": {
+      "Miscellaneous Engineering Technologies": {
          "Rank": 66,
          "Major_code": 2599,
          "Total": 8804,
@@ -5292,7 +5292,7 @@
          "Non_college_jobs": 3896,
          "Low_wage_jobs": 386
       },
-      "MECHANICAL ENGINEERING RELATED TECHNOLOGIES": {
+      "Mechanical Engineering Related Technologies": {
          "Rank": 67,
          "Major_code": 2504,
          "Total": 4790,
@@ -5314,7 +5314,7 @@
          "Non_college_jobs": 2121,
          "Low_wage_jobs": 406
       },
-      "GENETICS": {
+      "Genetics": {
          "Rank": 68,
          "Major_code": 3605,
          "Total": 3635,
@@ -5336,7 +5336,7 @@
          "Non_college_jobs": 678,
          "Low_wage_jobs": 201
       },
-      "MISCELLANEOUS SOCIAL SCIENCES": {
+      "Miscellaneous Social Sciences": {
          "Rank": 69,
          "Major_code": 5599,
          "Total": 3283,
@@ -5358,7 +5358,7 @@
          "Non_college_jobs": 1654,
          "Low_wage_jobs": 573
       },
-      "UNITED STATES HISTORY": {
+      "United States History": {
          "Rank": 70,
          "Major_code": 6403,
          "Total": 3079,
@@ -5380,7 +5380,7 @@
          "Non_college_jobs": 1591,
          "Low_wage_jobs": 302
       },
-      "INDUSTRIAL AND ORGANIZATIONAL PSYCHOLOGY": {
+      "Industrial And Organizational Psychology": {
          "Rank": 71,
          "Major_code": 5205,
          "Total": 3014,
@@ -5402,7 +5402,7 @@
          "Non_college_jobs": 1224,
          "Low_wage_jobs": 272
       },
-      "AGRICULTURAL ECONOMICS": {
+      "Agricultural Economics": {
          "Rank": 72,
          "Major_code": 1102,
          "Total": 2439,
@@ -5424,7 +5424,7 @@
          "Non_college_jobs": 893,
          "Low_wage_jobs": 94
       },
-      "PHYSICAL SCIENCES": {
+      "Physical Sciences": {
          "Rank": 73,
          "Major_code": 5000,
          "Total": 1436,
@@ -5446,7 +5446,7 @@
          "Non_college_jobs": 465,
          "Low_wage_jobs": 269
       },
-      "MILITARY TECHNOLOGIES": {
+      "Military Technologies": {
          "Rank": 74,
          "Major_code": 3801,
          "Total": 124,
@@ -5468,7 +5468,7 @@
          "Non_college_jobs": 0,
          "Low_wage_jobs": 0
       },
-      "CHEMISTRY": {
+      "Chemistry": {
          "Rank": 75,
          "Major_code": 5003,
          "Total": 66530,
@@ -5490,7 +5490,7 @@
          "Non_college_jobs": 14718,
          "Low_wage_jobs": 4288
       },
-      "ELECTRICAL, MECHANICAL, AND PRECISION TECHNOLOGIES AND PRODUCTION": {
+      "Electrical, Mechanical, And Precision Technologies And Production": {
          "Rank": 76,
          "Major_code": 5701,
          "Total": 2435,
@@ -5512,7 +5512,7 @@
          "Non_college_jobs": 1659,
          "Low_wage_jobs": 81
       },
-      "BUSINESS MANAGEMENT AND ADMINISTRATION": {
+      "Business Management And Administration": {
          "Rank": 77,
          "Major_code": 6203,
          "Total": 329927,
@@ -5534,7 +5534,7 @@
          "Non_college_jobs": 148395,
          "Low_wage_jobs": 32395
       },
-      "MARKETING AND MARKETING RESEARCH": {
+      "Marketing And Marketing Research": {
          "Rank": 78,
          "Major_code": 6206,
          "Total": 205211,
@@ -5556,7 +5556,7 @@
          "Non_college_jobs": 93889,
          "Low_wage_jobs": 27968
       },
-      "POLITICAL SCIENCE AND GOVERNMENT": {
+      "Political Science And Government": {
          "Rank": 79,
          "Major_code": 5506,
          "Total": 182621,
@@ -5578,7 +5578,7 @@
          "Non_college_jobs": 66947,
          "Low_wage_jobs": 19803
       },
-      "GEOGRAPHY": {
+      "Geography": {
          "Rank": 80,
          "Major_code": 5504,
          "Total": 18480,
@@ -5600,7 +5600,7 @@
          "Non_college_jobs": 6830,
          "Low_wage_jobs": 1905
       },
-      "MICROBIOLOGY": {
+      "Microbiology": {
          "Rank": 81,
          "Major_code": 3606,
          "Total": 15232,
@@ -5622,7 +5622,7 @@
          "Non_college_jobs": 3174,
          "Low_wage_jobs": 1246
       },
-      "COMPUTER ADMINISTRATION MANAGEMENT AND SECURITY": {
+      "Computer Administration Management And Security": {
          "Rank": 82,
          "Major_code": 2106,
          "Total": 8066,
@@ -5644,7 +5644,7 @@
          "Non_college_jobs": 3244,
          "Low_wage_jobs": 308
       },
-      "BIOCHEMICAL SCIENCES": {
+      "Biochemical Sciences": {
          "Rank": 83,
          "Major_code": 3601,
          "Total": 39107,
@@ -5666,7 +5666,7 @@
          "Non_college_jobs": 8394,
          "Low_wage_jobs": 3012
       },
-      "BOTANY": {
+      "Botany": {
          "Rank": 84,
          "Major_code": 3602,
          "Total": 1329,
@@ -5688,7 +5688,7 @@
          "Non_college_jobs": 184,
          "Low_wage_jobs": 56
       },
-      "COMPUTER NETWORKING AND TELECOMMUNICATIONS": {
+      "Computer Networking And Telecommunications": {
          "Rank": 85,
          "Major_code": 2107,
          "Total": 7613,
@@ -5710,7 +5710,7 @@
          "Non_college_jobs": 2941,
          "Low_wage_jobs": 352
       },
-      "GEOLOGY AND EARTH SCIENCE": {
+      "Geology And Earth Science": {
          "Rank": 86,
          "Major_code": 5004,
          "Total": 10972,
@@ -5732,7 +5732,7 @@
          "Non_college_jobs": 2792,
          "Low_wage_jobs": 959
       },
-      "HUMAN RESOURCES AND PERSONNEL MANAGEMENT": {
+      "Human Resources And Personnel Management": {
          "Rank": 87,
          "Major_code": 6209,
          "Total": 24497,
@@ -5754,7 +5754,7 @@
          "Non_college_jobs": 9629,
          "Low_wage_jobs": 1906
       },
-      "PRE-LAW AND LEGAL STUDIES": {
+      "Pre-Law And Legal Studies": {
          "Rank": 88,
          "Major_code": 3202,
          "Total": 13528,
@@ -5776,7 +5776,7 @@
          "Non_college_jobs": 6454,
          "Low_wage_jobs": 1336
       },
-      "MISCELLANEOUS HEALTH MEDICAL PROFESSIONS": {
+      "Miscellaneous Health Medical Professions": {
          "Rank": 89,
          "Major_code": 6199,
          "Total": 13386,
@@ -5798,7 +5798,7 @@
          "Non_college_jobs": 3835,
          "Low_wage_jobs": 1422
       },
-      "PUBLIC ADMINISTRATION": {
+      "Public Administration": {
          "Rank": 90,
          "Major_code": 5401,
          "Total": 5629,
@@ -5820,7 +5820,7 @@
          "Non_college_jobs": 2313,
          "Low_wage_jobs": 496
       },
-      "GEOSCIENCES": {
+      "Geosciences": {
          "Rank": 91,
          "Major_code": 5005,
          "Total": 1978,
@@ -5842,7 +5842,7 @@
          "Non_college_jobs": 591,
          "Low_wage_jobs": 221
       },
-      "SOCIAL PSYCHOLOGY": {
+      "Social Psychology": {
          "Rank": 92,
          "Major_code": 5206,
          "Total": 1386,
@@ -5864,7 +5864,7 @@
          "Non_college_jobs": 593,
          "Low_wage_jobs": 37
       },
-      "ENVIRONMENTAL SCIENCE": {
+      "Environmental Science": {
          "Rank": 93,
          "Major_code": 1301,
          "Total": 25965,
@@ -5886,7 +5886,7 @@
          "Non_college_jobs": 10076,
          "Low_wage_jobs": 3175
       },
-      "COMMUNICATIONS": {
+      "Communications": {
          "Rank": 94,
          "Major_code": 1901,
          "Total": 213996,
@@ -5908,7 +5908,7 @@
          "Non_college_jobs": 97964,
          "Low_wage_jobs": 27440
       },
-      "CRIMINAL JUSTICE AND FIRE PROTECTION": {
+      "Criminal Justice And Fire Protection": {
          "Rank": 95,
          "Major_code": 5301,
          "Total": 152824,
@@ -5930,7 +5930,7 @@
          "Non_college_jobs": 88858,
          "Low_wage_jobs": 18404
       },
-      "COMMERCIAL ART AND GRAPHIC DESIGN": {
+      "Commercial Art And Graphic Design": {
          "Rank": 96,
          "Major_code": 6004,
          "Total": 103480,
@@ -5952,7 +5952,7 @@
          "Non_college_jobs": 38119,
          "Low_wage_jobs": 14839
       },
-      "JOURNALISM": {
+      "Journalism": {
          "Rank": 97,
          "Major_code": 1902,
          "Total": 72619,
@@ -5974,7 +5974,7 @@
          "Non_college_jobs": 26672,
          "Low_wage_jobs": 8512
       },
-      "MULTI-DISCIPLINARY OR GENERAL SCIENCE": {
+      "Multi-Disciplinary Or General Science": {
          "Rank": 98,
          "Major_code": 5098,
          "Total": 62052,
@@ -5996,7 +5996,7 @@
          "Non_college_jobs": 22039,
          "Low_wage_jobs": 5751
       },
-      "ADVERTISING AND PUBLIC RELATIONS": {
+      "Advertising And Public Relations": {
          "Rank": 99,
          "Major_code": 1904,
          "Total": 53162,
@@ -6018,7 +6018,7 @@
          "Non_college_jobs": 23059,
          "Low_wage_jobs": 7214
       },
-      "AREA ETHNIC AND CIVILIZATION STUDIES": {
+      "Area Ethnic And Civilization Studies": {
          "Rank": 100,
          "Major_code": 1501,
          "Total": 31195,
@@ -6040,7 +6040,7 @@
          "Non_college_jobs": 11818,
          "Low_wage_jobs": 3677
       },
-      "SPECIAL NEEDS EDUCATION": {
+      "Special Needs Education": {
          "Rank": 101,
          "Major_code": 2310,
          "Total": 28739,
@@ -6062,7 +6062,7 @@
          "Non_college_jobs": 3797,
          "Low_wage_jobs": 1179
       },
-      "PHYSIOLOGY": {
+      "Physiology": {
          "Rank": 102,
          "Major_code": 3608,
          "Total": 22060,
@@ -6084,7 +6084,7 @@
          "Non_college_jobs": 6894,
          "Low_wage_jobs": 2237
       },
-      "CRIMINOLOGY": {
+      "Criminology": {
          "Rank": 103,
          "Major_code": 5503,
          "Total": 19879,
@@ -6106,7 +6106,7 @@
          "Non_college_jobs": 10605,
          "Low_wage_jobs": 1895
       },
-      "NUTRITION SCIENCES": {
+      "Nutrition Sciences": {
          "Rank": 104,
          "Major_code": 4002,
          "Total": 18909,
@@ -6128,7 +6128,7 @@
          "Non_college_jobs": 5473,
          "Low_wage_jobs": 2449
       },
-      "HEALTH AND MEDICAL ADMINISTRATIVE SERVICES": {
+      "Health And Medical Administrative Services": {
          "Rank": 105,
          "Major_code": 6103,
          "Total": 18109,
@@ -6150,7 +6150,7 @@
          "Non_college_jobs": 8592,
          "Low_wage_jobs": 1391
       },
-      "COMMUNICATION TECHNOLOGIES": {
+      "Communication Technologies": {
          "Rank": 106,
          "Major_code": 2001,
          "Total": 18035,
@@ -6172,7 +6172,7 @@
          "Non_college_jobs": 8794,
          "Low_wage_jobs": 2495
       },
-      "TRANSPORTATION SCIENCES AND TECHNOLOGIES": {
+      "Transportation Sciences And Technologies": {
          "Rank": 107,
          "Major_code": 5901,
          "Total": 15150,
@@ -6194,7 +6194,7 @@
          "Non_college_jobs": 6147,
          "Low_wage_jobs": 557
       },
-      "NATURAL RESOURCES MANAGEMENT": {
+      "Natural Resources Management": {
          "Rank": 108,
          "Major_code": 1303,
          "Total": 13773,
@@ -6216,7 +6216,7 @@
          "Non_college_jobs": 5808,
          "Low_wage_jobs": 1405
       },
-      "NEUROSCIENCE": {
+      "Neuroscience": {
          "Rank": 109,
          "Major_code": 3611,
          "Total": 13663,
@@ -6238,7 +6238,7 @@
          "Non_college_jobs": 2301,
          "Low_wage_jobs": 902
       },
-      "MULTI/INTERDISCIPLINARY STUDIES": {
+      "Multi/Interdisciplinary Studies": {
          "Rank": 110,
          "Major_code": 4000,
          "Total": 12296,
@@ -6260,7 +6260,7 @@
          "Non_college_jobs": 3903,
          "Low_wage_jobs": 1061
       },
-      "ATMOSPHERIC SCIENCES AND METEOROLOGY": {
+      "Atmospheric Sciences And Meteorology": {
          "Rank": 111,
          "Major_code": 5002,
          "Total": 4043,
@@ -6282,7 +6282,7 @@
          "Non_college_jobs": 1317,
          "Low_wage_jobs": 237
       },
-      "FORESTRY": {
+      "Forestry": {
          "Rank": 112,
          "Major_code": 1302,
          "Total": 3607,
@@ -6304,7 +6304,7 @@
          "Non_college_jobs": 1692,
          "Low_wage_jobs": 327
       },
-      "SOIL SCIENCE": {
+      "Soil Science": {
          "Rank": 113,
          "Major_code": 1106,
          "Total": 685,
@@ -6326,7 +6326,7 @@
          "Non_college_jobs": 144,
          "Low_wage_jobs": 0
       },
-      "GENERAL EDUCATION": {
+      "General Education": {
          "Rank": 114,
          "Major_code": 2300,
          "Total": 143718,
@@ -6348,7 +6348,7 @@
          "Non_college_jobs": 31112,
          "Low_wage_jobs": 11443
       },
-      "HISTORY": {
+      "History": {
          "Rank": 115,
          "Major_code": 6402,
          "Total": 141951,
@@ -6370,7 +6370,7 @@
          "Non_college_jobs": 54569,
          "Low_wage_jobs": 16839
       },
-      "FRENCH GERMAN LATIN AND OTHER COMMON FOREIGN LANGUAGE STUDIES": {
+      "French German Latin And Other Common Foreign Language Studies": {
          "Rank": 116,
          "Major_code": 2602,
          "Total": 48246,
@@ -6392,7 +6392,7 @@
          "Non_college_jobs": 18193,
          "Low_wage_jobs": 5267
       },
-      "INTERCULTURAL AND INTERNATIONAL STUDIES": {
+      "Intercultural And International Studies": {
          "Rank": 117,
          "Major_code": 4001,
          "Total": 24650,
@@ -6414,7 +6414,7 @@
          "Non_college_jobs": 10343,
          "Low_wage_jobs": 3168
       },
-      "SOCIAL SCIENCE OR HISTORY TEACHER EDUCATION": {
+      "Social Science Or History Teacher Education": {
          "Rank": 118,
          "Major_code": 2311,
          "Total": 20198,
@@ -6436,7 +6436,7 @@
          "Non_college_jobs": 5561,
          "Low_wage_jobs": 1806
       },
-      "COMMUNITY AND PUBLIC HEALTH": {
+      "Community And Public Health": {
          "Rank": 119,
          "Major_code": 6110,
          "Total": 19735,
@@ -6458,7 +6458,7 @@
          "Non_college_jobs": 7385,
          "Low_wage_jobs": 1854
       },
-      "MATHEMATICS TEACHER EDUCATION": {
+      "Mathematics Teacher Education": {
          "Rank": 120,
          "Major_code": 2305,
          "Total": 14237,
@@ -6480,7 +6480,7 @@
          "Non_college_jobs": 1977,
          "Low_wage_jobs": 786
       },
-      "EDUCATIONAL ADMINISTRATION AND SUPERVISION": {
+      "Educational Administration And Supervision": {
          "Rank": 121,
          "Major_code": 2301,
          "Total": 804,
@@ -6502,7 +6502,7 @@
          "Non_college_jobs": 206,
          "Low_wage_jobs": 111
       },
-      "HEALTH AND MEDICAL PREPARATORY PROGRAMS": {
+      "Health And Medical Preparatory Programs": {
          "Rank": 122,
          "Major_code": 6106,
          "Total": 12740,
@@ -6524,7 +6524,7 @@
          "Non_college_jobs": 3539,
          "Low_wage_jobs": 1159
       },
-      "MISCELLANEOUS BIOLOGY": {
+      "Miscellaneous Biology": {
          "Rank": 123,
          "Major_code": 3699,
          "Total": 10706,
@@ -6546,7 +6546,7 @@
          "Non_college_jobs": 2722,
          "Low_wage_jobs": 459
       },
-      "BIOLOGY": {
+      "Biology": {
          "Rank": 124,
          "Major_code": 3600,
          "Total": 280709,
@@ -6568,7 +6568,7 @@
          "Non_college_jobs": 81109,
          "Low_wage_jobs": 28339
       },
-      "SOCIOLOGY": {
+      "Sociology": {
          "Rank": 125,
          "Major_code": 5507,
          "Total": 115433,
@@ -6590,7 +6590,7 @@
          "Non_college_jobs": 48899,
          "Low_wage_jobs": 13748
       },
-      "MASS MEDIA": {
+      "Mass Media": {
          "Rank": 126,
          "Major_code": 1903,
          "Total": 52824,
@@ -6612,7 +6612,7 @@
          "Non_college_jobs": 25297,
          "Low_wage_jobs": 6429
       },
-      "TREATMENT THERAPY PROFESSIONS": {
+      "Treatment Therapy Professions": {
          "Rank": 127,
          "Major_code": 6109,
          "Total": 48491,
@@ -6634,7 +6634,7 @@
          "Non_college_jobs": 14616,
          "Low_wage_jobs": 4468
       },
-      "HOSPITALITY MANAGEMENT": {
+      "Hospitality Management": {
          "Rank": 128,
          "Major_code": 6211,
          "Total": 43647,
@@ -6656,7 +6656,7 @@
          "Non_college_jobs": 23341,
          "Low_wage_jobs": 9063
       },
-      "LANGUAGE AND DRAMA EDUCATION": {
+      "Language And Drama Education": {
          "Rank": 129,
          "Major_code": 2313,
          "Total": 30471,
@@ -6678,7 +6678,7 @@
          "Non_college_jobs": 6824,
          "Low_wage_jobs": 2819
       },
-      "LINGUISTICS AND COMPARATIVE LANGUAGE AND LITERATURE": {
+      "Linguistics And Comparative Language And Literature": {
          "Rank": 130,
          "Major_code": 2601,
          "Total": 16601,
@@ -6700,7 +6700,7 @@
          "Non_college_jobs": 5695,
          "Low_wage_jobs": 2085
       },
-      "MISCELLANEOUS EDUCATION": {
+      "Miscellaneous Education": {
          "Rank": 131,
          "Major_code": 2399,
          "Total": 10150,
@@ -6722,7 +6722,7 @@
          "Non_college_jobs": 2438,
          "Low_wage_jobs": 657
       },
-      "INTERDISCIPLINARY SOCIAL SCIENCES": {
+      "Interdisciplinary Social Sciences": {
          "Rank": 132,
          "Major_code": 4007,
          "Total": 9916,
@@ -6744,7 +6744,7 @@
          "Non_college_jobs": 3906,
          "Low_wage_jobs": 1470
       },
-      "ECOLOGY": {
+      "Ecology": {
          "Rank": 133,
          "Major_code": 3604,
          "Total": 9154,
@@ -6766,7 +6766,7 @@
          "Non_college_jobs": 4159,
          "Low_wage_jobs": 976
       },
-      "SECONDARY TEACHER EDUCATION": {
+      "Secondary Teacher Education": {
          "Rank": 134,
          "Major_code": 2309,
          "Total": 17125,
@@ -6788,7 +6788,7 @@
          "Non_college_jobs": 3967,
          "Low_wage_jobs": 1385
       },
-      "GENERAL MEDICAL AND HEALTH SERVICES": {
+      "General Medical And Health Services": {
          "Rank": 135,
          "Major_code": 6100,
          "Total": 33599,
@@ -6810,7 +6810,7 @@
          "Non_college_jobs": 12889,
          "Low_wage_jobs": 3816
       },
-      "PHILOSOPHY AND RELIGIOUS STUDIES": {
+      "Philosophy And Religious Studies": {
          "Rank": 136,
          "Major_code": 4801,
          "Total": 54814,
@@ -6832,7 +6832,7 @@
          "Non_college_jobs": 20313,
          "Low_wage_jobs": 8051
       },
-      "ART AND MUSIC EDUCATION": {
+      "Art And Music Education": {
          "Rank": 137,
          "Major_code": 2314,
          "Total": 34181,
@@ -6854,7 +6854,7 @@
          "Non_college_jobs": 8260,
          "Low_wage_jobs": 2767
       },
-      "ENGLISH LANGUAGE AND LITERATURE": {
+      "English Language And Literature": {
          "Rank": 138,
          "Major_code": 3301,
          "Total": 194673,
@@ -6876,7 +6876,7 @@
          "Non_college_jobs": 71827,
          "Low_wage_jobs": 26503
       },
-      "ELEMENTARY EDUCATION": {
+      "Elementary Education": {
          "Rank": 139,
          "Major_code": 2304,
          "Total": 170862,
@@ -6898,7 +6898,7 @@
          "Non_college_jobs": 36972,
          "Low_wage_jobs": 11502
       },
-      "PHYSICAL FITNESS PARKS RECREATION AND LEISURE": {
+      "Physical Fitness Parks Recreation And Leisure": {
          "Rank": 140,
          "Major_code": 4101,
          "Total": 125074,
@@ -6920,7 +6920,7 @@
          "Non_college_jobs": 63946,
          "Low_wage_jobs": 16838
       },
-      "LIBERAL ARTS": {
+      "Liberal Arts": {
          "Rank": 141,
          "Major_code": 3401,
          "Total": 71369,
@@ -6942,7 +6942,7 @@
          "Non_college_jobs": 28558,
          "Low_wage_jobs": 9030
       },
-      "FILM VIDEO AND PHOTOGRAPHIC ARTS": {
+      "Film Video And Photographic Arts": {
          "Rank": 142,
          "Major_code": 6005,
          "Total": 38761,
@@ -6964,7 +6964,7 @@
          "Non_college_jobs": 20721,
          "Low_wage_jobs": 5862
       },
-      "GENERAL SOCIAL SCIENCES": {
+      "General Social Sciences": {
          "Rank": 143,
          "Major_code": 5500,
          "Total": 12920,
@@ -6986,7 +6986,7 @@
          "Non_college_jobs": 4778,
          "Low_wage_jobs": 1634
       },
-      "PLANT SCIENCE AND AGRONOMY": {
+      "Plant Science And Agronomy": {
          "Rank": 144,
          "Major_code": 1105,
          "Total": 7416,
@@ -7008,7 +7008,7 @@
          "Non_college_jobs": 3545,
          "Low_wage_jobs": 1231
       },
-      "SCIENCE AND COMPUTER TEACHER EDUCATION": {
+      "Science And Computer Teacher Education": {
          "Rank": 145,
          "Major_code": 2308,
          "Total": 6483,
@@ -7030,7 +7030,7 @@
          "Non_college_jobs": 1106,
          "Low_wage_jobs": 591
       },
-      "PSYCHOLOGY": {
+      "Psychology": {
          "Rank": 146,
          "Major_code": 5200,
          "Total": 393735,
@@ -7052,7 +7052,7 @@
          "Non_college_jobs": 141860,
          "Low_wage_jobs": 48207
       },
-      "MUSIC": {
+      "Music": {
          "Rank": 147,
          "Major_code": 6002,
          "Total": 60633,
@@ -7074,7 +7074,7 @@
          "Non_college_jobs": 28786,
          "Low_wage_jobs": 9286
       },
-      "PHYSICAL AND HEALTH EDUCATION TEACHING": {
+      "Physical And Health Education Teaching": {
          "Rank": 148,
          "Major_code": 2306,
          "Total": 28213,
@@ -7096,7 +7096,7 @@
          "Non_college_jobs": 9328,
          "Low_wage_jobs": 2042
       },
-      "ART HISTORY AND CRITICISM": {
+      "Art History And Criticism": {
          "Rank": 149,
          "Major_code": 6006,
          "Total": 21030,
@@ -7118,7 +7118,7 @@
          "Non_college_jobs": 9738,
          "Low_wage_jobs": 3426
       },
-      "FINE ARTS": {
+      "Fine Arts": {
          "Rank": 150,
          "Major_code": 6000,
          "Total": 74440,
@@ -7140,7 +7140,7 @@
          "Non_college_jobs": 32725,
          "Low_wage_jobs": 11880
       },
-      "FAMILY AND CONSUMER SCIENCES": {
+      "Family And Consumer Sciences": {
          "Rank": 151,
          "Major_code": 2901,
          "Total": 58001,
@@ -7162,7 +7162,7 @@
          "Non_college_jobs": 20133,
          "Low_wage_jobs": 5248
       },
-      "SOCIAL WORK": {
+      "Social Work": {
          "Rank": 152,
          "Major_code": 5404,
          "Total": 53552,
@@ -7184,7 +7184,7 @@
          "Non_college_jobs": 14416,
          "Low_wage_jobs": 4344
       },
-      "ANIMAL SCIENCES": {
+      "Animal Sciences": {
          "Rank": 153,
          "Major_code": 1103,
          "Total": 21573,
@@ -7206,7 +7206,7 @@
          "Non_college_jobs": 9571,
          "Low_wage_jobs": 2125
       },
-      "VISUAL AND PERFORMING ARTS": {
+      "Visual And Performing Arts": {
          "Rank": 154,
          "Major_code": 6003,
          "Total": 16250,
@@ -7228,7 +7228,7 @@
          "Non_college_jobs": 7635,
          "Low_wage_jobs": 2840
       },
-      "TEACHER EDUCATION: MULTIPLE LEVELS": {
+      "Teacher Education: Multiple Levels": {
          "Rank": 155,
          "Major_code": 2312,
          "Total": 14443,
@@ -7250,7 +7250,7 @@
          "Non_college_jobs": 1949,
          "Low_wage_jobs": 722
       },
-      "MISCELLANEOUS PSYCHOLOGY": {
+      "Miscellaneous Psychology": {
          "Rank": 156,
          "Major_code": 5299,
          "Total": 9628,
@@ -7272,7 +7272,7 @@
          "Non_college_jobs": 3948,
          "Low_wage_jobs": 1650
       },
-      "HUMAN SERVICES AND COMMUNITY ORGANIZATION": {
+      "Human Services And Community Organization": {
          "Rank": 157,
          "Major_code": 5403,
          "Total": 9374,
@@ -7294,7 +7294,7 @@
          "Non_college_jobs": 4595,
          "Low_wage_jobs": 724
       },
-      "HUMANITIES": {
+      "Humanities": {
          "Rank": 158,
          "Major_code": 3402,
          "Total": 6652,
@@ -7316,7 +7316,7 @@
          "Non_college_jobs": 3354,
          "Low_wage_jobs": 1141
       },
-      "THEOLOGY AND RELIGIOUS VOCATIONS": {
+      "Theology And Religious Vocations": {
          "Rank": 159,
          "Major_code": 4901,
          "Total": 30207,
@@ -7338,7 +7338,7 @@
          "Non_college_jobs": 12037,
          "Low_wage_jobs": 3304
       },
-      "STUDIO ARTS": {
+      "Studio Arts": {
          "Rank": 160,
          "Major_code": 6007,
          "Total": 16977,
@@ -7360,7 +7360,7 @@
          "Non_college_jobs": 8707,
          "Low_wage_jobs": 3586
       },
-      "COSMETOLOGY SERVICES AND CULINARY ARTS": {
+      "Cosmetology Services And Culinary Arts": {
          "Rank": 161,
          "Major_code": 2201,
          "Total": 10510,
@@ -7382,7 +7382,7 @@
          "Non_college_jobs": 7384,
          "Low_wage_jobs": 3163
       },
-      "MISCELLANEOUS AGRICULTURE": {
+      "Miscellaneous Agriculture": {
          "Rank": 162,
          "Major_code": 1199,
          "Total": 1488,
@@ -7404,7 +7404,7 @@
          "Non_college_jobs": 626,
          "Low_wage_jobs": 31
       },
-      "ANTHROPOLOGY AND ARCHEOLOGY": {
+      "Anthropology And Archeology": {
          "Rank": 163,
          "Major_code": 5502,
          "Total": 38844,
@@ -7426,7 +7426,7 @@
          "Non_college_jobs": 16693,
          "Low_wage_jobs": 6866
       },
-      "COMMUNICATION DISORDERS SCIENCES AND SERVICES": {
+      "Communication Disorders Sciences And Services": {
          "Rank": 164,
          "Major_code": 6102,
          "Total": 38279,
@@ -7448,7 +7448,7 @@
          "Non_college_jobs": 9404,
          "Low_wage_jobs": 5125
       },
-      "EARLY CHILDHOOD EDUCATION": {
+      "Early Childhood Education": {
          "Rank": 165,
          "Major_code": 2307,
          "Total": 37589,
@@ -7470,7 +7470,7 @@
          "Non_college_jobs": 7705,
          "Low_wage_jobs": 2868
       },
-      "OTHER FOREIGN LANGUAGES": {
+      "Other Foreign Languages": {
          "Rank": 166,
          "Major_code": 2603,
          "Total": 11204,
@@ -7492,7 +7492,7 @@
          "Non_college_jobs": 3703,
          "Low_wage_jobs": 1115
       },
-      "DRAMA AND THEATER ARTS": {
+      "Drama And Theater Arts": {
          "Rank": 167,
          "Major_code": 6001,
          "Total": 43249,
@@ -7514,7 +7514,7 @@
          "Non_college_jobs": 25313,
          "Low_wage_jobs": 11068
       },
-      "COMPOSITION AND RHETORIC": {
+      "Composition And Rhetoric": {
          "Rank": 168,
          "Major_code": 3302,
          "Total": 18953,
@@ -7536,7 +7536,7 @@
          "Non_college_jobs": 8100,
          "Low_wage_jobs": 3466
       },
-      "ZOOLOGY": {
+      "Zoology": {
          "Rank": 169,
          "Major_code": 3609,
          "Total": 8409,
@@ -7558,7 +7558,7 @@
          "Non_college_jobs": 2947,
          "Low_wage_jobs": 743
       },
-      "EDUCATIONAL PSYCHOLOGY": {
+      "Educational Psychology": {
          "Rank": 170,
          "Major_code": 5201,
          "Total": 2854,
@@ -7580,7 +7580,7 @@
          "Non_college_jobs": 615,
          "Low_wage_jobs": 82
       },
-      "CLINICAL PSYCHOLOGY": {
+      "Clinical Psychology": {
          "Rank": 171,
          "Major_code": 5202,
          "Total": 2838,
@@ -7602,7 +7602,7 @@
          "Non_college_jobs": 870,
          "Low_wage_jobs": 622
       },
-      "COUNSELING PSYCHOLOGY": {
+      "Counseling Psychology": {
          "Rank": 172,
          "Major_code": 5203,
          "Total": 4626,
@@ -7624,7 +7624,7 @@
          "Non_college_jobs": 1245,
          "Low_wage_jobs": 308
       },
-      "LIBRARY SCIENCE": {
+      "Library Science": {
          "Rank": 173,
          "Major_code": 3501,
          "Total": 1098,
