@@ -128,21 +128,23 @@ yFactor.onchange = () => {
 
 
 
-function updateCategoriesChart(factor) {
-  var categoriesChartDiv = document.getElementById("categoriesChart");
-  categoriesChartDiv.style.width = "75rem";
-  categoriesChartDiv.style.height = "55rem";
-  var w = window.getComputedStyle(categoriesChartDiv).width;
-  var h = window.getComputedStyle(categoriesChartDiv).height;
+
+function drawChart(chartId, chartData, factor, yAxisData) {
+
+  var chartDiv = document.getElementById(chartId);
+  chartDiv.style.width = "75rem";
+  chartDiv.style.height = "55rem";
+  var w = window.getComputedStyle(chartDiv).width;
+  var h = window.getComputedStyle(chartDiv).height;
   w = w.substring(0, w.length - 2);
   h = h.substring(0, h.length - 2);
   const padding = w * 0.15;
 
-  document.querySelector("#categoriesChart svg").innerHTML = "";
+  document.querySelector("#" + chartId).innerHTML = "";
 
   const svg = d3
-    .select("#categoriesChart")
-    .select("svg");
+    .select("#" + chartId)
+    .append("svg");
 
   const tooltip = d3.select("body")
       .append("div")
@@ -156,31 +158,6 @@ function updateCategoriesChart(factor) {
       .style("visibility", "hidden");
 
   if (factor == "Gender" || factor == "WorkTime") {
-    var averageValues = [];
-    for (category in data["categories"]) {
-      averageValues.push({
-        "category": category,
-        "average": 100
-      });
-    }
-    for (category in data["categories"]) {
-      var sum = 0.0;
-      var numMajors = data["categories"][category].length;
-      for (major in data["categories"][category]) {
-        if (factor == "Gender") {
-          sum += (data["categories"][category][major]["ShareWomen"] * 100);
-        } else {
-          var partTime = data["categories"][category][major]["Part_time"]
-          var percent = (partTime * 1.0) / (partTime + data["categories"][category][major]["Full_time"])
-          sum += (percent * 100);
-        }
-      }
-      averageValues.push({
-        "category": category,
-        "average": (sum / numMajors).toFixed(2)
-      });
-    }
-
     const xScale = d3
       .scaleLinear()
       .domain([0, 100])
@@ -188,7 +165,7 @@ function updateCategoriesChart(factor) {
 
     const yScale = d3
       .scaleBand()
-      .domain(majorCategories)
+      .domain(yAxisData)
       .range([h - padding, padding])
       .paddingInner(0.2)
       .paddingOuter(0.2);
@@ -198,30 +175,32 @@ function updateCategoriesChart(factor) {
 
     svg
       .selectAll("rect")
-      .data(averageValues)
+      .data(chartData)
       .enter()
       .append("rect")
       .attr("x", function (d) {
         return xScale(0);
       })
       .attr("y", function (d) {
-        return yScale(d["category"]) + yScale.bandwidth() / 4;
+        return yScale(d["name"]) + yScale.bandwidth() / 4;
       })
       .attr("height", yScale.bandwidth() / 2)
       .attr("width", function (d) {
-        return xScale(d["average"]) - xScale(0);
+        return xScale(d["value"]) - xScale(0);
       })
       .attr("fill", function(d) {
-        if (d["average"] == 100) {
+        if (d["value"] == 100) {
           return "blue";
         } else {
           return "green";
         }
       })
       .on("click", function(d) {
-        document.getElementById("categories").classList.add("hidden");
-        document.getElementById("top5").classList.remove("hidden");
-        updateTopFiveChart(factor, d["category"]);
+        if (chartId == "categoriesChart") {
+          document.getElementById("categories").classList.add("hidden");
+          document.getElementById("top5").classList.remove("hidden");
+          updateTopFiveChart(factor, d["name"]);
+        }
       })
       .on("mouseover", function (d) {
         d3.select(this).transition()
@@ -229,11 +208,11 @@ function updateCategoriesChart(factor) {
           .attr('opacity', '.85');
         var text = "";
         if (factor == "Gender") {
-          var value = d["average"];
+          var value = d["value"];
           if (value == 100) {
-            for (var i = 0; i < averageValues.length; i++) {
-              if (averageValues[i]["category"] == d["category"] && averageValues[i]["average"] != 100) {
-                value = (100 - averageValues[i]["average"]).toFixed(2);
+            for (var i = 0; i < chartData.length; i++) {
+              if (chartData[i]["name"] == d["name"] && chartData[i]["value"] != 100) {
+                value = (100 - chartData[i]["value"]).toFixed(2);
                 break;
               }
             }
@@ -242,11 +221,11 @@ function updateCategoriesChart(factor) {
             text = text + value + "% women";
           }
         } else {
-          var value = d["average"];
+          var value = d["value"];
           if (value == 100) {
-            for (var i = 0; i < averageValues.length; i++) {
-              if (averageValues[i]["category"] == d["category"] && averageValues[i]["average"] != 100) {
-                value = (100 - averageValues[i]["average"]).toFixed(2);
+            for (var i = 0; i < chartData.length; i++) {
+              if (chartData[i]["name"] == d["name"] && chartData[i]["value"] != 100) {
+                value = (100 - chartData[i]["value"]).toFixed(2);
                 break;
               }
             }
@@ -280,33 +259,16 @@ function updateCategoriesChart(factor) {
       .call(yAxis);
 
   } else {
-    var averageValues = [];
-    for (category in data["categories"]) {
-      var sum = 0.0;
-      var numMajors = data["categories"][category].length;
-      for (major in data["categories"][category]) {
-        if (factor == "Unemployment_rate") {
-          sum += (data["categories"][category][major][factor] * 100);
-        } else {
-          sum += data["categories"][category][major][factor];
-        }
-      }
-      averageValues.push({
-        "category": category,
-        "average": (sum / numMajors).toFixed(2)
-      });
-    }
-
     const xScale = d3
       .scaleLinear()
-      .domain([0, d3.max(averageValues, function(d) {
-        return d["average"];
+      .domain([0, d3.max(chartData, function(d) {
+        return d["value"];
       })])
       .range([padding, w - padding]);
 
     const yScale = d3
       .scaleBand()
-      .domain(majorCategories)
+      .domain(yAxisData)
       .range([h - padding, padding])
       .paddingInner(0.2)
       .paddingOuter(0.2);
@@ -316,30 +278,32 @@ function updateCategoriesChart(factor) {
 
     svg
       .selectAll("rect")
-      .data(averageValues)
+      .data(chartData)
       .enter()
       .append("rect")
       .attr("x", function (d) {
         return xScale(0);
       })
       .attr("y", function (d) {
-        return yScale(d["category"]) + yScale.bandwidth() / 4;
+        return yScale(d["name"]) + yScale.bandwidth() / 4;
       })
       .attr("height", yScale.bandwidth() / 2)
       .attr("width", function (d) {
-        return xScale(d["average"]) - xScale(0);
+        return xScale(d["value"]) - xScale(0);
       })
       .attr("fill", "blue")
       .on("click", function(d) {
-        document.getElementById("categories").classList.add("hidden");
-        document.getElementById("top5").classList.remove("hidden");
-        updateTopFiveChart(factor, d["category"]);
+        if (chartId == "categoriesChart") {
+          document.getElementById("categories").classList.add("hidden");
+          document.getElementById("top5").classList.remove("hidden");
+          updateTopFiveChart(factor, d["name"]);
+        }
       })
       .on("mouseover", function (d) {
         d3.select(this).transition()
           .duration('50')
           .attr('opacity', '.85');
-        var text = "" + d["average"];
+        var text = "" + d["value"];
         if (factor == "Median") {
           text = factorInfo[factor]["units"] + addCommasToNumber(text);
         } else {
@@ -377,6 +341,57 @@ function updateCategoriesChart(factor) {
     .attr("id", "x-axis-label");
 
   document.getElementById("x-axis-label").innerHTML = factorInfo[factor]["axis name"];
+
+}
+
+
+
+function updateCategoriesChart(factor) {
+  chartData = [];
+
+  if (factor == "Gender" || factor == "WorkTime") {
+    for (category in data["categories"]) {
+      chartData.push({
+        "name": category,
+        "value": 100
+      });
+    }
+    for (category in data["categories"]) {
+      var sum = 0.0;
+      var numMajors = data["categories"][category].length;
+      for (major in data["categories"][category]) {
+        if (factor == "Gender") {
+          sum += (data["categories"][category][major]["ShareWomen"] * 100);
+        } else {
+          var partTime = data["categories"][category][major]["Part_time"]
+          var percent = (partTime * 1.0) / (partTime + data["categories"][category][major]["Full_time"])
+          sum += (percent * 100);
+        }
+      }
+      chartData.push({
+        "name": category,
+        "value": (sum / numMajors).toFixed(2)
+      });
+    }
+  } else {
+    for (category in data["categories"]) {
+      var sum = 0.0;
+      var numMajors = data["categories"][category].length;
+      for (major in data["categories"][category]) {
+        if (factor == "Unemployment_rate") {
+          sum += (data["categories"][category][major][factor] * 100);
+        } else {
+          sum += data["categories"][category][major][factor];
+        }
+      }
+      chartData.push({
+        "name": category,
+        "value": (sum / numMajors).toFixed(2)
+      });
+    }
+  }
+
+  drawChart("categoriesChart", chartData, factor, majorCategories);
 
 }
 
@@ -421,4 +436,3 @@ function addCommasToNumber(text) {
   }
   return result;
 }
-
