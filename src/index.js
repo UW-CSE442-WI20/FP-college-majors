@@ -185,6 +185,9 @@ function drawChart(chartId, chartData, factor, yAxisData) {
         return yScale(d["name"]) + yScale.bandwidth() / 4;
       })
       .attr("height", yScale.bandwidth() / 2)
+      .attr("width", 0)
+      .transition()
+      .duration(1000)
       .attr("width", function (d) {
         return xScale(d["value"]) - xScale(0);
       })
@@ -194,7 +197,9 @@ function drawChart(chartId, chartData, factor, yAxisData) {
         } else {
           return "green";
         }
-      })
+      });
+    svg
+      .selectAll("rect")
       .on("click", function(d) {
         if (chartId == "categoriesChart") {
           document.getElementById("categories").classList.add("hidden");
@@ -288,10 +293,15 @@ function drawChart(chartId, chartData, factor, yAxisData) {
         return yScale(d["name"]) + yScale.bandwidth() / 4;
       })
       .attr("height", yScale.bandwidth() / 2)
+      .attr("width", 0)
+      .transition()
+      .duration(1000)
       .attr("width", function (d) {
         return xScale(d["value"]) - xScale(0);
       })
-      .attr("fill", "blue")
+      .attr("fill", "blue");
+    svg
+      .selectAll("rect")
       .on("click", function(d) {
         if (chartId == "categoriesChart") {
           document.getElementById("categories").classList.add("hidden");
