@@ -1,5 +1,8 @@
 
 
+## Sources used in creating our website:
+1. Transition of bars' length/width in the bar chart: https://stackoverflow.com/questions/38983807/how-to-animate-a-horizontal-d3-bar-chart
+
 # Final Project Starter template
 
 The starter code for creating interactive visualization prototypes.
