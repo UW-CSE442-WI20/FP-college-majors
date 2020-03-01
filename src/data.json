@@ -3814,30 +3814,6 @@
             "Low_wage_jobs": 6429
          }
       ],
-      "Interdisciplinary": [
-         {
-            "Rank": 110,
-            "Major_code": 4000,
-            "Major": "Multi/Interdisciplinary Studies",
-            "Total": 12296,
-            "Men": 2817,
-            "Women": 9479,
-            "ShareWomen": 0.770901106,
-            "Sample_size": 128,
-            "Employed": 9821,
-            "Full_time": 8032,
-            "Part_time": 3173,
-            "Full_time_year_round": 6234,
-            "Unemployed": 749,
-            "Unemployment_rate": 0.070860927,
-            "Median": 35000,
-            "P25th": 25000,
-            "P75th": 44000,
-            "College_jobs": 5176,
-            "Non_college_jobs": 3903,
-            "Low_wage_jobs": 1061
-         }
-      ]
    },
    "majors": {
       "Petroleum Engineering": {
@@ -6237,28 +6213,6 @@
          "College_jobs": 5605,
          "Non_college_jobs": 2301,
          "Low_wage_jobs": 902
-      },
-      "Multi/Interdisciplinary Studies": {
-         "Rank": 110,
-         "Major_code": 4000,
-         "Total": 12296,
-         "Men": 2817,
-         "Women": 9479,
-         "Major_category": "Interdisciplinary",
-         "ShareWomen": 0.770901106,
-         "Sample_size": 128,
-         "Employed": 9821,
-         "Full_time": 8032,
-         "Part_time": 3173,
-         "Full_time_year_round": 6234,
-         "Unemployed": 749,
-         "Unemployment_rate": 0.070860927,
-         "Median": 35000,
-         "P25th": 25000,
-         "P75th": 44000,
-         "College_jobs": 5176,
-         "Non_college_jobs": 3903,
-         "Low_wage_jobs": 1061
       },
       "Atmospheric Sciences And Meteorology": {
          "Rank": 111,
