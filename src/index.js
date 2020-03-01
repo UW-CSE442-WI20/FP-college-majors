@@ -129,19 +129,20 @@ yFactor.onchange = () => {
 function drawChart(chartId, chartData, factor, yAxisData) {
 
   var chartDiv = document.getElementById(chartId);
-  chartDiv.style.width = "75rem";
-  chartDiv.style.height = "55rem";
-  var w = window.getComputedStyle(chartDiv).width;
-  var h = window.getComputedStyle(chartDiv).height;
-  w = w.substring(0, w.length - 2);
-  h = h.substring(0, h.length - 2);
-  const padding = w * 0.15;
+  var margin = { top: 20, right: 30, bottom: 40, left: 200 };
+  var width = 1100 - margin.left - margin.right;
+  var height = 500 - margin.top - margin.bottom;
 
   document.querySelector("#" + chartId).innerHTML = "";
 
   const svg = d3
     .select("#" + chartId)
-    .append("svg");
+    .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform",
+      "translate(" + margin.left + "," + margin.top + ")");
 
   const tooltip = d3.select("body")
     .append("div")
@@ -158,12 +159,12 @@ function drawChart(chartId, chartData, factor, yAxisData) {
     const xScale = d3
       .scaleLinear()
       .domain([0, 100])
-      .range([padding, w - padding]);
+      .range([0, width]);
 
     const yScale = d3
       .scaleBand()
       .domain(yAxisData)
-      .range([h - padding, padding])
+      .range([height, 0])
       .paddingInner(0.2)
       .paddingOuter(0.2);
 
@@ -251,13 +252,12 @@ function drawChart(chartId, chartData, factor, yAxisData) {
     svg
       .append("g")
       .attr("id", "x-axis")
-      .attr("transform", "translate(0," + (h - padding) + ")")
+      .attr("transform", "translate(0," + height + ")")
       .call(xAxis);
 
     svg
       .append("g")
       .attr("id", "y-axis")
-      .attr("transform", "translate(" + padding + ",0)")
       .call(yAxis);
 
   } else {
@@ -266,12 +266,12 @@ function drawChart(chartId, chartData, factor, yAxisData) {
       .domain([0, d3.max(chartData, function (d) {
         return d["value"];
       })])
-      .range([padding, w - padding]);
+      .range([0, width]);
 
     const yScale = d3
       .scaleBand()
       .domain(yAxisData)
-      .range([h - padding, padding])
+      .range([height, 0])
       .paddingInner(0.2)
       .paddingOuter(0.2);
 
@@ -331,20 +331,19 @@ function drawChart(chartId, chartData, factor, yAxisData) {
     svg
       .append("g")
       .attr("id", "x-axis")
-      .attr("transform", "translate(0," + (h - padding) + ")")
+      .attr("transform", "translate(0," + height + ")")
       .call(xAxis);
 
     svg
       .append("g")
       .attr("id", "y-axis")
-      .attr("transform", "translate(" + padding + ",0)")
       .call(yAxis);
   }
 
   svg
     .append("text")
-    .attr("y", h - (padding * 0.7))
-    .attr("x", (w - padding) / 2)
+    .attr("y", "95%")
+    .attr("x", "33%")
     .attr("id", "x-axis-label");
 
   document.getElementById("x-axis-label").innerHTML = factorInfo[factor]["axis name"];
