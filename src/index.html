@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <title>College Majors</title>
     <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="modal.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
   <body>
 
@@ -24,6 +29,28 @@
     </div>
 
     <div id="top5">
+      <!-- modal start -->
+      <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal" id="open-button">Select Majors</button>
+
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" id="x-button">&times;</button>
+              <h4 class="modal-title">Select Majors to Compare</h4>
+            </div>
+            <div class="modal-body form-group">
+                <select multiple class="form-control" id="sel"></select>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal" id='sel-button'>Select</button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <!-- modal end -->
+      
       <button id="backButton">Back to Major Categories</button>
       <select id="factorsForTopFive">
         <option value="Median">Median Pay</option>
@@ -73,5 +100,6 @@
     </div>
 
     <script src="./index.js"></script>
+    <script src="./modal.js"></script>
   </body>
 </html>
