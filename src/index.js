@@ -1,5 +1,5 @@
 
-const d3 = require('d3')
+import { updateTop5EachCategory } from "./top5EachCategory.js";
 
 /* Sample code provided to us:
 // You can include local JS files:
@@ -22,12 +22,12 @@ d3.csv('carbon-emissions.csv')
   })
 */
 
-
+const d3 = require('d3');
 const data = require('./data.json');
 
 
 const majorCategories = [];
-for (category in data["categories"]) {
+for (let category in data["categories"]) {
   majorCategories.push(category);
 }
 
@@ -147,15 +147,15 @@ function drawChart(chartId, chartData, factor, yAxisData) {
     .append("svg");
 
   const tooltip = d3.select("body")
-      .append("div")
-      .style("position", "absolute")
-      .style("z-index", "10")
-      .style("color", "#fff5e6")
-      .style("background-color", "#3f546c")
-      .style("padding", "6px 10px")
-      .style("font-family", "formular-light")
-      .style("font-size", "0.8rem")
-      .style("visibility", "hidden");
+    .append("div")
+    .style("position", "absolute")
+    .style("z-index", "10")
+    .style("color", "#fff5e6")
+    .style("background-color", "#3f546c")
+    .style("padding", "6px 10px")
+    .style("font-family", "formular-light")
+    .style("font-size", "0.8rem")
+    .style("visibility", "hidden");
 
   if (factor == "Gender" || factor == "WorkTime") {
     const xScale = d3
@@ -191,7 +191,7 @@ function drawChart(chartId, chartData, factor, yAxisData) {
       .attr("width", function (d) {
         return xScale(d["value"]) - xScale(0);
       })
-      .attr("fill", function(d) {
+      .attr("fill", function (d) {
         if (d["value"] == 100) {
           return "blue";
         } else {
@@ -200,7 +200,7 @@ function drawChart(chartId, chartData, factor, yAxisData) {
       });
     svg
       .selectAll("rect")
-      .on("click", function(d) {
+      .on("click", function (d) {
         if (chartId == "categoriesChart") {
           document.getElementById("categories").classList.add("hidden");
           document.getElementById("top5").classList.remove("hidden");
@@ -266,7 +266,7 @@ function drawChart(chartId, chartData, factor, yAxisData) {
   } else {
     const xScale = d3
       .scaleLinear()
-      .domain([0, d3.max(chartData, function(d) {
+      .domain([0, d3.max(chartData, function (d) {
         return d["value"];
       })])
       .range([padding, w - padding]);
@@ -302,7 +302,7 @@ function drawChart(chartId, chartData, factor, yAxisData) {
       .attr("fill", "blue");
     svg
       .selectAll("rect")
-      .on("click", function(d) {
+      .on("click", function (d) {
         if (chartId == "categoriesChart") {
           document.getElementById("categories").classList.add("hidden");
           document.getElementById("top5").classList.remove("hidden");
@@ -357,19 +357,19 @@ function drawChart(chartId, chartData, factor, yAxisData) {
 
 
 function updateCategoriesChart(factor) {
-  chartData = [];
+  let chartData = [];
 
   if (factor == "Gender" || factor == "WorkTime") {
-    for (category in data["categories"]) {
+    for (let category in data["categories"]) {
       chartData.push({
         "name": category,
         "value": 100
       });
     }
-    for (category in data["categories"]) {
+    for (let category in data["categories"]) {
       var sum = 0.0;
       var numMajors = data["categories"][category].length;
-      for (major in data["categories"][category]) {
+      for (let major in data["categories"][category]) {
         if (factor == "Gender") {
           sum += (data["categories"][category][major]["ShareWomen"] * 100);
         } else {
@@ -384,10 +384,10 @@ function updateCategoriesChart(factor) {
       });
     }
   } else {
-    for (category in data["categories"]) {
+    for (let category in data["categories"]) {
       var sum = 0.0;
       var numMajors = data["categories"][category].length;
-      for (major in data["categories"][category]) {
+      for (let major in data["categories"][category]) {
         if (factor == "Unemployment_rate") {
           sum += (data["categories"][category][major][factor] * 100);
         } else {
@@ -406,6 +406,11 @@ function updateCategoriesChart(factor) {
 }
 
 function updateTopFiveChart(factor, category) {
+  console.log(factor, category)
+  d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/7_OneCatOneNum_header.csv", function (data) {
+    console.log(data);
+    updateTop5EachCategory(data);
+  })
   // TODO
 }
 
