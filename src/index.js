@@ -1,5 +1,6 @@
-
 import { updateTop5EachCategory } from "./top5EachCategory.js";
+const d3 = require('d3');
+const data = require('./data.json');
 
 /* Sample code provided to us:
 // You can include local JS files:
@@ -21,10 +22,6 @@ d3.csv('carbon-emissions.csv')
     console.log('Dynamically loaded CSV data', data);
   })
 */
-
-const d3 = require('d3');
-const data = require('./data.json');
-
 
 const majorCategories = [];
 for (let category in data["categories"]) {
@@ -405,12 +402,14 @@ function updateCategoriesChart(factor) {
 
 }
 
-function updateTopFiveChart(factor, category) {
-  console.log(factor, category)
-  d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/7_OneCatOneNum_header.csv", function (data) {
-    console.log(data);
-    updateTop5EachCategory(data);
-  })
+function updateTopFiveChart(factor, category) { 
+  // console.log(factor, category)
+  // console.log(data)
+  const listOfMajors = data.categories[category];
+  listOfMajors.sort((a, b) => (a[factor] < b[factor]) ? 1 : -1)
+  const top5 = listOfMajors.slice(0, 5)
+  updateTop5EachCategory(top5, factor, "Major");
+  // setTimeout(function() {updateTop5EachCategory(data2)}, 5000);
   // TODO
 }
 
