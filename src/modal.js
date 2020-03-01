@@ -8,7 +8,7 @@ function updateGraph() {
 function updateModal(majors) {
   // call this with an array of majors i.e. ["Aerospace Engineering", "Materials Science"]
   // and it will make it so the modal ONLY has those majors select
-  select(majors)
+  select(majors);
 } 
 
 
