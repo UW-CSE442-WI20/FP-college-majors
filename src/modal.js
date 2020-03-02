@@ -1,45 +1,34 @@
-// make const?
-var compareModal = {
-  modalId: "",
-  selectId: "",
-  openId: "",
-  deselId: "",
-  selId: "",
-};
-
-
-var factorsModal = {
-  modalId: "",
-  selectId: "",
-  openId: "",
-  deselId: "",
-  selId: "",
-};
-
-function updateGraph() {
+function updateGraph(majors) {
   // call what you need in here, pass in "selected", which will give you an array of majors
   // i.e. ["Aerospace Engineering", "Materials Science"]
   // update graph will be called whenever user selects different majors in modal and saves changes
   
-  // alert(selected + "have been selected");
+  if (currModal === "compare") {
+    // do something with majors in compare 5 graph
+  } else if (currModal === "factors") {
+    // do something with majors in factors graph
+  } else {
+    alert("problem with modal state / string comparisons")
+  }
 }
 
 function updateModal(majors) {
   // call this with an array of majors i.e. ["Aerospace Engineering", "Materials Science"]
   // and it will make it so the modal ONLY has those majors select
   select(majors);
-} 
+
+  // need to make second bool parameter to choose which modal to update
+}
 
 initModal();
-var selected = [];
+var compareSelected = [];
+var factorsSelected = [];
+var currModal = ""
 
 function initModal() {
   var fs = require("fs");
   var data = JSON.parse(fs.readFileSync("./src/data.json", "utf8"));
   var selector = document.getElementById("sel");
-
-  var option;
-  var optgroup;
 
   for (x in data["categories"]) {
     optgroup = document.createElement("optgroup");
@@ -67,50 +56,72 @@ function initModal() {
       }
 
       optgroup.append(option);
+      option = null; // TODO fix this
     }
+    optgroup = null; // TODO fix this
   }
 
 
-  document.getElementById("sel-button").addEventListener("click", function() {
-    saveSelections();
+
+  document.getElementById("compare-open-button").addEventListener("click", function() {
+    currModal = "compare";
+    resetSelections(compareSelected);
+  })
+  document.getElementById("factors-open-button").addEventListener("click", function() {
+    currModal = "factors";
+    resetSelections(factorsSelected);
   })
 
-  document.getElementById("open-button").addEventListener("click", function() {
-    resetSelections();
+  document.getElementById("sel-button").addEventListener("click", function() {
+    saveSelections();
   })
 
   document.getElementById("desel-button").addEventListener("click", function() {
     deselectAll();
   })
 
-  option = document.createElement("option"); // quick fix for problem with last item always getting selected
-  optgroup = document.createElement("optgroup");
+  
 }
 
-function resetSelections() {
-  select(selected, "sel");
+function resetSelections(majors) {
+  select(majors);
 }
 
 function deselectAll() {
   tmp = selected;
-  select([], "sel");
+  select([]);
   selected = tmp;
 }
 
 function saveSelections() {
   selected = [];
-  $("#sel > optgroup > option").each(function() {
-      if (this.selected) {
-        selected.push(this.value); 
-      }
-  });
-  updateGraph();
+
+  // TODO split
+  if (currModal === "compare") {
+    compareSelected = [];
+    $("#sel > optgroup > option").each(function() {
+        if (this.selected) {
+          compareSelected.push(this.value); 
+        }
+    });
+  } else if (currModal === "factors") {
+    factorsSelected = [];
+    $("#sel > optgroup > option").each(function() {
+        if (this.selected) {
+          factorsSelected.push(this.value); 
+        }
+    });
+  } else {
+    alert("problem with modal state / string comparisons");
+  }
+
+  updateGraph(selected);
 }
 
 // selects given majors in modal (input example: ["Aerospace Engineering", "Materials Science"]) 
-function select(majors, selectID) {
+function select(majors) {
   selected = [];
-  $("#" + selectID + " > optgroup > option").each(function() {
+  $("#sel > optgroup > option").each(function() {
       this.selected = majors.includes(this.value);
       if (this.selected) {
         selected.push(this.value);

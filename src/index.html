@@ -55,6 +55,8 @@
         <option value="finance">Finance</option>
         <option value="biology">Biology</option>
       </select>
+      <button type="button" class="btn btn-default" data-toggle="modal" data-target="#selectModal" id="compare-open-button">Select Majors</button>
+
       <select id="factorsForChooseMajors">
         <option value="Median">Median Pay</option>
         <option value="Unemployment_rate">Unemployment Rate</option>
@@ -74,10 +76,11 @@
         <option value="biology">Biology</option>
       </select>
 
-      <!-- modal start -->
-      <button type="button" class="btn btn-default" data-toggle="modal" data-target="#multFactModal" id="open-button">Select Majors</button>
+      
+      <button type="button" class="btn btn-default" data-toggle="modal" data-target="#selectModal" id="factor-open-button">Select Majors</button>
 
-      <div class="modal fade" id="multFactModal" role="dialog">
+      <!-- modal start -->
+      <div class="modal fade" id="selectModal" role="dialog">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
