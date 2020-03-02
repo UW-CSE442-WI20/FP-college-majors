@@ -1,4 +1,4 @@
-import { updateTop5EachCategory } from "./top5EachCategory.js";
+import TopFiveCategory from "./top5EachCategory.js";
 const d3 = require('d3');
 const data = require('./data.json');
 
@@ -23,6 +23,7 @@ d3.csv('carbon-emissions.csv')
   })
 */
 
+const topFiveCategory = new TopFiveCategory();
 const majorCategories = [];
 for (let category in data["categories"]) {
   majorCategories.push(category);
@@ -414,14 +415,7 @@ function updateCategoriesChart(factor) {
 }
 
 function updateTopFiveChart(factor, category) {
-  // console.log(factor, category)
-  // console.log(data)
-  const listOfMajors = data.categories[category];
-  listOfMajors.sort((a, b) => (a[factor] < b[factor]) ? 1 : -1)
-  const top5 = listOfMajors.slice(0, 5)
-  updateTop5EachCategory(top5, factor, "Major");
-  // setTimeout(function() {updateTop5EachCategory(data2)}, 5000);
-  // TODO
+  topFiveCategory.update(factor, category, DATA_PROPERTIES.Major);
 }
 
 function updateChooseMajorChart(factor, majors) {
