@@ -1,20 +1,3 @@
-function updateGraph() {
-  // call what you need in here, pass in "selected", which will give you an array of majors
-  // i.e. ["Aerospace Engineering", "Materials Science"]
-  // update graph will be called whenever user selects different majors in modal and saves changes
-  
-  // alert(selected + "have been selected");
-}
-
-function updateModal(majors) {
-  // call this with an array of majors i.e. ["Aerospace Engineering", "Materials Science"]
-  // and it will make it so the modal ONLY has those majors select
-  select(majors);
-} 
-
-initModal();
-var selected = [];
-
 // make const?
 var compareModal = {
   modalId: "",
@@ -33,6 +16,22 @@ var factorsModal = {
   selId: "",
 };
 
+function updateGraph() {
+  // call what you need in here, pass in "selected", which will give you an array of majors
+  // i.e. ["Aerospace Engineering", "Materials Science"]
+  // update graph will be called whenever user selects different majors in modal and saves changes
+  
+  // alert(selected + "have been selected");
+}
+
+function updateModal(majors) {
+  // call this with an array of majors i.e. ["Aerospace Engineering", "Materials Science"]
+  // and it will make it so the modal ONLY has those majors select
+  select(majors);
+} 
+
+initModal();
+var selected = [];
 
 function initModal() {
   var fs = require("fs");
