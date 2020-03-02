@@ -1,68 +1,104 @@
 const d3 = require('d3')
+const database = require('./data.json');
 
-// set the dimensions and margins of the graph
-var margin = { top: 20, right: 30, bottom: 40, left: 400 },
-  width = 860 - margin.left - margin.right,
-  height = 400 - margin.top - margin.bottom;
+class TopFiveCategory {
+  constructor() {
+    // set the dimensions and margins of the graph
+    this.margin = { top: 20, right: 30, bottom: 40, left: 400 };
+    this.width = 860 - this.margin.left - this.margin.right,
+      this.height = 400 - this.margin.top - this.margin.bottom;
 
-// append the svg object to the body of the page
-var svg = d3.select("#top5EachCategory")
-  .append("svg")
-  .attr("width", width + margin.left + margin.right)
-  .attr("height", height + margin.top + margin.bottom)
-  .append("g")
-  .attr("transform",
-    "translate(" + margin.left + "," + margin.top + ")");
-var x = d3.scaleLinear()
-  // .domain([0, 13000])
-  .range([0, width]);
-var xAxis = svg.append("g")
-  .attr("transform", "translate(0," + height + ")")
-  // .call(d3.axisBottom(x))
-  // .selectAll("text")
-// .attr("transform", "translate(-10,0)rotate(-45)")
-// .style("text-anchor", "end");
+    // append the svg object to the body of the page
+    this.svg = d3.select("#top5EachCategory")
+      .append("svg")
+      .attr("width", this.width + this.margin.left + this.margin.right)
+      .attr("height", this.height + this.margin.top + this.margin.bottom)
+      .append("g")
+      .attr("transform",
+        "translate(" + this.margin.left + "," + this.margin.top + ")");
+    this.x = d3.scaleLinear()
+      // .domain([0, 13000])
+      .range([0, this.width]);
+    this.xAxis = this.svg.append("g")
+      .attr("transform", "translate(0," + this.height + ")")
+    // .call(d3.axisBottom(x))
+    // .selectAll("text")
+    // .attr("transform", "translate(-10,0)rotate(-45)")
+    // .style("text-anchor", "end");
 
-// Y axis
-var y = d3.scaleBand()
-  .range([0, height])
-  // .domain(data.map(function (d) { return d.Country; }))
-  .padding(.2);
-var yAxis = svg.append("g")
-  .attr("class", "myYaxis")
-  // .call(d3.axisLeft(y))
+    // Y axis
+    this.y = d3.scaleBand()
+      .range([0, this.height])
+      // .domain(data.map(function (d) { return d.Country; }))
+      .padding(.2);
+    this.yAxis = this.svg.append("g")
+      .attr("class", "myYaxis")
+    // .call(d3.axisLeft(y))
+  }
 
-export function updateTop5EachCategory(data, xProperty, yProperty) {
-  // Add X axis
-  x
-    .domain([0, d3.max(data.map(function(d) { return d[xProperty]; }))]);
-  xAxis
-    .transition().duration(1000)
-    .call(d3.axisBottom(x))
-  y
-    .domain(data.map(function (d) { return d[yProperty]; }))
-  yAxis
-    .call(d3.axisLeft(y))
-  yAxis
-    .transition().duration(3000)
-    .call(d3.axisLeft(y));
-  
-  //Bars
-  var u = svg.selectAll("rect")
-    .data(data)
+  update(factor, category, yProperty) {
+    const top5 = this.processingData(factor, category);
+    this.drawChart(top5, factor, yProperty);
+  }
 
-  u .enter()
-    .append("rect")
-    .merge(u)
-    .transition()
-    .duration(1000)
-    .attr("x", x(0))
-    .attr("y", function (d) { return y(d[yProperty]); })
-    .attr("width", function (d) { return x(d[xProperty]); })
-    .attr("height", y.bandwidth())
-    .attr("fill", "#69b3a2")
+  processingData(factor, category) {
+    const listOfMajors = database.categories[category];
+    listOfMajors.sort((a, b) => (a[factor] < b[factor]) ? 1 : -1)
+    const top5 = listOfMajors.slice(0, 5)
+    if (factor == FACTORS.Men || factor == FACTORS.Women) {
+      top5.forEach((major) => {
+        const total = major.Men + major.Women;
+        major[FACTORS.Men] = major.Men*100 / total;
+        major[FACTORS.Women] = major.Women*100 / total;
+        return major;
+      });
+    }
+    if (factor == FACTORS.Full_time || factor == FACTORS.Part_time) {
+      top5.forEach((major) => {
+        const total = major.Full_time + major.Part_time;
+        major[FACTORS.Full_time] = major.Full_time*100 / total;
+        major[FACTORS.Part_time] = major.Part_time*100 / total;
+        return major;
+      });
+    }
+    return top5;
+  }
+
+  drawChart(data, xProperty, yProperty) {
+    // Add X axis
+    this.x
+      .domain([0, d3.max(data.map(function (d) { return d[xProperty]; }))]);
+    this.xAxis
+      .transition().duration(1000)
+      .call(d3.axisBottom(this.x))
+    this.y
+      .domain(data.map(function (d) { return d[yProperty]; }))
+    this.yAxis
+      .call(d3.axisLeft(this.y))
+    this.yAxis
+      .transition().duration(3000)
+      .call(d3.axisLeft(this.y));
+    var x = this.x;
+    var y = this.y;
+    //Bars
+    var u = this.svg.selectAll("rect")
+      .data(data)
+
+    u.enter()
+      .append("rect")
+      .merge(u)
+      .transition()
+      .duration(1000)
+      .attr("x", this.x(0))
+      .attr("y", function (d) { return y(d[yProperty]); })
+      .attr("width", function (d) { return x(d[xProperty]); })
+      .attr("height", y.bandwidth())
+      .attr("fill", "#69b3a2")
     // If less group in the new dataset, I delete the ones not in use anymore
     u
-    .exit()
-    .remove()
+      .exit()
+      .remove()
+  }
 }
+
+module.exports = TopFiveCategory;
