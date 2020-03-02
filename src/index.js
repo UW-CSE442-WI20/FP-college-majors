@@ -204,15 +204,15 @@ function drawChart(chartId, chartData, factor, yAxisData) {
           document.getElementById("top5").classList.remove("hidden");
           if (factor == "Gender") {
             if (d["value"] == 100) {
-              updateTopFiveChart("men", d["name"]);
+              updateTopFiveChart("Men", d["name"]);
             } else {
-              updateTopFiveChart("women", d["name"]);
+              updateTopFiveChart("Women", d["name"]);
             }
           } else {
             if (d["value"] == 100) {
-              updateTopFiveChart("fulltime", d["name"]);
+              updateTopFiveChart("Full_time", d["name"]);
             } else {
-              updateTopFiveChart("parttime", d["name"]);
+              updateTopFiveChart("Part_time", d["name"]);
             }
           }
         }
@@ -414,7 +414,7 @@ function updateCategoriesChart(factor) {
 }
 
 function updateTopFiveChart(factor, category) {
-  console.log(factor, category)
+  // console.log(factor, category)
   // console.log(data)
   const listOfMajors = data.categories[category];
   listOfMajors.sort((a, b) => (a[factor] < b[factor]) ? 1 : -1)
