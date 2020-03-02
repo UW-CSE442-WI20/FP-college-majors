@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.full.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css" />
   </head>
   <body>
 
@@ -29,29 +32,6 @@
     </div>
 
     <div id="top5" class="hidden">
-      
-      <!-- modal start -->
-      <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal" id="open-button">Select Majors</button>
-
-      <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" id="x-button">&times;</button>
-              <h4 class="modal-title">Select Majors to Compare</h4>
-            </div>
-            <div class="modal-body form-group">
-                <select multiple class="form-control" id="sel"></select>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal" id='sel-button'>Select</button>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-      <!-- modal end -->
-
       <button id="backButton">Back to Major Categories</button>
       <select id="factorsForTopFive">
         <option value="Median">Median Pay</option>
@@ -93,6 +73,29 @@
         <option value="finance">Finance</option>
         <option value="biology">Biology</option>
       </select>
+
+      <!-- modal start -->
+      <button type="button" class="btn btn-default" data-toggle="modal" data-target="#multFactModal" id="open-button">Select Majors</button>
+
+      <div class="modal fade" id="multFactModal" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" id="x-button">&times;</button>
+              <h4 class="modal-title">Select Majors to Compare</h4>
+            </div>
+            <div class="modal-body form-group">
+                <select multiple class="form-control" id="sel"></select>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" id='desel-button'>Deselect All</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal" id='sel-button'>Select</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal end -->
+
       <p>Factor 1 (x-axis):</p>
       <select id="xFactor">
         <option value="Median">Median Pay</option>
