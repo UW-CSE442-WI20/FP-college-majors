@@ -1,5 +1,5 @@
 import TopFiveCategory from "./top5EachCategory.js";
-import ScatterPlot from "./ScatterPlot";
+import ScatterPlot from "./scatterPlot.js";
 const d3 = require('d3');
 const data = require('./data.json');
 
