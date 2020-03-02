@@ -1,4 +1,5 @@
 import TopFiveCategory from "./top5EachCategory.js";
+import ScatterPlot from "./ScatterPlot";
 const d3 = require('d3');
 const data = require('./data.json');
 
@@ -24,6 +25,7 @@ d3.csv('carbon-emissions.csv')
 */
 
 const topFiveCategory = new TopFiveCategory();
+const scatterPlot = new ScatterPlot();
 const majorCategories = [];
 for (let category in data["categories"]) {
   majorCategories.push(category);
