@@ -56,6 +56,8 @@ function initModal() {
       }
 
       optgroup.append(option);
+
+
       option = document.createElement("option"); // TODO fix this
     }
     optgroup = document.createElement("optgroup"); // TODO fix this
