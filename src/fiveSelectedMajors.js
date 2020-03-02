@@ -41,12 +41,14 @@ class FiveSelectedMajors {
     this.drawChart(top5, factor, yProperty);
   }
 
-  processingData(factor, category) {
-    const listOfMajors = database.categories[category];
-    listOfMajors.sort((a, b) => (a[factor] < b[factor]) ? 1 : -1)
-    const top5 = listOfMajors.slice(0, 5)
+  processingData(factor, majorNames) {
+    const selectedMajors = [];
+    majorNames.forEach((name) => {
+      selectedMajors.push(database.majors[name]);
+    })
+    selectedMajors.sort((a, b) => (a[factor] < b[factor]) ? 1 : -1)
     if (factor == FACTORS.Men || factor == FACTORS.Women) {
-      top5.forEach((major) => {
+      selectedMajors.forEach((major) => {
         const total = major.Men + major.Women;
         major[FACTORS.Men] = major.Men*100 / total;
         major[FACTORS.Women] = major.Women*100 / total;
@@ -54,14 +56,14 @@ class FiveSelectedMajors {
       });
     }
     if (factor == FACTORS.Full_time || factor == FACTORS.Part_time) {
-      top5.forEach((major) => {
+      selectedMajors.forEach((major) => {
         const total = major.Full_time + major.Part_time;
         major[FACTORS.Full_time] = major.Full_time*100 / total;
         major[FACTORS.Part_time] = major.Part_time*100 / total;
         return major;
       });
     }
-    return top5;
+    return selectedMajors;
   }
 
   drawChart(data, xProperty, yProperty) {
