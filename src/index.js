@@ -25,7 +25,9 @@ d3.csv('carbon-emissions.csv')
 */
 
 const topFiveCategory = new TopFiveCategory();
+const placeHolderForSecondChart = null; // single factor
 const scatterPlot = new ScatterPlot();
+
 const majorCategories = [];
 let categorySelector = document.getElementById("categoriesForTopFive");
 for (let category in data["categories"]) {
@@ -36,6 +38,35 @@ for (let category in data["categories"]) {
   optionElement.innerHTML = category;
   categorySelector.append(optionElement);
 }
+
+const charts = {
+  oneFactor: {
+    factor: "Median",
+    majors: [],
+    update: function() {
+      // placeHolderForSecondChart.update(this.factor, this.majors)
+    },
+    init: function(factor_, majors_) {
+      this.factor = factor_;
+      this.majors = majors_;
+      // this.update();
+    }
+  },
+  twoFactor: {
+    factor1: "Median",
+    factor2: "Unemployment_rate",
+    majors: [],
+    update: function() {
+      scatterPlot.update(this.factor1, this.factor2, this.majors);
+    },
+    init: function(factor1_, factor2_, majors_) {
+      this.factor1 = factor1_;
+      this.factor2 = factor2_;
+      this.majors = majors_;
+      this.update();
+    }
+  }
+};
 
 const factorInfo = {
   "Median": {
@@ -77,62 +108,30 @@ categoriesForTopFive.onchange = () => {
   updateTopFiveChart(factorsForTopFive.value, categoriesForTopFive.value);
 }
 
-let majorsForChooseMajors = document.getElementById("majorsForChooseMajors");
+// factor for single factor chart
 let factorsForChooseMajors = document.getElementById("factorsForChooseMajors");
-let majorOptions = document.querySelectorAll("#majorsForChooseMajors option");
-updateChooseMajorChart(factorsForChooseMajors.value, []);
-majorsForChooseMajors.onchange = () => {
-  var selectedOptions = [];
-  for (var i = 0; i < majorOptions.length; i++) {
-    if (majorOptions[i].selected) {
-      selectedOptions.push(majorOptions[i].value);
-    }
-  }
-  updateChooseMajorChart(factorsForChooseMajors.value, selectedOptions);
-}
+
+charts.oneFactor.init(factorsForChooseMajors.value, []);
+
 factorsForChooseMajors.onchange = () => {
-  var selectedOptions = [];
-  for (var i = 0; i < majorOptions.length; i++) {
-    if (majorOptions[i].selected) {
-      selectedOptions.push(majorOptions[i].value);
-    }
-  }
-  updateChooseMajorChart(factorsForChooseMajors.value, selectedOptions);
+  charts.oneFactor.factor = factorsForChooseMajors.value;
+  charts.oneFactor.update();
 }
 
-let majorsForSelectFactors = document.getElementById("majorsForSelectFactors");
+// factors for two factor chart
 let xFactor = document.getElementById("xFactor");
 let yFactor = document.getElementById("yFactor");
-updateChooseFactorsChart([], xFactor.value, yFactor.value);
-majorsForSelectFactors.onchange = () => {
-  var selectedOptions = [];
-  for (var i = 0; i < majorOptions.length; i++) {
-    if (majorOptions[i].selected) {
-      selectedOptions.push(majorOptions[i].value);
-    }
-  }
-  updateChooseFactorsChart(selectedOptions, xFactor.value, yFactor.value);
-}
+
+charts.twoFactor.init(xFactor.value, yFactor.value, []);
+
 xFactor.onchange = () => {
-  var selectedOptions = [];
-  for (var i = 0; i < majorOptions.length; i++) {
-    if (majorOptions[i].selected) {
-      selectedOptions.push(majorOptions[i].value);
-    }
-  }
-  updateChooseFactorsChart(selectedOptions, xFactor.value, yFactor.value);
+  charts.twoFactor.factor1 = xFactor.value;
+  charts.twoFactor.update();
 }
 yFactor.onchange = () => {
-  var selectedOptions = [];
-  for (var i = 0; i < majorOptions.length; i++) {
-    if (majorOptions[i].selected) {
-      selectedOptions.push(majorOptions[i].value);
-    }
-  }
-  updateChooseFactorsChart(selectedOptions, xFactor.value, yFactor.value);
+  charts.twoFactor.factor2 = yFactor.value;
+  charts.twoFactor.update();
 }
-
-
 
 
 function drawChart(chartId, chartData, factor, yAxisData) {
@@ -385,7 +384,6 @@ function drawChart(chartId, chartData, factor, yAxisData) {
 }
 
 
-
 function updateCategoriesChart(factor) {
   let chartData = [];
 
@@ -439,24 +437,6 @@ function updateTopFiveChart(factor, category) {
   topFiveCategory.update(factor, category, DATA_PROPERTIES.Major);
 }
 
-function updateChooseMajorChart(factor, majors) {
-  if (majors.length > 5) {
-    var chartDiv = document.getElementById("majorsForChooseMajors");
-    chartDiv.innerHTML = "<p>Please select no more than 5 majors to display at once.</p>" + chartDiv.innerHTML;
-  }
-
-  // TODO
-}
-
-function updateChooseFactorsChart(majors, factorXAxis, factorYAxis) {
-  if (majors.length > 5) {
-    var chartDiv = document.getElementById("majorsForSelectFactors");
-    chartDiv.innerHTML = "<p>Please select no more than 5 majors to display at once.</p>" + chartDiv.innerHTML;
-  }
-
-  // TODO
-}
-
 function addCommasToNumber(text) {
   var result = "";
   var dotIndex = text.indexOf(".");
@@ -476,3 +456,9 @@ function addCommasToNumber(text) {
   }
   return result;
 }
+
+function updateChartMajors(graph, majors) {
+  charts[graph].majors = majors;
+  charts[graph].update();
+}
+export { updateChartMajors };

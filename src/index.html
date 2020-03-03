@@ -100,11 +100,6 @@
 									<p>Choose up to 15 majors to compare at a time.</p>
 								</header>
 								<div id="chooseMajors">
-									<select multiple id="majorsForChooseMajors">
-										<option value="computer science">Computer Science</option>
-										<option value="finance">Finance</option>
-										<option value="biology">Biology</option>
-									</select>
 									<button type="button" class="btn btn-default" data-toggle="modal" data-target="#selectModal" id="compare-open-button">Select Majors</button>
 									<select id="factorsForChooseMajors">
 										<option value="Median">Median Pay</option>
@@ -125,25 +120,21 @@
 									<p>Select two factors and up to 15 majors to compare.</p>
 								</header>
 								<div id="multipleFactors">
-									<select multiple id="majorsForSelectFactors">
-										<option value="computer science">Computer Science</option>
-										<option value="finance">Finance</option>
-										<option value="biology">Biology</option>
-									</select>
 									<button type="button" class="btn btn-default" data-toggle="modal" data-target="#selectModal" id="factors-open-button">Select Majors</button>
 
 									<!-- modal start -->
 									<div class="modal fade" id="selectModal" role="dialog">
 										<div class="modal-dialog">
 											<div class="modal-content">
-												<div class="modal-header">
-													<button type="button" class="close" data-dismiss="modal" id="x-button">&times;</button>
-													<h4 class="modal-title">Select Majors to Compare</h4>
+												<div>
+<!-- 													<button type="button" class="close" data-dismiss="modal" id="x-button">&times;</button> -->
+                          <h4 class="modal-title">Select Majors to Compare</h4>
+                          <div id="max-warning">please only select up to 15 majors</div>
 												</div>
 												<div class="modal-body form-group">
 													<select multiple class="form-control" id="sel"></select>
 												</div>
-												<div class="modal-footer">
+												<div>
 													<button type="button" class="btn btn-default" id='desel-button'>Deselect All</button>
 													<button type="button" class="btn btn-default" data-dismiss="modal" id='sel-button'>Select</button>
 												</div>
@@ -214,8 +205,10 @@
 					blue: "#8cc9f0"
 				};
 			</script>
-			<script src="./index.js"></script>
-			<script src="./modal.js"></script>
+
+      <!-- was unable to access a function in index.js from modal.js, had to import which links index.js--> 
+			<!-- <script src="./index.js" type="text/javascript"></script> -->
+			<script src="./modal.js" type="text/javascript"></script>
 
 	</body>
 </html>
