@@ -27,8 +27,14 @@ d3.csv('carbon-emissions.csv')
 const topFiveCategory = new TopFiveCategory();
 const scatterPlot = new ScatterPlot();
 const majorCategories = [];
+let categorySelector = document.getElementById("categoriesForTopFive");
 for (let category in data["categories"]) {
   majorCategories.push(category);
+
+  var optionElement = document.createElement("option");
+  optionElement.value = category;
+  optionElement.innerHTML = category;
+  categorySelector.append(optionElement);
 }
 
 const factorInfo = {
@@ -132,7 +138,7 @@ yFactor.onchange = () => {
 function drawChart(chartId, chartData, factor, yAxisData) {
 
   var chartDiv = document.getElementById(chartId);
-  var margin = { top: 20, right: 30, bottom: 40, left: 200 };
+  var margin = { top: 20, right: 210, bottom: 40, left: 175 };
   var width = 1100 - margin.left - margin.right;
   var height = 500 - margin.top - margin.bottom;
 
@@ -194,9 +200,13 @@ function drawChart(chartId, chartData, factor, yAxisData) {
       })
       .attr("fill", function (d) {
         if (d["value"] == 100) {
-          return "blue";
+          if (factor == "Gender") {
+            return COLORS.blue;
+          } else {
+            return COLORS.purple;
+          }
         } else {
-          return "green";
+          return COLORS.pink;
         }
       });
     svg
@@ -311,7 +321,13 @@ function drawChart(chartId, chartData, factor, yAxisData) {
       .attr("width", function (d) {
         return xScale(d["value"]) - xScale(0);
       })
-      .attr("fill", "blue");
+      .attr("fill", () => {
+        if (factor == "Unemployment_rate") {
+          return COLORS.purple;
+        } else {
+          return COLORS.pink;
+        }
+      });
     svg
       .selectAll("rect")
       .on("click", function (d) {
@@ -355,6 +371,8 @@ function drawChart(chartId, chartData, factor, yAxisData) {
       .call(yAxis);
   }
 
+  // Not sure that we should keep this x-axis label
+  /*
   svg
     .append("text")
     .attr("y", "95%")
@@ -362,6 +380,7 @@ function drawChart(chartId, chartData, factor, yAxisData) {
     .attr("id", "x-axis-label");
 
   document.getElementById("x-axis-label").innerHTML = factorInfo[factor]["axis name"];
+  */
 
 }
 

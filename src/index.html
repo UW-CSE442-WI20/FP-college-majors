@@ -1,142 +1,221 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>College Majors</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
-    <link rel="stylesheet" type="text/css" href="modal.css">
+	<head>
+		<title>College Majors</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.full.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css" />
-  </head>
-  <body>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.full.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css" />
 
-    <!-- TODO: use real values for the selectors -->
+		<link rel="stylesheet" href="assets/css/main.css" />
 
-    <h1>Choosing a College Major</h1>
-    <h2>Short description of website will go here</h2>
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<link rel="stylesheet" type="text/css" href="modal.css">
 
-    <div id="categories">
-      <h3>Compare Categories of Majors</h3>
-      <select id="factorsForCategories">
-        <option value="Median">Median Pay</option>
-        <option value="Unemployment_rate">Unemployment Rate</option>
-        <option value="Gender">Percentage of Men vs. Women</option>
-        <option value="WorkTime">Full Time vs. Part Time Jobs</option>
-      </select>
-      <div id="categoriesChart"></div>
-    </div>
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
 
-    <div id="top5" class="hidden">
-      <button id="backButton">Back to Major Categories</button>
-      <select id="factorsForTopFive">
-        <option value="Median">Median Pay</option>
-        <option value="Unemployment_rate">Unemployment Rate</option>
-        <option value="Women">Percent who are Women</option>
-        <option value="Men">Percent who are Men</option>
-        <option value="Full_time">Percent of Jobs that are Full Time</option>
-        <option value="Part_time">Percent of Jobs that are Part Time</option>
-      </select>
-      <select id="categoriesForTopFive">
-        <option value="Business">Business</option>
-        <option value="Engineering">Engineering</option>
-      </select>
-      <div id="top5EachCategory"></div>
-    </div>
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-    <div id="chooseMajors">
-      <h3>Choose up to 5 Majors to Compare</h3>
-      <select multiple id="majorsForChooseMajors">
-        <option value="computer science">Computer Science</option>
-        <option value="finance">Finance</option>
-        <option value="biology">Biology</option>
-      </select>
-      <button type="button" class="btn btn-default" data-toggle="modal" data-target="#selectModal" id="compare-open-button">Select Majors</button>
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1>Explore College Majors</h1>
+					</header>
 
-      <select id="factorsForChooseMajors">
-        <option value="Median">Median Pay</option>
-        <option value="Unemployment_rate">Unemployment Rate</option>
-        <option value="Women">Percent who are Women</option>
-        <option value="Men">Percent who are Men</option>
-        <option value="Full_time">Percent of Jobs that are Full Time</option>
-        <option value="Part_time">Percent of Jobs that are Part Time</option>
-      </select>
-      <div id="fiveSelectedMajors"></div>
-    </div>
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="#intro" class="active">Introduction</a></li>
+							<li><a href="#first">Explore Major Categories</a></li>
+							<li><a href="#second">Select Majors to Compare</a></li>
+							<li><a href="#cta">Compare Majors by Multiple Factors</a></li>
+						</ul>
+					</nav>
 
-    <div id="multipleFactors">
-      <h3>Select Multiple Factors to Compare up to 5 Majors By</h3>
-      <select multiple id="majorsForSelectFactors">
-        <option value="computer science">Computer Science</option>
-        <option value="finance">Finance</option>
-        <option value="biology">Biology</option>
-      </select>
+				<!-- Main -->
+					<div id="main">
 
-      
-      <button type="button" class="btn btn-default" data-toggle="modal" data-target="#selectModal" id="factors-open-button">Select Majors</button>
+						<!-- Introduction -->
+							<section id="intro" class="main special">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>Overview</h2>
+										</header>
+										<p>Short description of website will go here.</p>
+									</div>
+								</div>
+							</section>
 
-      <!-- modal start -->
-      <div class="modal fade" id="selectModal" role="dialog">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" id="x-button">&times;</button>
-              <h4 class="modal-title">Select Majors to Compare</h4>
-            </div>
-            <div class="modal-body form-group">
-                <select multiple class="form-control" id="sel"></select>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" id='desel-button'>Deselect All</button>
-              <button type="button" class="btn btn-default" data-dismiss="modal" id='sel-button'>Select</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- modal end -->
+						<!-- First Section -->
+							<section id="first" class="main special">
+								<header class="major">
+									<h2>Explore Categories of Majors</h2>
+								</header>
+								<div id="categories">
+      									<h3>Compare Categories of Majors</h3>
+									<p>Click on a bar for a major category to see the top five majors for the selected factor and category.</p>
+									<select id="factorsForCategories">
+										<option value="Median">Median Pay</option>
+										<option value="Unemployment_rate">Unemployment Rate</option>
+										<option value="Gender">Percentage of Men vs. Women</option>
+										<option value="WorkTime">Full Time vs. Part Time Jobs</option>
+									</select>
+									<div id="categoriesChart"></div>
+								</div>
 
-      <p>Factor 1 (x-axis):</p>
-      <select id="xFactor">
-        <option value="Median">Median Pay</option>
-        <option value="Unemployment_rate">Unemployment Rate</option>
-        <option value="Women">Percent who are Women</option>
-        <option value="Men">Percent who are Men</option>
-        <option value="Full_time">Percent of Jobs that are Full Time</option>
-        <option value="Part_time">Percent of Jobs that are Part Time</option>
-      </select>
-      <p>Factor 2 (y-axis):</p>
-      <select id="yFactor">
-        <option value="Median">Median Pay</option>
-        <option value="Unemployment_rate">Unemployment Rate</option>
-        <option value="Women">Percent who are Women</option>
-        <option value="Men">Percent who are Men</option>
-        <option value="Full_time">Percent of Jobs that are Full Time</option>
-        <option value="Part_time">Percent of Jobs that are Part Time</option>
-      </select>
-      <div id="scatterPlot"></div>
-    </div>
-    <script>
-      const FACTORS = {
-        Unemployment_rate: "Unemployment_rate",
-        Median: "Median",
-        Men: "Men", 
-        Women: "Women",
-        Full_time: "Full_time",
-        Part_time: "Part_time"
-      };
-      const DATA_PROPERTIES = {
-        Major: "Major",
-        Categories: "Categories",
-        Category: "Category",
-        categories: "categories",
-        majors: "majors"
-      };
-    </script>
-    <script src="./index.js"></script>
-    <script src="./modal.js"></script>
-  </body>
+								<div id="top5" class="hidden">
+									<h3>Top 5 Majors for this Factor and Category</h3>
+									<button id="backButton">Back to Major Categories</button>
+									<select id="factorsForTopFive">
+										<option value="Median">Median Pay</option>
+										<option value="Unemployment_rate">Unemployment Rate</option>
+										<option value="Women">Percent who are Women</option>
+										<option value="Men">Percent who are Men</option>
+										<option value="Full_time">Percent of Jobs that are Full Time</option>
+										<option value="Part_time">Percent of Jobs that are Part Time</option>
+									</select>
+									<select id="categoriesForTopFive">
+									</select>
+									<div id="top5EachCategory"></div>
+								</div>
+							</section>
+
+						<!-- Second Section -->
+							<section id="second" class="main special">
+								<header class="major">
+									<h2>Select Majors to Compare</h2>
+									<p>Choose up to 15 majors to compare at a time.</p>
+								</header>
+								<div id="chooseMajors">
+									<select multiple id="majorsForChooseMajors">
+										<option value="computer science">Computer Science</option>
+										<option value="finance">Finance</option>
+										<option value="biology">Biology</option>
+									</select>
+									<button type="button" class="btn btn-default" data-toggle="modal" data-target="#selectModal" id="compare-open-button">Select Majors</button>
+									<select id="factorsForChooseMajors">
+										<option value="Median">Median Pay</option>
+										<option value="Unemployment_rate">Unemployment Rate</option>
+										<option value="Women">Percent who are Women</option>
+										<option value="Men">Percent who are Men</option>
+										<option value="Full_time">Percent of Jobs that are Full Time</option>
+										<option value="Part_time">Percent of Jobs that are Part Time</option>
+									</select>
+									<div id="fiveSelectedMajors"></div>
+								</div>
+							</section>
+
+						<!-- Third Section -->
+							<section id="cta" class="main special">
+								<header class="major">
+									<h2>Compare Majors by Multiple Factors</h2>
+									<p>Select two factors and up to 15 majors to compare.</p>
+								</header>
+								<div id="multipleFactors">
+									<select multiple id="majorsForSelectFactors">
+										<option value="computer science">Computer Science</option>
+										<option value="finance">Finance</option>
+										<option value="biology">Biology</option>
+									</select>
+									<button type="button" class="btn btn-default" data-toggle="modal" data-target="#selectModal" id="factors-open-button">Select Majors</button>
+
+									<!-- modal start -->
+									<div class="modal fade" id="selectModal" role="dialog">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<div class="modal-header">
+													<button type="button" class="close" data-dismiss="modal" id="x-button">&times;</button>
+													<h4 class="modal-title">Select Majors to Compare</h4>
+												</div>
+												<div class="modal-body form-group">
+													<select multiple class="form-control" id="sel"></select>
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-default" id='desel-button'>Deselect All</button>
+													<button type="button" class="btn btn-default" data-dismiss="modal" id='sel-button'>Select</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- modal end -->
+
+									<p>Factor 1 (x-axis):</p>
+									<select id="xFactor">
+										<option value="Median">Median Pay</option>
+										<option value="Unemployment_rate">Unemployment Rate</option>
+										<option value="Women">Percent who are Women</option>
+										<option value="Men">Percent who are Men</option>
+										<option value="Full_time">Percent of Jobs that are Full Time</option>
+										<option value="Part_time">Percent of Jobs that are Part Time</option>
+									</select>
+									<p>Factor 2 (y-axis):</p>
+									<select id="yFactor">
+										<option value="Median">Median Pay</option>
+										<option value="Unemployment_rate">Unemployment Rate</option>
+										<option value="Women">Percent who are Women</option>
+										<option value="Men">Percent who are Men</option>
+										<option value="Full_time">Percent of Jobs that are Full Time</option>
+										<option value="Part_time">Percent of Jobs that are Part Time</option>
+									</select>
+									<div id="scatterPlot"></div>
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">Design/Layout: <a href="https://html5up.net/stellar">HTML5 UP Stellar Template</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+			<script>
+				const FACTORS = {
+					Unemployment_rate: "Unemployment_rate",
+					Median: "Median",
+					Men: "Men", 
+					Women: "Women",
+					Full_time: "Full_time",
+					Part_time: "Part_time"
+				};
+				const DATA_PROPERTIES = {
+					Major: "Major",
+					Categories: "Categories",
+					Category: "Category",
+					categories: "categories",
+					majors: "majors"
+				};
+				const COLORS = {
+					pink: "#efa8b0",
+					purple: "#a89cc8",
+					blue: "#8cc9f0"
+				};
+			</script>
+			<script src="./index.js"></script>
+			<script src="./modal.js"></script>
+
+	</body>
 </html>

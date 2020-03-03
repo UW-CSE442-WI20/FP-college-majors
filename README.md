@@ -2,6 +2,7 @@
 
 ## Sources used in creating our website:
 1. Transition of bars' length/width in the bar chart: https://stackoverflow.com/questions/38983807/how-to-animate-a-horizontal-d3-bar-chart
+2. Overall tyling and layout of the page: https://html5up.net/stellar
 
 # Final Project Starter template
 
