@@ -14,7 +14,7 @@ for (const key of Object.keys(database.majors)) {
 class TopFiveCategory {
   constructor() {
     // set the dimensions and margins of the graph
-    this.margin = { top: 20, right: 210, bottom: 40, left: 270 };
+    this.margin = { top: 20, right: 210, bottom: 40, left: 320 };
     this.width = 1100 - this.margin.left - this.margin.right;
     this.height = 500 - this.margin.top - this.margin.bottom;
 
