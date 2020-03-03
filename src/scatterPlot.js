@@ -1,5 +1,6 @@
 const d3 = require('d3')
-const database = require('./data.json');
+const data = require('./data.json');
+const database = JSON.parse(JSON.stringify(data));
 for (const key of Object.keys(database.majors)) {
   const major = database.majors[key];
   let total = major.Men + major.Women;

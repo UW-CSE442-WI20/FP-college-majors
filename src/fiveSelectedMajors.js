@@ -1,5 +1,6 @@
 const d3 = require('d3')
-const database = require('./data.json');
+const data = require('./data.json');
+const database = JSON.parse(JSON.stringify(data));
 for (const key of Object.keys(database.majors)) {
   const major = database.majors[key];
   let total = major.Men + major.Women;
@@ -8,7 +9,7 @@ for (const key of Object.keys(database.majors)) {
   total = major.Full_time + major.Part_time;
   major[FACTORS.Full_time] = major.Full_time * 100 / total;
   major[FACTORS.Part_time] = major.Part_time * 100 / total;
-  major[FACTORS.Unemployment_rate] = major[FACTORS.Unemployment_rate]*100;
+  major[FACTORS.Unemployment_rate] = major[FACTORS.Unemployment_rate] * 100;
 }
 class FiveSelectedMajors {
   constructor() {
@@ -72,6 +73,7 @@ class FiveSelectedMajors {
   }
 
   drawChart(data, xProperty) {
+    debugger
     const tooltip = this.tooltip;
     // Add X axis
     let maxValue = d3.max(data.map(function (d) { return d[xProperty]; }));
