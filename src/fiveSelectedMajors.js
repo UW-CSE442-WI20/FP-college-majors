@@ -52,7 +52,7 @@ class FiveSelectedMajors {
   }
 
   processingData(factor, majorNames) {
-    debugger
+    // debugger
     const selectedMajors = [];
     majorNames.forEach((name) => {
       const major = database.majors[name];

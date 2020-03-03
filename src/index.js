@@ -1,5 +1,6 @@
 import TopFiveCategory from "./top5EachCategory.js";
 import ScatterPlot from "./scatterPlot.js";
+import FiveSelectedMajors from "./fiveSelectedMajors.js";
 const d3 = require('d3');
 const data = require('./data.json');
 
@@ -25,7 +26,7 @@ d3.csv('carbon-emissions.csv')
 */
 
 const topFiveCategory = new TopFiveCategory();
-const placeHolderForSecondChart = null; // single factor
+const fiveSelectedMajors = new FiveSelectedMajors(); // single factor
 const scatterPlot = new ScatterPlot();
 
 const majorCategories = [];
@@ -44,12 +45,12 @@ const charts = {
     factor: "Median",
     majors: [],
     update: function() {
-      // placeHolderForSecondChart.update(this.factor, this.majors)
+      fiveSelectedMajors.update(this.factor, this.majors)
     },
     init: function(factor_, majors_) {
       this.factor = factor_;
       this.majors = majors_;
-      // this.update();
+      this.update();
     }
   },
   twoFactor: {

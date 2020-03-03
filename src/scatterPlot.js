@@ -148,7 +148,7 @@ class ScatterPlot {
       });
   }
 
-  update(majors, factorXAxis, factorYAxis) {
+  update(factorXAxis, factorYAxis, majors) {
     const data = this.processingData(majors);
     this.drawChart(data, factorXAxis, factorYAxis);
   }
