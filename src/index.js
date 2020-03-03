@@ -58,7 +58,7 @@ const charts = {
     factor2: "Unemployment_rate",
     majors: [],
     update: function() {
-      scatterPlot.update(this.factor1, this.factor2, this.majors);
+      scatterPlot.update(this.majors, this.factor1, this.factor2);
     },
     init: function(factor1_, factor2_, majors_) {
       this.factor1 = factor1_;
