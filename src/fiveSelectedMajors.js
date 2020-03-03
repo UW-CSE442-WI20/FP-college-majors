@@ -1,6 +1,15 @@
 const d3 = require('d3')
 const database = require('./data.json');
-
+for (const key of Object.keys(database.majors)) {
+  const major = database.majors[key];
+  let total = major.Men + major.Women;
+  major[FACTORS.Men] = major.Men * 100 / total;
+  major[FACTORS.Women] = major.Women * 100 / total;
+  total = major.Full_time + major.Part_time;
+  major[FACTORS.Full_time] = major.Full_time * 100 / total;
+  major[FACTORS.Part_time] = major.Part_time * 100 / total;
+  major[FACTORS.Unemployment_rate] = major[FACTORS.Unemployment_rate]*100;
+}
 class FiveSelectedMajors {
   constructor() {
     // set the dimensions and margins of the graph
@@ -52,36 +61,12 @@ class FiveSelectedMajors {
   }
 
   processingData(factor, majorNames) {
-    // debugger
     const selectedMajors = [];
     majorNames.forEach((name) => {
       const major = database.majors[name];
       major[DATA_PROPERTIES.Major] = name;
       selectedMajors.push(major);
     })
-    selectedMajors.sort((a, b) => (a[factor] < b[factor]) ? 1 : -1)
-    if (factor == FACTORS.Men || factor == FACTORS.Women) {
-      selectedMajors.forEach((major) => {
-        const total = major.Men + major.Women;
-        major[FACTORS.Men] = major.Men * 100 / total;
-        major[FACTORS.Women] = major.Women * 100 / total;
-        return major;
-      });
-    }
-    if (factor == FACTORS.Full_time || factor == FACTORS.Part_time) {
-      selectedMajors.forEach((major) => {
-        const total = major.Full_time + major.Part_time;
-        major[FACTORS.Full_time] = major.Full_time * 100 / total;
-        major[FACTORS.Part_time] = major.Part_time * 100 / total;
-        return major;
-      });
-    }
-    if (factor == FACTORS.Unemployment_rate) {
-      selectedMajors.forEach((major) => {
-        major[FACTORS.Unemployment_rate] = major[FACTORS.Unemployment_rate]*100;
-        return major;
-      });
-    }
     selectedMajors.sort((a, b) => (a[factor] > b[factor]) ? 1 : -1)
     return selectedMajors;
   }
