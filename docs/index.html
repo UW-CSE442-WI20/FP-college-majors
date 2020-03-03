@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>College Majors</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.full.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css">
+
+		<link rel="stylesheet" href="https://uw-cse442-wi20.github.io/FP-college-majors/main.ba262477.css">
+
+		<link rel="stylesheet" type="text/css" href="https://uw-cse442-wi20.github.io/FP-college-majors/src.c7eebd54.css">
+		<link rel="stylesheet" type="text/css" href="https://uw-cse442-wi20.github.io/FP-college-majors/modal.d8d0875a.css">
+
+		<noscript><link rel="stylesheet" href="https://uw-cse442-wi20.github.io/FP-college-majors/noscript.30fe8d20.css"></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1>Explore College Majors</h1>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="#intro" class="active">Introduction</a></li>
+							<li><a href="#first">Explore Major Categories</a></li>
+							<li><a href="#second">Select Majors to Compare</a></li>
+							<li><a href="#cta">Compare Majors by Multiple Factors</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Introduction -->
+							<section id="intro" class="main special">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>Overview</h2>
+										</header>
+										<p>Short description of website will go here.</p>
+									</div>
+								</div>
+							</section>
+
+						<!-- First Section -->
+							<section id="first" class="main special">
+								<header class="major">
+									<h2>Explore Categories of Majors</h2>
+								</header>
+								<div id="categories">
+      									<h3>Compare Categories of Majors</h3>
+									<p>Click on a bar for a major category to see the top five majors for the selected factor and category.</p>
+									<select id="factorsForCategories">
+										<option value="Median">Median Pay</option>
+										<option value="Unemployment_rate">Unemployment Rate</option>
+										<option value="Gender">Percentage of Men vs. Women</option>
+										<option value="WorkTime">Full Time vs. Part Time Jobs</option>
+									</select>
+									<div id="categoriesChart"></div>
+								</div>
+
+								<div id="top5" class="hidden">
+									<h3>Top 5 Majors for this Factor and Category</h3>
+									<button id="backButton">Back to Major Categories</button>
+									<select id="factorsForTopFive">
+										<option value="Median">Median Pay</option>
+										<option value="Unemployment_rate">Unemployment Rate</option>
+										<option value="Women">Percent who are Women</option>
+										<option value="Men">Percent who are Men</option>
+										<option value="Full_time">Percent of Jobs that are Full Time</option>
+										<option value="Part_time">Percent of Jobs that are Part Time</option>
+									</select>
+									<select id="categoriesForTopFive">
+									</select>
+									<div id="top5EachCategory"></div>
+								</div>
+							</section>
+
+						<!-- Second Section -->
+							<section id="second" class="main special">
+								<header class="major">
+									<h2>Select Majors to Compare</h2>
+									<p>Choose up to 15 majors to compare at a time.</p>
+								</header>
+								<div id="chooseMajors">
+									<button type="button" class="btn btn-default" data-toggle="modal" data-target="#selectModal" id="compare-open-button">Select Majors</button>
+									<select id="factorsForChooseMajors">
+										<option value="Median">Median Pay</option>
+										<option value="Unemployment_rate">Unemployment Rate</option>
+										<option value="Women">Percent who are Women</option>
+										<option value="Men">Percent who are Men</option>
+										<option value="Full_time">Percent of Jobs that are Full Time</option>
+										<option value="Part_time">Percent of Jobs that are Part Time</option>
+									</select>
+									<div id="fiveSelectedMajors"></div>
+								</div>
+							</section>
+
+						<!-- Third Section -->
+							<section id="cta" class="main special">
+								<header class="major">
+									<h2>Compare Majors by Multiple Factors</h2>
+									<p>Select two factors and up to 15 majors to compare.</p>
+								</header>
+								<div id="multipleFactors">
+									<button type="button" class="btn btn-default" data-toggle="modal" data-target="#selectModal" id="factors-open-button">Select Majors</button>
+
+									<!-- modal start -->
+									<div class="modal fade" id="selectModal" role="dialog">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<div>
+<!-- 													<button type="button" class="close" data-dismiss="modal" id="x-button">&times;</button> -->
+                          <h4 class="modal-title">Select Majors to Compare</h4>
+                          <div id="max-warning">Please select no more than 15 majors</div>
+												</div>
+												<div class="modal-body form-group">
+													<select multiple="" class="form-control" id="sel"></select>
+												</div>
+												<div>
+													<button type="button" class="btn btn-default" id="desel-button">Deselect All</button>
+													<button type="button" class="btn btn-default" data-dismiss="modal" id="sel-button">Select</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- modal end -->
+
+									<p>Factor 1 (x-axis):</p>
+									<select id="xFactor">
+										<option value="Median">Median Pay</option>
+										<option value="Unemployment_rate">Unemployment Rate</option>
+										<option value="Women">Percent who are Women</option>
+										<option value="Men">Percent who are Men</option>
+										<option value="Full_time">Percent of Jobs that are Full Time</option>
+										<option value="Part_time">Percent of Jobs that are Part Time</option>
+									</select>
+									<p>Factor 2 (y-axis):</p>
+									<select id="yFactor">
+										<option value="Median">Median Pay</option>
+										<option value="Unemployment_rate">Unemployment Rate</option>
+										<option value="Women">Percent who are Women</option>
+										<option value="Men">Percent who are Men</option>
+										<option value="Full_time">Percent of Jobs that are Full Time</option>
+										<option value="Part_time">Percent of Jobs that are Part Time</option>
+									</select>
+									<div id="scatterPlot"></div>
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">Design/Layout: <a href="https://html5up.net/stellar">HTML5 UP Stellar Template</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="https://uw-cse442-wi20.github.io/FP-college-majors/jquery.min.cc79068b.js"></script>
+			<script src="https://uw-cse442-wi20.github.io/FP-college-majors/jquery.scrollex.min.aba65e8a.js"></script>
+			<script src="https://uw-cse442-wi20.github.io/FP-college-majors/jquery.scrolly.min.501caad1.js"></script>
+			<script src="https://uw-cse442-wi20.github.io/FP-college-majors/browser.min.2fa9c6f4.js"></script>
+			<script src="https://uw-cse442-wi20.github.io/FP-college-majors/breakpoints.min.c322b3e3.js"></script>
+			<script src="https://uw-cse442-wi20.github.io/FP-college-majors/util.18e6ab9b.js"></script>
+			<script src="https://uw-cse442-wi20.github.io/FP-college-majors/main.d9965132.js"></script>
+
+			<script>var FACTORS = {
+  Unemployment_rate: "Unemployment_rate",
+  Median: "Median",
+  Men: "Men",
+  Women: "Women",
+  Full_time: "Full_time",
+  Part_time: "Part_time"
+};
+var DATA_PROPERTIES = {
+  Major: "Major",
+  Categories: "Categories",
+  Category: "Category",
+  categories: "categories",
+  majors: "majors"
+};
+var COLORS = {
+  pink: "#efa8b0",
+  purple: "#a89cc8",
+  blue: "#8cc9f0"
+};
+var UNITS = {
+  Unemployment_rate: "%",
+  Median: "$",
+  Men: "%",
+  Women: "%",
+  Full_time: "%",
+  Part_time: "%"
+};
+var TOOLTIP_STYLE = {
+  background: "#666666",
+  font: "Source Sans Pro",
+  font_color: "white"
+};</script>
+
+      <!-- was unable to access a function in index.js from modal.js, had to import which links index.js--> 
+			<!-- <script src="./index.js" type="text/javascript"></script> -->
+			<script src="https://uw-cse442-wi20.github.io/FP-college-majors/modal.2e444d07.js" type="text/javascript"></script>
+
+	</body>
+</html>
