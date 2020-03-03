@@ -4,9 +4,9 @@ const database = require('./data.json');
 class TopFiveCategory {
   constructor() {
     // set the dimensions and margins of the graph
-    this.margin = { top: 20, right: 30, bottom: 40, left: 400 };
-    this.width = 860 - this.margin.left - this.margin.right,
-      this.height = 400 - this.margin.top - this.margin.bottom;
+    this.margin = { top: 20, right: 210, bottom: 40, left: 270 };
+    this.width = 1100 - this.margin.left - this.margin.right;
+    this.height = 500 - this.margin.top - this.margin.bottom;
 
     // append the svg object to the body of the page
     this.svg = d3.select("#top5EachCategory")
@@ -17,67 +17,77 @@ class TopFiveCategory {
       .attr("transform",
         "translate(" + this.margin.left + "," + this.margin.top + ")");
     this.x = d3.scaleLinear()
-      // .domain([0, 13000])
       .range([0, this.width]);
     this.xAxis = this.svg.append("g")
       .attr("transform", "translate(0," + this.height + ")")
-    // .call(d3.axisBottom(x))
-    // .selectAll("text")
-    // .attr("transform", "translate(-10,0)rotate(-45)")
-    // .style("text-anchor", "end");
 
     // Y axis
     this.y = d3.scaleBand()
       .range([0, this.height])
-      // .domain(data.map(function (d) { return d.Country; }))
       .padding(.2);
     this.yAxis = this.svg.append("g")
-      .attr("class", "myYaxis")
-    // .call(d3.axisLeft(y))
+      .attr("class", "myYaxis");
+    this.tooltip = d3.select("body")
+      .append("div")
+      .style("position", "absolute")
+      .style("z-index", "10")
+      .style("color", "#fff5e6")
+      .style("background-color", "#3f546c")
+      .style("padding", "6px 10px")
+      .style("font-family", "formular-light")
+      .style("font-size", "0.8rem")
+      .style("visibility", "hidden");
+
   }
 
-  update(factor, category, yProperty) {
+  update(factor, category) {
     const top5 = this.processingData(factor, category);
-    this.drawChart(top5, factor, yProperty);
+    this.drawChart(top5, factor);
   }
 
   processingData(factor, category) {
     const listOfMajors = database.categories[category];
-    listOfMajors.sort((a, b) => (a[factor] < b[factor]) ? 1 : -1)
     const top5 = listOfMajors.slice(0, 5)
     if (factor == FACTORS.Men || factor == FACTORS.Women) {
       top5.forEach((major) => {
         const total = major.Men + major.Women;
-        major[FACTORS.Men] = major.Men*100 / total;
-        major[FACTORS.Women] = major.Women*100 / total;
+        major[FACTORS.Men] = major.Men * 100 / total;
+        major[FACTORS.Women] = major.Women * 100 / total;
         return major;
       });
     }
     if (factor == FACTORS.Full_time || factor == FACTORS.Part_time) {
       top5.forEach((major) => {
         const total = major.Full_time + major.Part_time;
-        major[FACTORS.Full_time] = major.Full_time*100 / total;
-        major[FACTORS.Part_time] = major.Part_time*100 / total;
+        major[FACTORS.Full_time] = major.Full_time * 100 / total;
+        major[FACTORS.Part_time] = major.Part_time * 100 / total;
         return major;
       });
     }
+    if (factor == FACTORS.Unemployment_rate) {
+      top5.forEach((major) => {
+        major[FACTORS.Unemployment_rate] = major[FACTORS.Unemployment_rate]*100;
+        return major;
+      });
+    }
+    top5.sort((a, b) => (a[factor] > b[factor]) ? 1 : -1)
     return top5;
   }
 
-  drawChart(data, xProperty, yProperty) {
+  drawChart(data, xProperty) {
+    const tooltip = this.tooltip;
     // Add X axis
+    let maxValue = d3.max(data.map(function (d) { return d[xProperty]; }));
+    maxValue = maxValue * this.random();
     this.x
-      .domain([0, d3.max(data.map(function (d) { return d[xProperty]; }))]);
+      .domain([0, maxValue]);
     this.xAxis
       .transition().duration(1000)
       .call(d3.axisBottom(this.x))
     this.y
-      .domain(data.map(function (d) { return d[yProperty]; }))
+      .domain(data.map(function (d) { return d[DATA_PROPERTIES.Major]; }))
     this.yAxis
       .call(d3.axisLeft(this.y))
-    this.yAxis
-      .transition().duration(3000)
-      .call(d3.axisLeft(this.y));
     var x = this.x;
     var y = this.y;
     //Bars
@@ -90,7 +100,7 @@ class TopFiveCategory {
       .transition()
       .duration(1000)
       .attr("x", this.x(0))
-      .attr("y", function (d) { return y(d[yProperty]); })
+      .attr("y", function (d) { return y(d[DATA_PROPERTIES.Major]); })
       .attr("width", function (d) { return x(d[xProperty]); })
       .attr("height", y.bandwidth())
       .attr("fill", "#69b3a2")
@@ -98,6 +108,27 @@ class TopFiveCategory {
     u
       .exit()
       .remove()
+    this.svg.selectAll("rect")
+      .on("mouseover", function (d) {
+        return tooltip.style("visibility", "visible").text(
+          d["Median"] + " " + d["Full_time"]
+        );
+      })
+
+      // we move tooltip during of "mousemove"
+
+      .on("mousemove", function () {
+        return tooltip.style("top", (event.pageY - 10) + "px").style("left", (event.pageX + 10) + "px");
+      })
+      // we hide our tooltip on "mouseout"
+
+      .on("mouseout", function () {
+        return tooltip.style("visibility", "hidden");
+      });
+  }
+
+  random() {
+    return Math.floor(Math.random() * (15 - 10 + 1) + 10) / 100 + 1;
   }
 }
 
