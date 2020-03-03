@@ -215,17 +215,22 @@ function drawChart(chartId, chartData, factor, yAxisData) {
         if (chartId == "categoriesChart") {
           document.getElementById("categories").classList.add("hidden");
           document.getElementById("top5").classList.remove("hidden");
+          categoriesForTopFive.value = d["name"];
           if (factor == "Gender") {
             if (d["value"] == 100) {
-              updateTopFiveChart("Men", d["name"]);
+              factorsForTopFive.value = FACTORS.Men;
+              updateTopFiveChart(FACTORS.Men, d["name"]);
             } else {
-              updateTopFiveChart("Women", d["name"]);
+              factorsForTopFive.value = FACTORS.Women;
+              updateTopFiveChart(FACTORS.Women, d["name"]);
             }
           } else {
             if (d["value"] == 100) {
-              updateTopFiveChart("Full_time", d["name"]);
+              factorsForTopFive.value = FACTORS.Full_time;
+              updateTopFiveChart(FACTORS.Full_time, d["name"]);
             } else {
-              updateTopFiveChart("Part_time", d["name"]);
+              factorsForTopFive.value = FACTORS.Part_time;
+              updateTopFiveChart(FACTORS.Part_time, d["name"]);
             }
           }
         }
@@ -322,7 +327,7 @@ function drawChart(chartId, chartData, factor, yAxisData) {
         return xScale(d["value"]) - xScale(0);
       })
       .attr("fill", () => {
-        if (factor == "Unemployment_rate") {
+        if (factor == FACTORS.Unemployment_rate) {
           return COLORS.purple;
         } else {
           return COLORS.pink;
@@ -334,6 +339,8 @@ function drawChart(chartId, chartData, factor, yAxisData) {
         if (chartId == "categoriesChart") {
           document.getElementById("categories").classList.add("hidden");
           document.getElementById("top5").classList.remove("hidden");
+          categoriesForTopFive.value = d["name"];
+          factorsForTopFive.value = factor;
           updateTopFiveChart(factor, d["name"]);
         }
       })
