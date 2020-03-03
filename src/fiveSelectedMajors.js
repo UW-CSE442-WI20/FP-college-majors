@@ -111,8 +111,16 @@ class FiveSelectedMajors {
       .remove();
     this.svg.selectAll("rect")
       .on("mouseover", function (d) {
+        function wrapTooltipText(value, factor) {
+          if (factor == FACTORS.Median) {
+            return value.toLocaleString('us-US', { style: 'currency', currency: 'USD' }) + " " + factor
+          } else {
+            return value.toLocaleString("en") + UNITS.Men + " " + factor.replace('_', ' ')
+          }
+        }
+
         return tooltip.style("visibility", "visible").text(
-          d[xProperty]
+          wrapTooltipText(d[xProperty], xProperty)
         );
       })
 

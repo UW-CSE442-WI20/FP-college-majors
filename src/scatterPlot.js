@@ -79,8 +79,16 @@ class ScatterPlot {
       .attr("r", 7)
       .style("fill", "#69b3a2")
       .on("mouseover", function (d) {
+        function wrapTooltipText(value, factor) {
+          if (factor == FACTORS.Median) {
+            return value.toLocaleString('us-US', { style: 'currency', currency: 'USD' }) + " " + factor
+          } else {
+            return value.toLocaleString("en") + UNITS.Men + " " + factor.replace('_', ' ')
+          }
+        }
+
         return tooltip.style("visibility", "visible").text(
-          d[xProperty] + " " + d[yProperty]
+          wrapTooltipText(d[xProperty], xProperty) + " " + wrapTooltipText(d[yProperty], yProperty)
         );
       })
 

@@ -12,7 +12,7 @@ class TopFiveCategory {
         total = major.Full_time + major.Part_time;
         major[FACTORS.Full_time] = major.Full_time * 100 / total;
         major[FACTORS.Part_time] = major.Part_time * 100 / total;
-        major[FACTORS.Unemployment_rate] = major[FACTORS.Unemployment_rate]*100;  
+        major[FACTORS.Unemployment_rate] = major[FACTORS.Unemployment_rate] * 100;
       }
     }
     this.dataJSON = database;
@@ -100,8 +100,16 @@ class TopFiveCategory {
       .remove()
     this.svg.selectAll("rect")
       .on("mouseover", function (d) {
+        function wrapTooltipText(value, factor) {
+          if (factor == FACTORS.Median) {
+            return value.toLocaleString('us-US', { style: 'currency', currency: 'USD' }) + " " + factor
+          } else {
+            return value.toLocaleString("en") + UNITS.Men + " " + factor.replace('_', ' ')
+          }
+        }
+
         return tooltip.style("visibility", "visible").text(
-          d[xProperty]
+          wrapTooltipText(d[xProperty], xProperty)
         );
       })
 
@@ -119,10 +127,6 @@ class TopFiveCategory {
 
   random() {
     return Math.floor(Math.random() * (15 - 10 + 1) + 10) / 100 + 1;
-  }
-
-  wrapTooltip(value, factor) {
-    
   }
 }
 
