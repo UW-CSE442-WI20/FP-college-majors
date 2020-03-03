@@ -1,18 +1,20 @@
 const d3 = require('d3')
 let fs = require("fs");
-const database = JSON.parse(fs.readFileSync("./src/data.json", "utf8"));
-for (const key of Object.keys(database.majors)) {
-  const major = database.majors[key];
-  let total = major.Men + major.Women;
-  major[FACTORS.Men] = major.Men * 100 / total;
-  major[FACTORS.Women] = major.Women * 100 / total;
-  total = major.Full_time + major.Part_time;
-  major[FACTORS.Full_time] = major.Full_time * 100 / total;
-  major[FACTORS.Part_time] = major.Part_time * 100 / total;
-  major[FACTORS.Unemployment_rate] = major[FACTORS.Unemployment_rate] * 100;
-}
 class FiveSelectedMajors {
   constructor() {
+    const database = JSON.parse(fs.readFileSync("./src/data.json", "utf8"));
+    for (const key of Object.keys(database.majors)) {
+      const major = database.majors[key];
+      let total = major.Men + major.Women;
+      major[FACTORS.Men] = major.Men * 100 / total;
+      major[FACTORS.Women] = major.Women * 100 / total;
+      total = major.Full_time + major.Part_time;
+      major[FACTORS.Full_time] = major.Full_time * 100 / total;
+      major[FACTORS.Part_time] = major.Part_time * 100 / total;
+      major[FACTORS.Unemployment_rate] = major[FACTORS.Unemployment_rate] * 100;
+    }
+
+    this.database = database;
     // set the dimensions and margins of the graph
     this.margin = { top: 20, right: 210, bottom: 40, left: 270 };
     this.width = 1100 - this.margin.left - this.margin.right;
@@ -62,6 +64,7 @@ class FiveSelectedMajors {
   }
 
   processingData(factor, majorNames) {
+    const database = this.database
     const selectedMajors = [];
     majorNames.forEach((name) => {
       const major = database.majors[name];
@@ -73,7 +76,6 @@ class FiveSelectedMajors {
   }
 
   drawChart(data, xProperty) {
-    debugger
     const tooltip = this.tooltip;
     // Add X axis
     let maxValue = d3.max(data.map(function (d) { return d[xProperty]; }));
@@ -110,7 +112,7 @@ class FiveSelectedMajors {
     this.svg.selectAll("rect")
       .on("mouseover", function (d) {
         return tooltip.style("visibility", "visible").text(
-          d["Median"] + " " + d["Full_time"]
+          d[xProperty]
         );
       })
 

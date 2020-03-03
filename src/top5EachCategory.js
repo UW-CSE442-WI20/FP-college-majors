@@ -1,19 +1,21 @@
 const d3 = require('d3')
 let fs = require("fs");
-const database = JSON.parse(fs.readFileSync("./src/data.json", "utf8"));
-for (const key of Object.keys(database.majors)) {
-  const major = database.majors[key];
-  let total = major.Men + major.Women;
-  major[FACTORS.Men] = major.Men * 100 / total;
-  major[FACTORS.Women] = major.Women * 100 / total;
-  total = major.Full_time + major.Part_time;
-  major[FACTORS.Full_time] = major.Full_time * 100 / total;
-  major[FACTORS.Part_time] = major.Part_time * 100 / total;
-  major[FACTORS.Unemployment_rate] = major[FACTORS.Unemployment_rate]*100;
-}
-
 class TopFiveCategory {
   constructor() {
+    const database = JSON.parse(fs.readFileSync("./src/data.json", "utf8"));
+    for (const key of Object.keys(database.categories)) {
+      for (const key2 of Object.keys(database.categories[key])) {
+        const major = database.categories[key][key2];
+        let total = major.Men + major.Women;
+        major[FACTORS.Men] = major.Men * 100 / total;
+        major[FACTORS.Women] = major.Women * 100 / total;
+        total = major.Full_time + major.Part_time;
+        major[FACTORS.Full_time] = major.Full_time * 100 / total;
+        major[FACTORS.Part_time] = major.Part_time * 100 / total;
+        major[FACTORS.Unemployment_rate] = major[FACTORS.Unemployment_rate]*100;  
+      }
+    }
+    this.dataJSON = database;
     // set the dimensions and margins of the graph
     this.margin = { top: 20, right: 210, bottom: 40, left: 320 };
     this.width = 1100 - this.margin.left - this.margin.right;
@@ -48,7 +50,6 @@ class TopFiveCategory {
       .style("font-family", "formular-light")
       .style("font-size", "0.8rem")
       .style("visibility", "hidden");
-
   }
 
   update(factor, category) {
@@ -57,7 +58,7 @@ class TopFiveCategory {
   }
 
   processingData(factor, category) {
-    const listOfMajors = database.categories[category];
+    const listOfMajors = this.dataJSON.categories[category];
     const top5 = listOfMajors.slice(0, 5)
     top5.sort((a, b) => (a[factor] > b[factor]) ? 1 : -1)
     return top5;
@@ -100,7 +101,7 @@ class TopFiveCategory {
     this.svg.selectAll("rect")
       .on("mouseover", function (d) {
         return tooltip.style("visibility", "visible").text(
-          d["Median"] + " " + d["Full_time"]
+          d[xProperty]
         );
       })
 
@@ -118,6 +119,10 @@ class TopFiveCategory {
 
   random() {
     return Math.floor(Math.random() * (15 - 10 + 1) + 10) / 100 + 1;
+  }
+
+  wrapTooltip(value, factor) {
+    
   }
 }
 

@@ -1,18 +1,20 @@
 const d3 = require('d3')
 let fs = require("fs");
-const database = JSON.parse(fs.readFileSync("./src/data.json", "utf8"));
-for (const key of Object.keys(database.majors)) {
-  const major = database.majors[key];
-  let total = major.Men + major.Women;
-  major[FACTORS.Men] = major.Men * 100 / total;
-  major[FACTORS.Women] = major.Women * 100 / total;
-  total = major.Full_time + major.Part_time;
-  major[FACTORS.Full_time] = major.Full_time * 100 / total;
-  major[FACTORS.Part_time] = major.Part_time * 100 / total;
-  major[FACTORS.Unemployment_rate] = major[FACTORS.Unemployment_rate]*100;
-}
 class ScatterPlot {
   constructor() {
+    const database = JSON.parse(fs.readFileSync("./src/data.json", "utf8"));
+    for (const key of Object.keys(database.majors)) {
+      const major = database.majors[key];
+      let total = major.Men + major.Women;
+      major[FACTORS.Men] = major.Men * 100 / total;
+      major[FACTORS.Women] = major.Women * 100 / total;
+      total = major.Full_time + major.Part_time;
+      major[FACTORS.Full_time] = major.Full_time * 100 / total;
+      major[FACTORS.Part_time] = major.Part_time * 100 / total;
+      major[FACTORS.Unemployment_rate] = major[FACTORS.Unemployment_rate] * 100;
+    }
+
+    this.database = database
     // set the dimensions and margins of the graph
     this.margin = { top: 10, right: 30, bottom: 30, left: 60 };
     this.width = 460 - this.margin.left - this.margin.right;
@@ -28,7 +30,7 @@ class ScatterPlot {
         "translate(" + this.margin.left + "," + this.margin.top + ")");
     // Add X axis
     this.x = d3.scaleLinear()
-    .range([0, this.width]);
+      .range([0, this.width]);
     this.xAxis = this.svg.append("g")
       .attr("transform", "translate(0," + this.height + ")")
 
@@ -65,8 +67,8 @@ class ScatterPlot {
     var y = this.y;
     const tooltip = this.tooltip;
     this.svg.selectAll("circle").transition()
-    .style("opacity", 0)
-    .remove();
+      .style("opacity", 0)
+      .remove();
     this.svg
       .selectAll("dot")
       .data(data)
@@ -78,7 +80,7 @@ class ScatterPlot {
       .style("fill", "#69b3a2")
       .on("mouseover", function (d) {
         return tooltip.style("visibility", "visible").text(
-          d["Median"] + " " + d["Full_time"]
+          d[xProperty] + " " + d[yProperty]
         );
       })
 
@@ -101,6 +103,7 @@ class ScatterPlot {
   }
 
   processingData(majorNames) {
+    const database = this.database
     let selectedMajors = [];
     majorNames.forEach((name) => {
       const major = database.majors[name];
