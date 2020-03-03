@@ -157,10 +157,10 @@ function drawChart(chartId, chartData, factor, yAxisData) {
     .append("div")
     .style("position", "absolute")
     .style("z-index", "10")
-    .style("color", "#fff5e6")
-    .style("background-color", "#3f546c")
+    .style("color", TOOLTIP_STYLE.font_color)
+    .style("background-color", TOOLTIP_STYLE.background)
     .style("padding", "6px 10px")
-    .style("font-family", "formular-light")
+    .style("font-family", TOOLTIP_STYLE.font)
     .style("font-size", "0.8rem")
     .style("visibility", "hidden");
 
