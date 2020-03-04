@@ -52,13 +52,20 @@ class ScatterPlot {
   }
 
   drawChart(data, xProperty, yProperty) {
+    console.log(data)
+    let minX, minY, maxX, maxY;
+    maxX = d3.max(data.map(function (d) { return d[xProperty]; })) * 1.1;
+    maxY = d3.max(data.map(function (d) { return d[yProperty]; })) * 1.1;
+    minX = d3.min(data.map(function (d) { return d[xProperty]; })) * 0.9;
+    minY = d3.min(data.map(function (d) { return d[yProperty]; })) * 0.9;
+
     this.x
-      .domain([0, d3.max(data.map(function (d) { return d[xProperty]; }))]);
+      .domain([minX, maxX]);
     this.xAxis
       .transition().duration(1000)
       .call(d3.axisBottom(this.x))
     this.y
-      .domain([0, d3.max(data.map(function (d) { return d[yProperty]; }))])
+      .domain([minY, maxY])
     this.yAxis
       .transition().duration(1000)
       .call(d3.axisLeft(this.y));
@@ -76,9 +83,17 @@ class ScatterPlot {
       .append("circle")
       .attr("cx", function (d) { return x(d[xProperty]); })
       .attr("cy", function (d) { return y(d[yProperty]); })
-      .attr("r", 7)
+      .attr("r", 3)
       .style("fill", "#69b3a2")
       .on("mouseover", function (d) {
+        function addTextDiv(texts) {
+          let html = "<div>";
+          texts.forEach(text => {
+            html += text + "<br />";
+          });
+          html += "</div>";
+          return html;
+        }
         function wrapTooltipText(value, factor) {
           if (factor == FACTORS.Median) {
             return value.toLocaleString('us-US', { style: 'currency', currency: 'USD' }) + " " + factor
@@ -86,10 +101,12 @@ class ScatterPlot {
             return value.toLocaleString("en") + UNITS.Men + " " + factor.replace('_', ' ')
           }
         }
-
-        return tooltip.style("visibility", "visible").text(
-          wrapTooltipText(d[xProperty], xProperty) + " " + wrapTooltipText(d[yProperty], yProperty)
-        );
+        const html = addTextDiv([
+          d[DATA_PROPERTIES.Major],
+          wrapTooltipText(d[xProperty], xProperty),
+          wrapTooltipText(d[yProperty], yProperty)
+        ]);
+        return tooltip.style("visibility", "visible").html(html);
       })
 
       // we move tooltip during of "mousemove"
