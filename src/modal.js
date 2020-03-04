@@ -2,7 +2,7 @@ import { updateChartMajors } from "./index.js";
 
 initModal();
 let compareSelected = [];
-let factorsSelected = [];
+let singleSelected = [];
 let currModal = ""
 
 function initModal() {
@@ -48,9 +48,9 @@ function initModal() {
     currModal = "compare";
     resetSelections(compareSelected);
   })
-  document.getElementById("factors-open-button").addEventListener("click", function() {
-    currModal = "factors";
-    resetSelections(factorsSelected);
+  document.getElementById("single-open-button").addEventListener("click", function() {
+    currModal = "single";
+    resetSelections(singleSelected);
   })
 
   document.getElementById("sel-button").addEventListener("click", function() {
@@ -81,11 +81,11 @@ function saveSelections() {
         }
     });
     updateChartMajors("oneFactor", compareSelected);
-  } else if (currModal === "factors") {
-    factorsSelected = [];
+  } else if (currModal === "single") {
+    singleSelected = [];
     $("#sel > optgroup > option").each(function() {
         if (this.selected) {
-          factorsSelected.push(this.value); 
+          singleSelected.push(this.value); 
         }
     });
     updateChartMajors("twoFactor", factorsSelected);
