@@ -5,3 +5,29 @@ div, h1, h2 {
 .hidden {
   display: none;
 }
+
+select {
+  width: 35%;
+  display: inline-block;
+  text-align: center;
+}
+
+#scatterplotFactors *, #singleMajor * {
+  display: inline-block;
+}
+
+#categoriesForTopFive {
+  width: 36%;
+}
+
+#lowHigh {
+  width: 15%;
+}
+
+#factorsForSingleMajor {
+  width: 30%;
+}
+
+#singleMajor {
+  margin-top: 2%;
+}

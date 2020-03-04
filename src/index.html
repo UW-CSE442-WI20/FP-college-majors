@@ -90,25 +90,26 @@
 										</div>
 									</div>
 									<!-- modal end -->
-
-									<p>Factor 1 (x-axis):</p>
-									<select id="xFactor">
-										<option value="Median">Median Pay</option>
-										<option value="Unemployment_rate">Unemployment Rate</option>
-										<option value="Women">Percent who are Women</option>
-										<option value="Men">Percent who are Men</option>
-										<option value="Full_time">Percent of Jobs that are Full Time</option>
-										<option value="Part_time">Percent of Jobs that are Part Time</option>
-									</select>
-									<p>Factor 2 (y-axis):</p>
-									<select id="yFactor">
-										<option value="Median">Median Pay</option>
-										<option value="Unemployment_rate">Unemployment Rate</option>
-										<option value="Women">Percent who are Women</option>
-										<option value="Men">Percent who are Men</option>
-										<option value="Full_time">Percent of Jobs that are Full Time</option>
-										<option value="Part_time">Percent of Jobs that are Part Time</option>
-									</select>
+									<div id="scatterplotFactors">
+										<p>Factor 1 (x-axis):</p>
+										<select id="xFactor">
+											<option value="Median">Median Pay</option>
+											<option value="Unemployment_rate">Unemployment Rate</option>
+											<option value="Women">Percent who are Women</option>
+											<option value="Men">Percent who are Men</option>
+											<option value="Full_time">Percent of Jobs that are Full Time</option>
+											<option value="Part_time">Percent of Jobs that are Part Time</option>
+										</select>
+										<p>Factor 2 (y-axis):</p>
+										<select id="yFactor">
+											<option value="Median">Median Pay</option>
+											<option value="Unemployment_rate">Unemployment Rate</option>
+											<option value="Women">Percent who are Women</option>
+											<option value="Men">Percent who are Men</option>
+											<option value="Full_time">Percent of Jobs that are Full Time</option>
+											<option value="Part_time">Percent of Jobs that are Part Time</option>
+										</select>
+									</div>
 									<div id="scatterPlot"></div>
 								</div>
 							</section>
@@ -191,7 +192,29 @@
 								<h2>Choose One Major</h2>
 								<p>Add some text here.</p>
 							</header>
-							<!-- TODO: finish this section -->
+
+							<!-- TODO: this needs to be limited to 1 not 15 majors -->
+							<button type="button" class="btn btn-default" data-toggle="modal" data-target="#selectModal" id="single-open-button">Select One Major</button>
+							<div id="singleMajor">
+								<p>Show me the major with the </p>
+								<select id="lowHigh">
+									<option value="lowest">lowest</option>
+									<option value="highest">highest</option>
+								</select>
+								<select id="factorsForSingleMajor">
+									<option value="Median">median pay</option>
+									<option value="Unemployment_rate">unemployment rate</option>
+									<option value="Women">percentage of women</option>
+									<option value="Men">percentage of men</option>
+									<option value="Full_time">percentage of full time jobs</option>
+									<option value="Part_time">percentage of part time jobs</option>
+								</select>
+								<button id="showSingleMajor">Go!</button>
+							</div>
+							<div id="random">
+								<button id="randomMajor">Random Major</button>
+							</div>
+							<div id="majorInfo"></div>
 						</section>
 
 					</div>
