@@ -56,14 +56,13 @@ const charts = {
   twoFactor: {
     factor1: "Median",
     factor2: "Unemployment_rate",
-    majors: [],
+    majors: Object.keys(data.majors),
     update: function() {
       scatterPlot.update(this.majors, this.factor1, this.factor2);
     },
-    init: function(factor1_, factor2_, majors_) {
+    init: function(factor1_, factor2_) {
       this.factor1 = factor1_;
       this.factor2 = factor2_;
-      this.majors = majors_;
       this.update();
     }
   }
@@ -123,7 +122,7 @@ factorsForChooseMajors.onchange = () => {
 let xFactor = document.getElementById("xFactor");
 let yFactor = document.getElementById("yFactor");
 
-charts.twoFactor.init(xFactor.value, yFactor.value, []);
+charts.twoFactor.init(xFactor.value, yFactor.value);
 
 xFactor.onchange = () => {
   charts.twoFactor.factor1 = xFactor.value;
