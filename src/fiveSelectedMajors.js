@@ -111,6 +111,14 @@ class FiveSelectedMajors {
       .remove();
     this.svg.selectAll("rect")
       .on("mouseover", function (d) {
+        function addTextDiv(texts) {
+          let html = "<div>";
+          texts.forEach(text => {
+            html += text + "<br />";
+          });
+          html += "</div>";
+          return html;
+        }
         function wrapTooltipText(value, factor) {
           if (factor == FACTORS.Median) {
             return value.toLocaleString('us-US', { style: 'currency', currency: 'USD' }) + " " + factor
@@ -118,10 +126,10 @@ class FiveSelectedMajors {
             return value.toLocaleString("en") + UNITS.Men + " " + factor.replace('_', ' ')
           }
         }
-
-        return tooltip.style("visibility", "visible").text(
+        const html = addTextDiv([
           wrapTooltipText(d[xProperty], xProperty)
-        );
+        ]);
+        return tooltip.style("visibility", "visible").html(html);
       })
 
       // we move tooltip during of "mousemove"
