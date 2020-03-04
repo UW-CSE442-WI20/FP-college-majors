@@ -38,9 +38,11 @@
 					<nav id="nav">
 						<ul>
 							<li><a href="#intro" class="active">Introduction</a></li>
-							<li><a href="#first">Explore Major Categories</a></li>
-							<li><a href="#second">Select Majors to Compare</a></li>
-							<li><a href="#cta">Compare Majors by Multiple Factors</a></li>
+							<li><a href="#first">Compare Majors by Multiple Factors</a></li>
+							<li><a href="#second">Explore Major Categories</a></li>
+							<li><a href="#third">Select Majors to Compare</a></li>
+							<li><a href="#fourth">Compare your Top Majors</a></li>
+							<li><a href="#fifth">Choose One Major</a></li>
 						</ul>
 					</nav>
 
@@ -61,60 +63,6 @@
 
 						<!-- First Section -->
 							<section id="first" class="main special">
-								<header class="major">
-									<h2>Explore Categories of Majors</h2>
-								</header>
-								<div id="categories">
-      									<h3>Compare Categories of Majors</h3>
-									<p>Click on a bar for a major category to see the top five majors for the selected factor and category.</p>
-									<select id="factorsForCategories">
-										<option value="Median">Median Pay</option>
-										<option value="Unemployment_rate">Unemployment Rate</option>
-										<option value="Gender">Percentage of Men vs. Women</option>
-										<option value="WorkTime">Full Time vs. Part Time Jobs</option>
-									</select>
-									<div id="categoriesChart"></div>
-								</div>
-
-								<div id="top5" class="hidden">
-									<h3>Top 5 Majors for this Factor and Category</h3>
-									<button id="backButton">Back to Major Categories</button>
-									<select id="factorsForTopFive">
-										<option value="Median">Median Pay</option>
-										<option value="Unemployment_rate">Unemployment Rate</option>
-										<option value="Women">Percent who are Women</option>
-										<option value="Men">Percent who are Men</option>
-										<option value="Full_time">Percent of Jobs that are Full Time</option>
-										<option value="Part_time">Percent of Jobs that are Part Time</option>
-									</select>
-									<select id="categoriesForTopFive">
-									</select>
-									<div id="top5EachCategory"></div>
-								</div>
-							</section>
-
-						<!-- Second Section -->
-							<section id="second" class="main special">
-								<header class="major">
-									<h2>Select Majors to Compare</h2>
-									<p>Choose up to 15 majors to compare at a time.</p>
-								</header>
-								<div id="chooseMajors">
-									<button type="button" class="btn btn-default" data-toggle="modal" data-target="#selectModal" id="compare-open-button">Select Majors</button>
-									<select id="factorsForChooseMajors">
-										<option value="Median">Median Pay</option>
-										<option value="Unemployment_rate">Unemployment Rate</option>
-										<option value="Women">Percent who are Women</option>
-										<option value="Men">Percent who are Men</option>
-										<option value="Full_time">Percent of Jobs that are Full Time</option>
-										<option value="Part_time">Percent of Jobs that are Part Time</option>
-									</select>
-									<div id="fiveSelectedMajors"></div>
-								</div>
-							</section>
-
-						<!-- Third Section -->
-							<section id="cta" class="main special">
 								<header class="major">
 									<h2>Compare Majors by Multiple Factors</h2>
 									<p>Select two factors and up to 15 majors to compare.</p>
@@ -164,6 +112,87 @@
 									<div id="scatterPlot"></div>
 								</div>
 							</section>
+
+
+							<!-- Second Section -->
+							<section id="second" class="main special">
+								<header class="major">
+									<h2>Explore Categories of Majors</h2>
+								</header>
+								<div id="categories">
+      									<h3>Compare Categories of Majors</h3>
+									<p>Click on a bar for a major category to see the top five majors for the selected factor and category.</p>
+									<select id="factorsForCategories">
+										<option value="Median">Median Pay</option>
+										<option value="Unemployment_rate">Unemployment Rate</option>
+										<option value="Gender">Percentage of Men vs. Women</option>
+										<option value="WorkTime">Full Time vs. Part Time Jobs</option>
+									</select>
+									<div id="categoriesChart"></div>
+								</div>
+
+								<div id="top5" class="hidden">
+									<h3>Top 5 Majors for this Factor and Category</h3>
+									<button id="backButton">Back to Major Categories</button>
+									<select id="factorsForTopFive">
+										<option value="Median">Median Pay</option>
+										<option value="Unemployment_rate">Unemployment Rate</option>
+										<option value="Women">Percent who are Women</option>
+										<option value="Men">Percent who are Men</option>
+										<option value="Full_time">Percent of Jobs that are Full Time</option>
+										<option value="Part_time">Percent of Jobs that are Part Time</option>
+									</select>
+									<select id="categoriesForTopFive">
+									</select>
+									<div id="top5EachCategory"></div>
+								</div>
+							</section>
+
+							<!-- Third Section -->
+							<section id="third" class="main special">
+								<header class="major">
+									<h2>Select Majors to Compare</h2>
+									<p>Choose up to 15 majors to compare at a time.</p>
+								</header>
+								<div id="chooseMajors">
+									<button type="button" class="btn btn-default" data-toggle="modal" data-target="#selectModal" id="compare-open-button">Select Majors</button>
+									<select id="factorsForChooseMajors">
+										<option value="Median">Median Pay</option>
+										<option value="Unemployment_rate">Unemployment Rate</option>
+										<option value="Women">Percent who are Women</option>
+										<option value="Men">Percent who are Men</option>
+										<option value="Full_time">Percent of Jobs that are Full Time</option>
+										<option value="Part_time">Percent of Jobs that are Part Time</option>
+									</select>
+									<div id="fiveSelectedMajors"></div>
+								</div>
+							</section>
+
+						<!-- Fourth Section -->
+						<section id="fourth" class="main special">
+							<header class="major">
+								<h2>Compare your Top Majors</h2>
+								<p>Add some text here.</p>
+							</header>
+							<div id="topMajors">
+								<button type="button" class="btn btn-default" data-toggle="modal" data-target="#selectModal" id="compare-open-button">Select Majors</button>
+								<div id="medianPay"></div>
+								<div id="unemployment"></div>
+								<div id="percentWomen"></div>
+								<div id="percentMen"></div>
+								<div id="percentPartTime"></div>
+								<div id="percentFullTime"></div>
+							</div>
+						</section>
+
+						<!-- Fifth Section -->
+						<section id="fifth" class="main special">
+							<header class="major">
+								<h2>Choose One Major</h2>
+								<p>Add some text here.</p>
+							</header>
+							<!-- TODO: finish this section -->
+						</section>
 
 					</div>
 
