@@ -65,7 +65,7 @@
 							<section id="first" class="main special">
 								<header class="major">
 									<h2>An Initial Exploration</h2>
-									<p>Select two factors and up to 15 majors to compare.</p>
+									<p>Add text here.</p>
 								</header>
 								<div id="multipleFactors">
 
@@ -175,7 +175,7 @@
 								<p>Add some text here.</p>
 							</header>
 							<div id="topMajors">
-								<button type="button" class="btn btn-default" data-toggle="modal" data-target="#selectModal" id="single-open-button">Select Majors</button>
+								<button type="button" class="btn btn-default" data-toggle="modal" data-target="#selectModal" id="fewer-majors-open-button">Select Majors</button>
 								<div id="medianPay"></div>
 								<div id="unemployment"></div>
 								<div id="percentWomen"></div>
@@ -191,11 +191,11 @@
 								<h2>Down to One</h2>
 								<p>Add some text here.</p>
 							</header>
-
-							<!-- TODO: this needs to be limited to 1 not 15 majors -->
-							<button type="button" class="btn btn-default" data-toggle="modal" data-target="#selectModal" id="single-open-button">Select One Major</button>
+							<span>Show me information about </span>
+							<select id="selectOneMajor"></select>
+							<button id="showMajor">Go!</button>
 							<div id="singleMajor">
-								<p>Show me the major with the </p>
+								<span>Show me the major with the </span>
 								<select id="lowHigh">
 									<option value="lowest">lowest</option>
 									<option value="highest">highest</option>
@@ -208,7 +208,7 @@
 									<option value="Full_time">percentage of full time jobs</option>
 									<option value="Part_time">percentage of part time jobs</option>
 								</select>
-								<button id="showSingleMajor">Go!</button>
+								<button id="findMajor">Go!</button>
 							</div>
 							<div id="random">
 								<button id="randomMajor">Random Major</button>

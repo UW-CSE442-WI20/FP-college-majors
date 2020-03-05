@@ -134,6 +134,57 @@ yFactor.onchange = () => {
 }
 
 
+let oneMajorSelector = document.getElementById("selectOneMajor");
+for (let category in data["categories"]) {
+    let optgroup = document.createElement("optgroup");
+    optgroup.label = category;
+    oneMajorSelector.append(optgroup);
+    for (let major in data["categories"][category]) {
+      let option = document.createElement("option");
+      option.innerHTML = data["categories"][category][major]["Major"];
+      option.value = data["categories"][category][major]["Major"];
+      optgroup.append(option);
+    }
+}
+
+
+document.getElementById("showMajor").onclick = () => {
+  addSingleMajorText(oneMajorSelector.value);
+}
+
+
+document.getElementById("findMajor").onclick = () => {
+  let lowOrHigh = document.getElementById("lowHigh").value;
+  let factor = document.getElementById("factorsForSingleMajor").value;
+  let majorName = "";
+  let value = 0;
+  for (let major in data.majors) {
+    if (majorName === "") {
+      majorName = major;
+      if (factor == FACTORS.Median || factor == FACTORS.Unemployment_rate) {
+        value = data["majors"][major][factor];
+      } else if (factor == FACTORS.Women || factor == FACTORS.Men) {
+        value = data["majors"][major][factor] / data["majors"][major]["Total"];
+      } else {
+        value = data["majors"][major][factor] / (data["majors"][major]["Full_time"] + data["majors"][major]["Part_time"]);
+      }
+    } else {
+      let curValue = data["majors"][major][factor];
+      if (factor == FACTORS.Women || factor == FACTORS.Men) {
+        curValue = curValue / data["majors"][major]["Total"];
+      } else if (factor == FACTORS.Full_time || factor == FACTORS.Part_time) {
+        curValue = curValue / (data["majors"][major]["Full_time"] + data["majors"][major]["Part_time"]);
+      }
+      if ((lowOrHigh == "lowest" && curValue < value) || (lowOrHigh == "highest" && curValue > value)) {
+        majorName = major;
+        value = curValue;
+      }
+    }
+  }
+  addSingleMajorText(majorName);
+}
+
+
 document.getElementById("randomMajor").onclick = () => {
   let randomNum = Math.floor(Math.random() * Object.keys(data.majors).length);
   let majorName = Object.keys(data.majors)[randomNum]
@@ -145,6 +196,7 @@ function addSingleMajorText(major) {
   infoDiv.innerHTML = "";
   let name = document.createElement("h3");
   name.innerHTML = major;
+  name.classList.add("singleMajorName");
   infoDiv.append(name);
   let majorInfo = data["majors"][major];
 
@@ -153,25 +205,25 @@ function addSingleMajorText(major) {
   infoDiv.append(medianPay);
 
   let unemployment = document.createElement("p");
-  unemployment.innerHTML = (majorInfo.Unemployment_rate * 100).toFixed(2) + "% unemployed";
+  unemployment.innerHTML = "Unemployment rate: " + restrictDecimalPlaces(majorInfo.Unemployment_rate * 100) + "%";
   infoDiv.append(unemployment);
 
   let women = document.createElement("p");
-  women.innerHTML = (majorInfo.ShareWomen * 100).toFixed(2) + "% women";
+  women.innerHTML = restrictDecimalPlaces(majorInfo.ShareWomen * 100) + "% women";
   infoDiv.append(women);
 
   let men = document.createElement("p");
-  men.innerHTML = ((majorInfo.Men / majorInfo.Total) * 100).toFixed(2) + "% men";
+  men.innerHTML = restrictDecimalPlaces((majorInfo.Men / majorInfo.Total) * 100) + "% men";
   infoDiv.append(men);
 
   let totalPartAndFullTime = majorInfo.Part_time + majorInfo.Full_time;
 
   let partTime = document.createElement("p");
-  partTime.innerHTML = ((majorInfo.Part_time / totalPartAndFullTime) * 100).toFixed(2) + "% part time";
+  partTime.innerHTML = restrictDecimalPlaces((majorInfo.Part_time / totalPartAndFullTime) * 100) + "% part time";
   infoDiv.append(partTime);
 
   let fullTime = document.createElement("p");
-  fullTime.innerHTML = ((majorInfo.Full_time / totalPartAndFullTime) * 100).toFixed(2) + "% full time";
+  fullTime.innerHTML = restrictDecimalPlaces((majorInfo.Full_time / totalPartAndFullTime) * 100) + "% full time";
   infoDiv.append(fullTime);
 }
 
@@ -285,7 +337,7 @@ function drawChart(chartId, chartData, factor, yAxisData) {
           if (value == 100) {
             for (var i = 0; i < chartData.length; i++) {
               if (chartData[i]["name"] == d["name"] && chartData[i]["value"] != 100) {
-                value = (100 - chartData[i]["value"]).toFixed(2);
+                value = restrictDecimalPlaces(100 - chartData[i]["value"]);
                 break;
               }
             }
@@ -298,7 +350,7 @@ function drawChart(chartId, chartData, factor, yAxisData) {
           if (value == 100) {
             for (var i = 0; i < chartData.length; i++) {
               if (chartData[i]["name"] == d["name"] && chartData[i]["value"] != 100) {
-                value = (100 - chartData[i]["value"]).toFixed(2);
+                value = restrictDecimalPlaces(100 - chartData[i]["value"]);
                 break;
               }
             }
@@ -504,6 +556,18 @@ function addCommasToNumber(text) {
     }
   }
   return result;
+}
+
+function restrictDecimalPlaces(number) {
+  var newNumber = "" + number;
+  var dotIndex = newNumber.indexOf(".");
+  if (dotIndex >= 0) {
+    var decimalPortion = newNumber.substring(dotIndex);
+    if (decimalPortion.length > 2) {
+      newNumber = "" + number.toFixed(2);
+    }
+  }
+  return newNumber;
 }
 
 function updateChartMajors(graph, majors) {

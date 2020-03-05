@@ -30,4 +30,21 @@ select {
 
 #singleMajor {
   margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+#selectOneMajor {
+  width: 47%;
+}
+
+#majorInfo {
+  margin-top: 3%;
+}
+
+.singleMajorName {
+  font-weight: bold;
+}
+
+#majorInfo p {
+  margin-bottom: 0.5%;
 }

@@ -2,7 +2,7 @@ import { updateChartMajors } from "./index.js";
 
 initModal();
 let compareSelected = [];
-let singleSelected = [];
+let fewerMajorsSelected = [];
 let currModal = ""
 
 function initModal() {
@@ -25,6 +25,8 @@ function initModal() {
         event.preventDefault();
         var scroll_offset= this.parentElement.scrollTop;
 
+        // TODO only allow 5 (or some other small number) majors to be selected
+        // for the modal in the fourth section
         if (this.selected || numSelected() < 15) {
           this.selected = !this.selected;
           document.getElementById("max-warning").style.display = "none";
@@ -32,7 +34,7 @@ function initModal() {
           document.getElementById("max-warning").style.display = "inline";
         }
 
-        this.parentElement.scrollTop= scroll_offset;
+        this.parentElement.scrollTop = scroll_offset;
       }
       option.onmousemove = function(event) {
           event.preventDefault();
@@ -48,9 +50,9 @@ function initModal() {
     currModal = "compare";
     resetSelections(compareSelected);
   })
-  document.getElementById("single-open-button").addEventListener("click", function() {
-    currModal = "single";
-    resetSelections(singleSelected);
+  document.getElementById("fewer-majors-open-button").addEventListener("click", function() {
+    currModal = "fewer-majors";
+    resetSelections(fewerMajorsSelected);
   })
 
   document.getElementById("sel-button").addEventListener("click", function() {
@@ -81,14 +83,15 @@ function saveSelections() {
         }
     });
     updateChartMajors("oneFactor", compareSelected);
-  } else if (currModal === "single") {
-    singleSelected = [];
+  } else if (currModal === "fewer-majors") {
+    fewerMajorsSelected = [];
     $("#sel > optgroup > option").each(function() {
         if (this.selected) {
-          singleSelected.push(this.value); 
+          fewerMajorsSelected.push(this.value); 
         }
     });
-    updateChartMajors("twoFactor", factorsSelected);
+    // TODO update charts for this the section with this modal
+    // updateChartMajors("twoFactor", factorsSelected);
   } else {
     alert("problem with modal state / string comparisons");
   }
