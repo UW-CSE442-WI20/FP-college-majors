@@ -60,6 +60,12 @@ class FiveSelectedMajors {
 
   update(factor, majorNames) {
     const top5 = this.processingData(factor, majorNames);
+    if (top5.length == 0) {
+      d3.select("#fiveSelectedMajors").style("visibility", "hidden");
+    } else {
+      d3.select("#fiveSelectedMajors").style("visibility", "visible");
+    }
+
     this.drawChart(top5, factor);
   }
 
