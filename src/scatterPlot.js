@@ -17,8 +17,8 @@ class ScatterPlot {
     this.database = database
     // set the dimensions and margins of the graph
     this.margin = { top: 10, right: 30, bottom: 30, left: 60 };
-    this.width = 460 - this.margin.left - this.margin.right;
-    this.height = 400 - this.margin.top - this.margin.bottom;
+    this.width = 800 - this.margin.left - this.margin.right;
+    this.height = 600 - this.margin.top - this.margin.bottom;
 
     // append the svg object to the body of the page
     this.svg = d3.select("#scatterPlot")
@@ -52,12 +52,12 @@ class ScatterPlot {
   }
 
   drawChart(data, xProperty, yProperty) {
-    console.log(data)
+    // console.log(data)
     let minX, minY, maxX, maxY;
-    maxX = d3.max(data.map(function (d) { return d[xProperty]; })) * 1.1;
-    maxY = d3.max(data.map(function (d) { return d[yProperty]; })) * 1.1;
-    minX = d3.min(data.map(function (d) { return d[xProperty]; })) * 0.9;
-    minY = d3.min(data.map(function (d) { return d[yProperty]; })) * 0.9;
+    maxX = this.maxPropertyValue(xProperty, data);
+    maxY = this.maxPropertyValue(yProperty, data);
+    minX = this.minPropertyValue(xProperty, data);
+    minY = this.minPropertyValue(yProperty, data);
 
     this.x
       .domain([minX, maxX]);
@@ -96,13 +96,15 @@ class ScatterPlot {
         }
         function wrapTooltipText(value, factor) {
           if (factor == FACTORS.Median) {
-            return value.toLocaleString('us-US', { style: 'currency', currency: 'USD' }) + " " + factor
+            return UNITS.Median_pay + ": " + value.toLocaleString('us-US', { style: 'currency', currency: 'USD' })
           } else {
             return value.toLocaleString("en") + UNITS.Men + " " + factor.replace('_', ' ')
           }
         }
+        console.log(d);
         const html = addTextDiv([
           d[DATA_PROPERTIES.Major],
+          DATA_PROPERTIES.Category + ": " + d[DATA_PROPERTIES.Major_category],
           wrapTooltipText(d[xProperty], xProperty),
           wrapTooltipText(d[yProperty], yProperty)
         ]);
@@ -136,6 +138,26 @@ class ScatterPlot {
       selectedMajors.push(major);
     })
     return selectedMajors;
+  }
+
+  maxPropertyValue(property, data) {
+    let maxValue;
+    if (property == FACTORS.Median) {
+      maxValue = d3.max(data.map(function (d) { return d[property]; })) * 1.1;
+    } else {
+      maxValue = d3.max(data.map(function (d) { return d[property]; }));
+    }
+    return maxValue;
+  }
+
+  minPropertyValue(property, data) {
+    let minValue;
+    if (property == FACTORS.Median) {
+      minValue = d3.min(data.map(function (d) { return d[property]; })) * 0.9;
+    } else {
+      minValue = d3.min(data.map(function (d) { return d[property]; }));
+    }
+    return minValue;
   }
 }
 
