@@ -67,10 +67,10 @@ class TopFiveCategory {
   drawChart(data, xProperty) {
     const tooltip = this.tooltip;
     // Add X axis
-    let maxValue = d3.max(data.map(function (d) { return d[xProperty]; }));
-    maxValue = maxValue * this.random();
+    let minX, minY, maxX, maxY;
+    maxX = this.maxPropertyValue(xProperty, data);
     this.x
-      .domain([0, maxValue]);
+      .domain([0, maxX]);
     this.xAxis
       .transition().duration(1000)
       .call(d3.axisBottom(this.x))
@@ -136,6 +136,17 @@ class TopFiveCategory {
   random() {
     return Math.floor(Math.random() * (15 - 10 + 1) + 10) / 100 + 1;
   }
+
+  maxPropertyValue(property, data) {
+    let maxValue;
+    if (property == FACTORS.Median) {
+      maxValue = d3.max(data.map(function (d) { return d[property]; })) * 1.1;
+    } else {
+      maxValue = d3.max(data.map(function (d) { return d[property]; }));
+    }
+    return maxValue;
+  }
+
 }
 
 module.exports = TopFiveCategory;
