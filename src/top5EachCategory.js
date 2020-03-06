@@ -93,7 +93,7 @@ class TopFiveCategory {
       .attr("y", function (d) { return y(d[DATA_PROPERTIES.Major]); })
       .attr("width", function (d) { return x(d[xProperty]); })
       .attr("height", y.bandwidth())
-      .attr("fill", "#69b3a2")
+      .attr("fill", COLORS.pink)
     // If less group in the new dataset, I delete the ones not in use anymore
     u
       .exit()

@@ -84,7 +84,7 @@ class ScatterPlot {
       .attr("cx", function (d) { return x(d[xProperty]); })
       .attr("cy", function (d) { return y(d[yProperty]); })
       .attr("r", 3)
-      .style("fill", "#69b3a2")
+      .style("fill", COLORS.pink)
       .on("mouseover", function (d) {
         function addTextDiv(texts) {
           let html = "<div>";
