@@ -63,12 +63,12 @@ class ScatterPlot {
       .domain([minX, maxX]);
     this.xAxis
       .transition().duration(1000)
-      .call(d3.axisBottom(this.x))
+      .call(d3.axisBottom(this.x).tickSizeOuter(0))
     this.y
       .domain([minY, maxY])
     this.yAxis
       .transition().duration(1000)
-      .call(d3.axisLeft(this.y));
+      .call(d3.axisLeft(this.y).tickSizeOuter(0));
     // Add dots
     var x = this.x;
     var y = this.y;

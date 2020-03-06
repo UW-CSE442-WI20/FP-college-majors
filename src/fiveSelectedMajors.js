@@ -91,11 +91,11 @@ class FiveSelectedMajors {
       .domain([0, maxX]);
     this.xAxis
       .transition().duration(1000)
-      .call(d3.axisBottom(this.x))
+      .call(d3.axisBottom(this.x).tickSizeOuter(0))
     this.y
       .domain(data.map(function (d) { return d[DATA_PROPERTIES.Major]; }))
     this.yAxis
-      .call(d3.axisLeft(this.y))
+      .call(d3.axisLeft(this.y).tickSizeOuter(0))
     var x = this.x;
     var y = this.y;
     //Bars
