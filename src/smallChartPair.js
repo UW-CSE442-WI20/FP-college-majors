@@ -63,9 +63,9 @@ class SmallChartPair {
   update(factor, majorNames) {
     const top5 = this.processingData(factor, majorNames);
     if (top5.length == 0) {
-      d3.select("#" + this.divName).style("visibility", "hidden");
+      document.getElementById(this.divName).classList.add("hidden");
     } else {
-      d3.select("#" + this.divName).style("visibility", "visible");
+      document.getElementById(this.divName).classList.remove("hidden");
     }
 
     this.drawChart(top5, factor);
