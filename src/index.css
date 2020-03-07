@@ -48,3 +48,28 @@ select {
 #majorInfo p {
   margin-bottom: 0.5%;
 }
+
+.colorBox {
+  width: 0.5em;
+  height: 0.5em;
+  margin-right: 0.2em;
+  display: inline-block;
+}
+
+.legendText {
+  font-size: 0.68em;
+}
+
+#legend {
+  display: inline-block;
+  float: right;
+  margin-top: 1em;
+}
+
+#legend * {
+  text-align: left;
+}
+
+#scatterPlot {
+  display: inline-block;
+}

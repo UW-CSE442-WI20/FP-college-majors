@@ -16,8 +16,8 @@ class ScatterPlot {
 
     this.database = database
     // set the dimensions and margins of the graph
-    this.margin = { top: 10, right: 30, bottom: 30, left: 60 };
-    this.width = 800 - this.margin.left - this.margin.right;
+    this.margin = { top: 10, right: 20, bottom: 30, left: 45 };
+    this.width = 725;
     this.height = 600 - this.margin.top - this.margin.bottom;
 
     // append the svg object to the body of the page

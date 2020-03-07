@@ -574,4 +574,19 @@ function updateChartMajors(graph, majors) {
   charts[graph].majors = majors;
   charts[graph].update();
 }
+
+let legend = document.getElementById("legend");
+for (var i = 0; i < majorCategories.length; i++) {
+  var containerDiv = document.createElement("div");
+  legend.append(containerDiv);
+  var colorBox = document.createElement("div");
+  colorBox.style.background = SCATTERPLOT_COLORS[majorCategories[i]];
+  colorBox.classList.add("colorBox");
+  containerDiv.append(colorBox);
+  var categoryName = document.createElement("span");
+  categoryName.innerHTML = majorCategories[i];
+  categoryName.classList.add("legendText");
+  containerDiv.append(categoryName);
+}
+
 export { updateChartMajors };
