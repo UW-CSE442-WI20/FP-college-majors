@@ -61,9 +61,9 @@ class FiveSelectedMajors {
   update(factor, majorNames) {
     const top5 = this.processingData(factor, majorNames);
     if (top5.length == 0) {
-      d3.select("#fiveSelectedMajors").style("visibility", "hidden");
+      document.getElementById("fiveSelectedMajors").classList.add("hidden");
     } else {
-      d3.select("#fiveSelectedMajors").style("visibility", "visible");
+      document.getElementById("fiveSelectedMajors").classList.remove("hidden");
     }
 
     this.drawChart(top5, factor);
