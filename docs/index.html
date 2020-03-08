@@ -17,10 +17,10 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.full.min.js"></script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css">
 
-		<link rel="stylesheet" href="https://uw-cse442-wi20.github.io/FP-college-majors/main.ba262477.css">
+		<link rel="stylesheet" href="https://uw-cse442-wi20.github.io/FP-college-majors/main.f2094a89.css">
 
-		<link rel="stylesheet" type="text/css" href="https://uw-cse442-wi20.github.io/FP-college-majors/src.c7eebd54.css">
-		<link rel="stylesheet" type="text/css" href="https://uw-cse442-wi20.github.io/FP-college-majors/modal.d8d0875a.css">
+		<link rel="stylesheet" type="text/css" href="https://uw-cse442-wi20.github.io/FP-college-majors/src.c15dae55.css">
+		<link rel="stylesheet" type="text/css" href="https://uw-cse442-wi20.github.io/FP-college-majors/modal.ecbbc2c9.css">
 
 		<noscript><link rel="stylesheet" href="https://uw-cse442-wi20.github.io/FP-college-majors/noscript.30fe8d20.css"></noscript>
 	</head>
@@ -38,9 +38,11 @@
 					<nav id="nav">
 						<ul>
 							<li><a href="#intro" class="active">Introduction</a></li>
-							<li><a href="#first">Explore Major Categories</a></li>
-							<li><a href="#second">Select Majors to Compare</a></li>
-							<li><a href="#cta">Compare Majors by Multiple Factors</a></li>
+							<li><a href="#first">An Initial Exploration</a></li>
+							<li><a href="#second">Examine Major Categories</a></li>
+							<li><a href="#third">Dive into Majors</a></li>
+							<li><a href="#fourth">Narrow down the Options</a></li>
+							<li><a href="#fifth">Down to One</a></li>
 						</ul>
 					</nav>
 
@@ -52,9 +54,21 @@
 								<div class="spotlight">
 									<div class="content">
 										<header class="major">
-											<h2>Overview</h2>
+											<h2>Introduction</h2>
 										</header>
-										<p>Short description of website will go here.</p>
+										<p>
+											Choosing a college major is an important decision because it helps define what your future career will be.
+											However, deciding what to major in can be very difficult because there are so many choices (there are approximately
+											175 majors listed on this page alone). Choosing a major becomes even more difficult when you want to take into account
+											not only what your interests are, but also other factors, such as pay for example. This webpage aims to make it easier
+											for you to consider those “other factors” when selecting a major by allowing you to explore various visualizations. In each
+											section, the factors you can choose to compare majors by are median pay, unemployment rate, percentage of men vs. women, and
+											percentage of jobs that are full time vs. part time. The data for all of the sections below is from
+											<a href="https://github.com/fivethirtyeight/data/tree/master/college-majors">https://github.com/fivethirtyeight/data/tree/master/college-majors</a>.
+											Also, in each visualization on this page, you can hover over the elements in the visualization (a dot in the scatterplot or a bar
+											in the bar charts) to view the exact value being displayed. Note that for the bar charts, if you do not see a bar for a major or category,
+											the value for that factor and major or category is zero.
+										</p>
 									</div>
 								</div>
 							</section>
@@ -62,65 +76,15 @@
 						<!-- First Section -->
 							<section id="first" class="main special">
 								<header class="major">
-									<h2>Explore Categories of Majors</h2>
+									<h2>An Initial Exploration</h2>
 								</header>
-								<div id="categories">
-      									<h3>Compare Categories of Majors</h3>
-									<p>Click on a bar for a major category to see the top five majors for the selected factor and category.</p>
-									<select id="factorsForCategories">
-										<option value="Median">Median Pay</option>
-										<option value="Unemployment_rate">Unemployment Rate</option>
-										<option value="Gender">Percentage of Men vs. Women</option>
-										<option value="WorkTime">Full Time vs. Part Time Jobs</option>
-									</select>
-									<div id="categoriesChart"></div>
-								</div>
-
-								<div id="top5" class="hidden">
-									<h3>Top 5 Majors for this Factor and Category</h3>
-									<button id="backButton">Back to Major Categories</button>
-									<select id="factorsForTopFive">
-										<option value="Median">Median Pay</option>
-										<option value="Unemployment_rate">Unemployment Rate</option>
-										<option value="Women">Percent who are Women</option>
-										<option value="Men">Percent who are Men</option>
-										<option value="Full_time">Percent of Jobs that are Full Time</option>
-										<option value="Part_time">Percent of Jobs that are Part Time</option>
-									</select>
-									<select id="categoriesForTopFive">
-									</select>
-									<div id="top5EachCategory"></div>
-								</div>
-							</section>
-
-						<!-- Second Section -->
-							<section id="second" class="main special">
-								<header class="major">
-									<h2>Select Majors to Compare</h2>
-									<p>Choose up to 15 majors to compare at a time.</p>
-								</header>
-								<div id="chooseMajors">
-									<button type="button" class="btn btn-default" data-toggle="modal" data-target="#selectModal" id="compare-open-button">Select Majors</button>
-									<select id="factorsForChooseMajors">
-										<option value="Median">Median Pay</option>
-										<option value="Unemployment_rate">Unemployment Rate</option>
-										<option value="Women">Percent who are Women</option>
-										<option value="Men">Percent who are Men</option>
-										<option value="Full_time">Percent of Jobs that are Full Time</option>
-										<option value="Part_time">Percent of Jobs that are Part Time</option>
-									</select>
-									<div id="fiveSelectedMajors"></div>
-								</div>
-							</section>
-
-						<!-- Third Section -->
-							<section id="cta" class="main special">
-								<header class="major">
-									<h2>Compare Majors by Multiple Factors</h2>
-									<p>Select two factors and up to 15 majors to compare.</p>
-								</header>
+								<p>
+									To start you off on your search for a college major, explore the scatterplot below. All 175 majors are shown in the scatterplot and you can use
+									the selectors to change which factor is displayed on the x and y axes. You can also hover over a point to see which major it corresponds to. The
+									color of each point corresponds to the category of major it belongs to. As you explore the scatterplot, think about which factors are most important
+									to you and which majors as well as categories of majors could be of interest to you based on those factors.
+								</p>
 								<div id="multipleFactors">
-									<button type="button" class="btn btn-default" data-toggle="modal" data-target="#selectModal" id="factors-open-button">Select Majors</button>
 
 									<!-- modal start -->
 									<div class="modal fade" id="selectModal" role="dialog">
@@ -129,7 +93,7 @@
 												<div>
 <!-- 													<button type="button" class="close" data-dismiss="modal" id="x-button">&times;</button> -->
                           <h4 class="modal-title">Select Majors to Compare</h4>
-                          <div id="max-warning">Please select no more than 15 majors</div>
+                          <div id="max-warning"></div>
 												</div>
 												<div class="modal-body form-group">
 													<select multiple="" class="form-control" id="sel"></select>
@@ -142,28 +106,158 @@
 										</div>
 									</div>
 									<!-- modal end -->
-
-									<p>Factor 1 (x-axis):</p>
-									<select id="xFactor">
-										<option value="Median">Median Pay</option>
-										<option value="Unemployment_rate">Unemployment Rate</option>
-										<option value="Women">Percent who are Women</option>
-										<option value="Men">Percent who are Men</option>
-										<option value="Full_time">Percent of Jobs that are Full Time</option>
-										<option value="Part_time">Percent of Jobs that are Part Time</option>
-									</select>
-									<p>Factor 2 (y-axis):</p>
-									<select id="yFactor">
-										<option value="Median">Median Pay</option>
-										<option value="Unemployment_rate">Unemployment Rate</option>
-										<option value="Women">Percent who are Women</option>
-										<option value="Men">Percent who are Men</option>
-										<option value="Full_time">Percent of Jobs that are Full Time</option>
-										<option value="Part_time">Percent of Jobs that are Part Time</option>
-									</select>
+									<div id="scatterplotFactors">
+										<p>Factor 1 (x-axis):</p>
+										<select id="xFactor">
+											<option value="Median" selected"="">Median Pay ($)</option>
+											<option value="Unemployment_rate">Unemployment Rate (%)</option>
+											<option value="Women">Percent who are Women</option>
+											<option value="Men">Percent who are Men</option>
+											<option value="Full_time">Percent of Jobs that are Full Time</option>
+											<option value="Part_time">Percent of Jobs that are Part Time</option>
+										</select>
+										<p>Factor 2 (y-axis):</p>
+										<select id="yFactor">
+											<option value="Median">Median Pay ($)</option>
+											<option value="Unemployment_rate" selected="">Unemployment Rate (%)</option>
+											<option value="Women">Percent who are Women</option>
+											<option value="Men">Percent who are Men</option>
+											<option value="Full_time">Percent of Jobs that are Full Time</option>
+											<option value="Part_time">Percent of Jobs that are Part Time</option>
+										</select>
+									</div>
 									<div id="scatterPlot"></div>
+									<div id="legend"></div>
 								</div>
 							</section>
+
+
+							<!-- Second Section -->
+							<section id="second" class="main special">
+								<header class="major">
+									<h2>Examine Major Categories</h2>
+								</header>
+								<p>
+									Now that you have an idea of what factors are important to you, let’s take a closer look at the categories of majors.
+									The chart below displays, for each category, the average value for the selected factor of the majors in that category.
+									The selector below can be used to change which factor is displayed. In addition, you can click on a bar in the chart to
+									see the top five majors for the factor you selected in the category that corresponds to the bar you clicked.
+								</p>
+								<div id="categories">
+      									<h3>Compare Categories of Majors</h3>
+									<select id="factorsForCategories">
+										<option value="Median">Median Pay ($)</option>
+										<option value="Unemployment_rate">Unemployment Rate (%)</option>
+										<option value="Gender">Percentage of Men vs. Women</option>
+										<option value="WorkTime">Full Time vs. Part Time Jobs</option>
+									</select>
+									<div id="categoriesChart"></div>
+								</div>
+
+								<div id="top5" class="hidden">
+									<h3>Top 5 Majors for this Factor and Category</h3>
+									<button id="backButton">Back to Major Categories</button>
+									<select id="factorsForTopFive">
+										<option value="Median">Median Pay ($)</option>
+										<option value="Unemployment_rate">Unemployment Rate (%)</option>
+										<option value="Women">Percent who are Women</option>
+										<option value="Men">Percent who are Men</option>
+										<option value="Full_time">Percent of Jobs that are Full Time</option>
+										<option value="Part_time">Percent of Jobs that are Part Time</option>
+									</select>
+									<select id="categoriesForTopFive">
+									</select>
+									<div id="top5EachCategory"></div>
+								</div>
+							</section>
+
+							<!-- Third Section -->
+							<section id="third" class="main special">
+								<header class="major">
+									<h2>Dive into Majors</h2>
+								</header>
+								<p>
+									After examining the categories of majors and top five majors for various factors and categories, you may
+									have an idea of which majors could be real possibilities for you. This section aims to help you compare those
+									majors and hopefully narrow down the list of majors you’re considering. Click the select majors button below to
+									open a modal where you can select up to 15 majors. To save your changes, whether you select majors or click deselect
+									all, click the select button on the modal. Once you select at least one major, you will see a bar chart below, displaying
+									the values for the majors and factor you selected.
+								</p>
+								<div id="chooseMajors">
+									<button data-toggle="modal" data-target="#selectModal" id="compare-open-button">Select Majors</button>
+									<select id="factorsForChooseMajors">
+										<option value="Median">Median Pay ($)</option>
+										<option value="Unemployment_rate">Unemployment Rate (%)</option>
+										<option value="Women">Percent who are Women</option>
+										<option value="Men">Percent who are Men</option>
+										<option value="Full_time">Percent of Jobs that are Full Time</option>
+										<option value="Part_time">Percent of Jobs that are Part Time</option>
+									</select>
+									<div id="fiveSelectedMajors"></div>
+								</div>
+							</section>
+
+						<!-- Fourth Section -->
+						<section id="fourth" class="main special">
+							<header class="major">
+								<h2>Narrow down the Options</h2>
+							</header>
+							<p>
+								At this point, hopefully you have a relatively small list of majors you are still considering, perhaps around
+								five majors or so. The goal of this section is to allow you to easily compare those majors on all factors to get
+								a better idea of which major is the best for you. Similar to the previous section, click the select majors button
+								below to open a modal where you can select up to 5 majors. Again, to save your changes, even after clicking deselect
+								all, click the select button on the modal. Once you select at least one major, multiple bar charts will be displayed,
+								showing the majors you selected and all factors.
+							</p>
+							<div id="topMajors">
+								<button data-toggle="modal" data-target="#selectModal" id="fewer-majors-open-button">Select Majors</button>
+								<div id="medianPaySmallChart"></div>
+								<div id="unemploymentSmallChart"></div>
+								<div id="genderSmallChart"></div>
+								<div id="hourSmallChart"></div>
+							</div>
+						</section>
+
+						<!-- Fifth Section -->
+						<section id="fifth" class="main special">
+							<header class="major">
+								<h2>Down to One</h2>
+							</header>
+							<p>
+								You made it to the last section of this webpage! After exploring all those visualizations in the previous sections,
+								we hope you have decided on a major. If you have, then you can see information about that major by selecting the major
+								in the first drop-down box below and clicking the “Go” button next to it. If not, no worries, we have options for that
+								too. If you’re interested in a particular factor, such as finding the major with the highest median pay for example, you
+								can use the second set of drop-down options to select a factor and whether you want to see the major with the lowest or highest
+								value for that factor, then click the “Go” button next to it. If you’re tired of looking at majors and still aren’t sure which one
+								to choose, then try clicking the “Random Major” button and see which major pops up.
+							</p>
+							<span>Show me information about </span>
+							<select id="selectOneMajor"></select>
+							<button id="showMajor">Go!</button>
+							<div id="singleMajor">
+								<span>Show me the major with the </span>
+								<select id="lowHigh">
+									<option value="lowest">lowest</option>
+									<option value="highest">highest</option>
+								</select>
+								<select id="factorsForSingleMajor">
+									<option value="Median">median pay</option>
+									<option value="Unemployment_rate">unemployment rate</option>
+									<option value="Women">percentage of women</option>
+									<option value="Men">percentage of men</option>
+									<option value="Full_time">percentage of full time jobs</option>
+									<option value="Part_time">percentage of part time jobs</option>
+								</select>
+								<button id="findMajor">Go!</button>
+							</div>
+							<div id="random">
+								<button id="randomMajor">Random Major</button>
+							</div>
+							<div id="majorInfo"></div>
+						</section>
 
 					</div>
 
@@ -194,6 +288,7 @@
 var DATA_PROPERTIES = {
   Major: "Major",
   Categories: "Categories",
+  Major_category: "Major_category",
   Category: "Category",
   categories: "categories",
   majors: "majors"
@@ -209,17 +304,43 @@ var UNITS = {
   Men: "%",
   Women: "%",
   Full_time: "%",
-  Part_time: "%"
+  Part_time: "%",
+  Median_pay: "Median Pay"
 };
 var TOOLTIP_STYLE = {
   background: "#666666",
   font: "Source Sans Pro",
   font_color: "white"
+};
+var TITLES = {
+  Unemployment_rate: "Unemployment Rate",
+  Median: "Median Pay",
+  Men: "Men",
+  Women: "Women",
+  Full_time: "Full Time",
+  Part_time: "Part Time"
+};
+var SCATTERPLOT_COLORS = {
+  "Engineering": "#006600",
+  "Business": "#ff9900",
+  "Physical Sciences": "#660066",
+  "Law & Public Policy": "#66ccff",
+  "Computers & Mathematics": "#0066ff",
+  "Agriculture & Natural Resources": "#000099",
+  "Industrial Arts & Consumer Services": "#ff33cc",
+  "Arts": "#d279a6",
+  "Health": "#e6e600",
+  "Social Science": "#a6a6a6",
+  "Biology & Life Science": "#404040",
+  "Education": "#9933ff",
+  "Humanities & Liberal Arts": "#b36b00",
+  "Psychology & Social Work": "Lime",
+  "Communications & Journalism": "#33cccc"
 };</script>
 
       <!-- was unable to access a function in index.js from modal.js, had to import which links index.js--> 
 			<!-- <script src="./index.js" type="text/javascript"></script> -->
-			<script src="https://uw-cse442-wi20.github.io/FP-college-majors/modal.2e444d07.js" type="text/javascript"></script>
+			<script src="https://uw-cse442-wi20.github.io/FP-college-majors/modal.dabbb80d.js" type="text/javascript"></script>
 
 	</body>
 </html>
