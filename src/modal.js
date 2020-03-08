@@ -4,6 +4,7 @@ initModal();
 let compareSelected = [];
 let fewerMajorsSelected = [];
 let currModal = ""
+let maxSelected = 0;
 
 function initModal() {
   let fs = require("fs");
@@ -20,19 +21,11 @@ function initModal() {
       option.innerHTML = data["categories"][x][y]["Major"];
       option.value = data["categories"][x][y]["Major"];
 
-      // fix ctrl problem
       option.onmousedown = function(event) {
         event.preventDefault();
         var scroll_offset= this.parentElement.scrollTop;
 
-        // TODO only allow 5 (or some other small number) majors to be selected
-        // for the modal in the fourth section
-        if (this.selected || numSelected() < 15) {
-          this.selected = !this.selected;
-          document.getElementById("max-warning").style.display = "none";
-        } else {
-          document.getElementById("max-warning").style.display = "inline";
-        }
+        checkMax(this);
 
         this.parentElement.scrollTop = scroll_offset;
       }
@@ -41,17 +34,21 @@ function initModal() {
       }
       optgroup.append(option);
 
-      option = document.createElement("option"); // TODO fix this
+      option = document.createElement("option");
     }
-    optgroup = document.createElement("optgroup"); // TODO fix this
+    optgroup = document.createElement("optgroup");
   }
 
   document.getElementById("compare-open-button").addEventListener("click", function() {
     currModal = "compare";
+    maxSelected = 15;
+    setWarning();
     resetSelections(compareSelected);
   })
   document.getElementById("fewer-majors-open-button").addEventListener("click", function() {
     currModal = "fewer-majors";
+    maxSelected = 5;
+    setWarning();
     resetSelections(fewerMajorsSelected);
   })
 
@@ -78,7 +75,7 @@ function saveSelections() {
   if (currModal === "compare") {
     compareSelected = [];
     $("#sel > optgroup > option").each(function() {
-        if (this.selected) {
+        if (isSelected(this)) {
           compareSelected.push(this.value); 
         }
     });
@@ -86,10 +83,12 @@ function saveSelections() {
   } else if (currModal === "fewer-majors") {
     fewerMajorsSelected = [];
     $("#sel > optgroup > option").each(function() {
-        if (this.selected) {
+        if (isSelected(this)) {
           fewerMajorsSelected.push(this.value); 
         }
     });
+
+
     // TODO update charts for this the section with this modal
     // updateChartMajors("twoFactor", factorsSelected);
   } else {
@@ -99,16 +98,47 @@ function saveSelections() {
 
 function select(majors) {
   $("#sel > optgroup > option").each(function() {
-      this.selected = majors.includes(this.value);
+      setOption(this, majors.includes(this.value));
   });
 }
 
 function numSelected() {
   let cnt = 0;
   $("#sel > optgroup > option").each(function() {
-      if (this.selected) {
+      if (isSelected(this)) {
         cnt += 1;
       }
   });
   return cnt;
+}
+
+function setOption(option, bool) {
+  if (bool) {
+    option.classList.add("selected");
+    option.style.backgroundColor = "#9bb2e1";
+    option.style.color = "white";
+  } else {
+    option.classList.remove("selected");
+    option.style.backgroundColor = "white";
+    option.style.color = "black";
+  }
+}
+
+function isSelected(option) {
+  return option.classList.contains("selected");
+}
+
+function checkMax(option) {
+  if (isSelected(option) || numSelected() < maxSelected) {
+    setOption(option, !isSelected(option));
+    document.getElementById("max-warning").style.display = "none";
+  } else {
+    document.getElementById("max-warning").style.display = "inline";
+  }
+}
+
+function setWarning() {
+  document.getElementById("max-warning").innerHTML = 
+    "Please select no more than " + maxSelected +" majors";
+    document.getElementById("max-warning").style.display = "none";
 }
