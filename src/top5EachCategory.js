@@ -110,9 +110,9 @@ class TopFiveCategory {
         }
         function wrapTooltipText(value, factor) {
           if (factor == FACTORS.Median) {
-            return value.toLocaleString('us-US', { style: 'currency', currency: 'USD' }) + " " + factor
+            return TITLES.Median + ": " + value.toLocaleString('us-US', { style: 'currency', currency: 'USD' })
           } else {
-            return value.toLocaleString("en") + UNITS.Men + " " + factor.replace('_', ' ')
+            return value.toLocaleString("en") + UNITS.Men + " " + TITLES[factor]
           }
         }
         const html = addTextDiv([

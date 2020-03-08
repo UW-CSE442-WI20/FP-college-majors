@@ -341,9 +341,9 @@ function drawChart(chartId, chartData, factor, yAxisData) {
                 break;
               }
             }
-            text = "Percent Men: " + value + "%";
+            text = value + UNITS.Men + " " + TITLES.Men;
           } else {
-            text = "Percent Women: " + value + "%";
+            text = value + UNITS.Women + " " + TITLES.Women;
           }
         } else {
           var value = d["value"];
@@ -354,9 +354,9 @@ function drawChart(chartId, chartData, factor, yAxisData) {
                 break;
               }
             }
-            text = "Full Time Jobs: " + value + "%";
+            text = value + UNITS.Full_time + " " + TITLES.Full_time;
           } else {
-            text = "Part Time Jobs: " + value + "%";
+            text = value + UNITS.Part_time + " " + TITLES.Part_time;
           }
         }
         return tooltip.style("visibility", "visible").html("<div>" + text + "</div>");
@@ -442,9 +442,9 @@ function drawChart(chartId, chartData, factor, yAxisData) {
           .attr('opacity', '.85');
         var text = "" + d["value"];
         if (factor == "Median") {
-          text = "Median Pay: " + factorInfo[factor]["units"] + addCommasToNumber(text);
+          text = TITLES.Median + ": " + factorInfo[factor]["units"] + addCommasToNumber(text);
         } else {
-          text = "Unemployment Rate: " + text + factorInfo[factor]["units"];
+          text = text + factorInfo[factor]["units"] + " " + TITLES.Unemployment_rate;
         }
         return tooltip.style("visibility", "visible").html("<div>" + text + "</div>");
       })

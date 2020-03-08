@@ -130,9 +130,9 @@ class SmallChartSingle {
         }
         function wrapTooltipText(value, factor) {
           if (factor == FACTORS.Median) {
-            return value.toLocaleString('us-US', { style: 'currency', currency: 'USD' }) + " " + factor
+            return TITLES[factor] + ": " + value.toLocaleString('us-US', { style: 'currency', currency: 'USD' })
           } else {
-            return value.toLocaleString("en") + UNITS.Men + " " + factor.replace('_', ' ')
+            return value.toLocaleString("en") + UNITS.Unemployment_rate + " " + TITLES[factor]
           }
         }
         const html = addTextDiv([
