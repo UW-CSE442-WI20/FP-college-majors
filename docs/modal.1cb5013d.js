@@ -29456,8 +29456,7 @@ function () {
       var y = this.y; //Bars
 
       var u = this.svg.selectAll("rect").data(data);
-      u.enter().append("rect") // .merge(u)
-      .transition().duration(1000).attr("x", this.x(0)).attr("y", function (d) {
+      u.enter().append("rect").merge(u).transition().duration(1000).attr("x", this.x(0)).attr("y", function (d) {
         return y(d[DATA_PROPERTIES.Major]);
       }).attr("width", function (d) {
         return x(d["Value"]);
@@ -37659,4 +37658,4 @@ function setWarning() {
   document.getElementById("max-warning").style.display = "none";
 }
 },{"./index.js":"Focm","fs":"rDCW"}]},{},["hR3q"], null)
-//# sourceMappingURL=https://uw-cse442-wi20.github.io/FP-college-majors/modal.dabbb80d.js.map
+//# sourceMappingURL=https://uw-cse442-wi20.github.io/FP-college-majors/modal.1cb5013d.js.map

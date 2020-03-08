@@ -29710,8 +29710,7 @@ function () {
       var y = this.y; //Bars
 
       var u = this.svg.selectAll("rect").data(data);
-      u.enter().append("rect") // .merge(u)
-      .transition().duration(1000).attr("x", this.x(0)).attr("y", function (d) {
+      u.enter().append("rect").merge(u).transition().duration(1000).attr("x", this.x(0)).attr("y", function (d) {
         return y(d[DATA_PROPERTIES.Major]);
       }).attr("width", function (d) {
         return x(d["Value"]);
@@ -37940,7 +37939,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58798" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59124" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
