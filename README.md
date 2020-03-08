@@ -1,4 +1,4 @@
-
+Our website can be viewed at https://uw-cse442-wi20.github.io/FP-college-majors/ an is best viewed on Chrome.
 
 ## Sources used in creating our website:
 1. Transition of bars' length/width in the bar chart: https://stackoverflow.com/questions/38983807/how-to-animate-a-horizontal-d3-bar-chart
