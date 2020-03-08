@@ -56,7 +56,18 @@
 										<header class="major">
 											<h2>Introduction</h2>
 										</header>
-										<p>Short description of website will go here.</p>
+										<p>
+											Choosing a college major is an important decision because it helps define what your future career will be.
+											However, deciding what to major in can be very difficult because there are so many choices (there are approximately
+											175 majors listed on this page alone). Choosing a major becomes even more difficult when you want to take into account
+											not only what your interests are, but also other factors, such as pay for example. This webpage aims to make it easier
+											for you to consider those “other factors” when selecting a major by allowing you to explore various visualizations. In each
+											section, the factors you can choose to compare majors by are median pay, unemployment rate, percentage of men vs. women, and
+											percentage of jobs that are full time vs. part time. The data for all of the sections below is from
+											<a href="https://github.com/fivethirtyeight/data/tree/master/college-majors">https://github.com/fivethirtyeight/data/tree/master/college-majors</a>.
+											Also, in each visualization on this page, you can hover over the elements in the visualization (a dot in the scatterplot or a bar
+											in the bar charts) to view the exact value being displayed.
+										</p>
 									</div>
 								</div>
 							</section>
@@ -65,8 +76,13 @@
 							<section id="first" class="main special">
 								<header class="major">
 									<h2>An Initial Exploration</h2>
-									<p>Add text here.</p>
 								</header>
+								<p>
+									To start you off on your search for a college major, explore the scatterplot below. All 175 majors are shown in the scatterplot and you can use
+									the selectors to change which factor is displayed on the x and y axes. You can also hover over a point to see which major it corresponds to. The
+									color of each point corresponds to the category of major it belongs to. As you explore the scatterplot, think about which factors are most important
+									to you and which majors as well as categories of majors could be of interest to you based on those factors.
+								</p>
 								<div id="multipleFactors">
 
 									<!-- modal start -->
@@ -120,9 +136,14 @@
 								<header class="major">
 									<h2>Examine Major Categories</h2>
 								</header>
+								<p>
+									Now that you have an idea of what factors are important to you, let’s take a closer look at the categories of majors.
+									The chart below displays, for each category, the average value for the selected factor of the majors in that category.
+									The selector below can be used to change which factor is displayed. In addition, you can click on a bar in the chart to
+									see the top five majors for the factor you selected in the category that corresponds to the bar you clicked.
+								</p>
 								<div id="categories">
       									<h3>Compare Categories of Majors</h3>
-									<p>Click on a bar for a major category to see the top five majors for the selected factor and category.</p>
 									<select id="factorsForCategories">
 										<option value="Median">Median Pay ($)</option>
 										<option value="Unemployment_rate">Unemployment Rate (%)</option>
@@ -153,8 +174,15 @@
 							<section id="third" class="main special">
 								<header class="major">
 									<h2>Dive into Majors</h2>
-									<p>Choose up to 15 majors to compare at a time.</p>
 								</header>
+								<p>
+									After examining the categories of majors and top five majors for various factors and categories, you may
+									have an idea of which majors could be real possibilities for you. This section aims to help you compare those
+									majors and hopefully narrow down the list of majors you’re considering. Click the select majors button below to
+									open a modal where you can select up to 15 majors. To save your changes, whether you select majors or click deselect
+									all, click the select button on the modal. Once you select at least one major, you will see a bar chart below, displaying
+									the values for the majors and factor you selected.
+								</p>
 								<div id="chooseMajors">
 									<button type="button" class="btn btn-default" data-toggle="modal" data-target="#selectModal" id="compare-open-button">Select Majors</button>
 									<select id="factorsForChooseMajors">
@@ -173,8 +201,15 @@
 						<section id="fourth" class="main special">
 							<header class="major">
 								<h2>Narrow down the Options</h2>
-								<p>Add some text here.</p>
 							</header>
+							<p>
+								At this point, hopefully you have a relatively small list of majors you are still considering, perhaps around
+								five majors or so. The goal of this section is to allow you to easily compare those majors on all factors to get
+								a better idea of which major is the best for you. Similar to the previous section, click the select majors button
+								below to open a modal where you can select up to 5 majors. Again, to save your changes, even after clicking deselect
+								all, click the select button on the modal. Once you select at least one major, multiple bar charts will be displayed,
+								showing the majors you selected and all factors.
+							</p>
 							<div id="topMajors">
 								<button type="button" class="btn btn-default" data-toggle="modal" data-target="#selectModal" id="fewer-majors-open-button">Select Majors</button>
 								<div id="medianPaySmallChart"></div>
@@ -188,8 +223,16 @@
 						<section id="fifth" class="main special">
 							<header class="major">
 								<h2>Down to One</h2>
-								<p>Add some text here.</p>
 							</header>
+							<p>
+								You made it to the last section of this webpage! After exploring all those visualizations in the previous sections,
+								we hope you have decided on a major. If you have, then you can see information about that major by selecting the major
+								in the first drop-down box below and clicking the “Go” button next to it. If not, no worries, we have options for that
+								too. If you’re interested in a particular factor, such as finding the major with the highest median pay for example, you
+								can use the second set of drop-down options to select a factor and whether you want to see the major with the lowest or highest
+								value for that factor, then click the “Go” button next to it. If you’re tired of looking at majors and still aren’t sure which one
+								to choose, then try clicking the “Random Major” button and see which major pops up.
+							</p>
 							<span>Show me information about </span>
 							<select id="selectOneMajor"></select>
 							<button id="showMajor">Go!</button>
