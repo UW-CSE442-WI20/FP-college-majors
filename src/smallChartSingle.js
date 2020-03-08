@@ -2,7 +2,6 @@ const d3 = require('d3')
 let fs = require("fs");
 class SmallChartSingle {
   constructor(divName) {
-    alert(divName);
     this.divName = divName;
     const database = JSON.parse(fs.readFileSync("./src/data.json", "utf8"));
     for (const key of Object.keys(database.majors)) {
@@ -61,7 +60,6 @@ class SmallChartSingle {
     if (top5.length == 0) {
       document.getElementById(this.divName).classList.add("hidden");
     } else {
-      alert(this.divName);
       document.getElementById(this.divName).classList.remove("hidden");
     }
 
