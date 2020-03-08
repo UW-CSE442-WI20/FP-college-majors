@@ -59,8 +59,6 @@ const charts = {
     }
   },
   twoFactor: {
-    factor1: "Median",
-    factor2: "Unemployment_rate",
     majors: Object.keys(data.majors),
     update: function() {
       scatterPlot.update(this.majors, this.factor1, this.factor2);
