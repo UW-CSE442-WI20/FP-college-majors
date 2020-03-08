@@ -124,7 +124,7 @@ class SmallChartPair {
 
     u.enter()
       .append("rect")
-      // .merge(u)
+      .merge(u)
       .transition()
       .duration(1000)
       .attr("x", this.x(0))
