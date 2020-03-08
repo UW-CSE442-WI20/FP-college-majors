@@ -145,7 +145,7 @@ class SmallChartPair {
     this.svg.append("text")
     .attr("text-anchor", "middle")  // this makes it easy to centre the text as the transform is applied to the anchor
     .attr("transform", "translate("+ (this.width/2) +","+(this.height + this.padding + 15)+")")  // centre below axis
-    .text(TITLES[xProperty] == FACTORS.Men ? "Gender" : "Hours");
+    .text(TITLES[xProperty] == FACTORS.Men ? "Percentage of Men and Women" : "Percentage of Full Time and Part Time Jobs");
   
     this.svg.selectAll("rect")
       .on("mouseover", function (d) {

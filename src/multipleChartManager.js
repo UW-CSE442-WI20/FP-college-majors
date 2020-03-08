@@ -13,7 +13,6 @@ class MultipleChartManager {
   }
 
   update(data) {
-    data = ["Petroleum Engineering", "Mass Media", "Journalism", "Communications"];
     this.median.update(FACTORS.Median, data);
     this.unemployment.update(FACTORS.Unemployment_rate, data);
     this.gender.update(FACTORS.Men, data);
