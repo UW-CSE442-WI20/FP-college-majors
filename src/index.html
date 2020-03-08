@@ -109,7 +109,7 @@
 									<div id="scatterplotFactors">
 										<p>Factor 1 (x-axis):</p>
 										<select id="xFactor">
-											<option value="Median">Median Pay ($)</option>
+											<option value="Median" selected">Median Pay ($)</option>
 											<option value="Unemployment_rate">Unemployment Rate (%)</option>
 											<option value="Women">Percent who are Women</option>
 											<option value="Men">Percent who are Men</option>
@@ -119,7 +119,7 @@
 										<p>Factor 2 (y-axis):</p>
 										<select id="yFactor">
 											<option value="Median">Median Pay ($)</option>
-											<option value="Unemployment_rate">Unemployment Rate (%)</option>
+											<option value="Unemployment_rate" selected>Unemployment Rate (%)</option>
 											<option value="Women">Percent who are Women</option>
 											<option value="Men">Percent who are Men</option>
 											<option value="Full_time">Percent of Jobs that are Full Time</option>
@@ -185,7 +185,7 @@
 									the values for the majors and factor you selected.
 								</p>
 								<div id="chooseMajors">
-									<button type="button" class="btn btn-default" data-toggle="modal" data-target="#selectModal" id="compare-open-button">Select Majors</button>
+									<button data-toggle="modal" data-target="#selectModal" id="compare-open-button">Select Majors</button>
 									<select id="factorsForChooseMajors">
 										<option value="Median">Median Pay ($)</option>
 										<option value="Unemployment_rate">Unemployment Rate (%)</option>
@@ -212,7 +212,7 @@
 								showing the majors you selected and all factors.
 							</p>
 							<div id="topMajors">
-								<button type="button" class="btn btn-default" data-toggle="modal" data-target="#selectModal" id="fewer-majors-open-button">Select Majors</button>
+								<button data-toggle="modal" data-target="#selectModal" id="fewer-majors-open-button">Select Majors</button>
 								<div id="medianPaySmallChart"></div>
 								<div id="unemploymentSmallChart"></div>
 								<div id="genderSmallChart"></div>

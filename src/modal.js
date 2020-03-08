@@ -90,7 +90,7 @@ function saveSelections() {
 
 
     // TODO update charts for this the section with this modal
-    // updateChartMajors("twoFactor", factorsSelected);
+    updateChartMajors("multiChart", fewerMajorsSelected);
   } else {
     alert("problem with modal state / string comparisons");
   }
