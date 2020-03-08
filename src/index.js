@@ -1,6 +1,8 @@
 import TopFiveCategory from "./top5EachCategory.js";
 import ScatterPlot from "./scatterPlot.js";
 import FiveSelectedMajors from "./fiveSelectedMajors.js";
+import MultipleChartManager from "./multipleChartManager.js";
+
 const d3 = require('d3');
 const data = require('./data.json');
 
@@ -28,6 +30,9 @@ d3.csv('carbon-emissions.csv')
 const topFiveCategory = new TopFiveCategory();
 const fiveSelectedMajors = new FiveSelectedMajors(); // single factor
 const scatterPlot = new ScatterPlot();
+
+const multipleChartManager = new MultipleChartManager();
+toggleMultiChart("none"); // should do this in multi manager
 
 const majorCategories = [];
 let categorySelector = document.getElementById("categoriesForTopFive");
@@ -63,6 +68,23 @@ const charts = {
     init: function(factor1_, factor2_) {
       this.factor1 = factor1_;
       this.factor2 = factor2_;
+      this.update();
+    }
+  },
+  multiChart: {
+    majors: [],
+    update: function() {
+      multipleChartManager.update(this.majors);
+
+      // do this in multi manager
+      if (this.majors.length > 0) {
+        toggleMultiChart("inline");
+      } else {
+        toggleMultiChart("none");
+      }
+    },
+    init: function(majors_) {
+      this.majors = majors_;
       this.update();
     }
   }
@@ -574,6 +596,7 @@ function updateChartMajors(graph, majors) {
   charts[graph].majors = majors;
   charts[graph].update();
 }
+export { updateChartMajors };
 
 let legend = document.getElementById("legend");
 for (var i = 0; i < majorCategories.length; i++) {
@@ -589,4 +612,9 @@ for (var i = 0; i < majorCategories.length; i++) {
   containerDiv.append(categoryName);
 }
 
-export { updateChartMajors };
+function toggleMultiChart(display) {
+  document.getElementById("medianPaySmallChart").style.display = display;
+  document.getElementById("unemploymentSmallChart").style.display = display;
+  document.getElementById("genderSmallChart").style.display = display;
+  document.getElementById("hourSmallChart").style.display = display;
+}
