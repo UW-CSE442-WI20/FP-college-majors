@@ -28724,7 +28724,15 @@ function () {
         return y(d[DATA_PROPERTIES.Major]);
       }).attr("width", function (d) {
         return x(d[xProperty]);
-      }).attr("height", y.bandwidth()).attr("fill", COLORS.pink); // If less group in the new dataset, I delete the ones not in use anymore
+      }).attr("height", y.bandwidth()).attr("fill", function () {
+        if (xProperty == FACTORS.Men) {
+          return COLORS.blue;
+        } else if (xProperty == FACTORS.Unemployment_rate || xProperty == FACTORS.Full_time) {
+          return COLORS.purple;
+        } else {
+          return COLORS.pink;
+        }
+      }); // If less group in the new dataset, I delete the ones not in use anymore
 
       u.exit().remove();
       this.svg.selectAll("rect").on("mouseover", function (d) {
@@ -28841,7 +28849,6 @@ function () {
   _createClass(ScatterPlot, [{
     key: "drawChart",
     value: function drawChart(data, xProperty, yProperty) {
-      // console.log(data)
       var minX, minY, maxX, maxY;
       maxX = this.maxPropertyValue(xProperty, data);
       maxY = this.maxPropertyValue(yProperty, data);
@@ -28995,18 +29002,11 @@ function () {
     this.height = 500 - this.margin.top - this.margin.bottom; // append the svg object to the body of the page
 
     this.svg = d3.select("#fiveSelectedMajors").append("svg").attr("width", this.width + this.margin.left + this.margin.right).attr("height", this.height + this.margin.top + this.margin.bottom).append("g").attr("transform", "translate(" + this.margin.left + "," + this.margin.top + ")");
-    this.x = d3.scaleLinear() // .domain([0, 13000])
-    .range([0, this.width]);
-    this.xAxis = this.svg.append("g").attr("transform", "translate(0," + this.height + ")"); // .call(d3.axisBottom(x))
-    // .selectAll("text")
-    // .attr("transform", "translate(-10,0)rotate(-45)")
-    // .style("text-anchor", "end");
-    // Y axis
+    this.x = d3.scaleLinear().range([0, this.width]);
+    this.xAxis = this.svg.append("g").attr("transform", "translate(0," + this.height + ")"); // Y axis
 
-    this.y = d3.scaleBand().range([0, this.height]) // .domain(data.map(function (d) { return d.Country; }))
-    .padding(.2);
-    this.yAxis = this.svg.append("g").attr("class", "myYaxis"); // .call(d3.axisLeft(y))
-
+    this.y = d3.scaleBand().range([0, this.height]).padding(.2);
+    this.yAxis = this.svg.append("g").attr("class", "myYaxis");
     this.tooltip = d3.select("body").append("div").style("position", "absolute").style("z-index", "10").style("color", "#fff5e6").style("background-color", "#3f546c").style("padding", "6px 10px").style("font-family", "formular-light").style("font-size", "0.8rem").style("visibility", "hidden");
   }
 
@@ -29059,7 +29059,15 @@ function () {
         return y(d[DATA_PROPERTIES.Major]);
       }).attr("width", function (d) {
         return x(d[xProperty]);
-      }).attr("height", y.bandwidth()).attr("fill", COLORS.pink); // If less group in the new dataset, I delete the ones not in use anymore
+      }).attr("height", y.bandwidth()).attr("fill", function () {
+        if (xProperty == FACTORS.Men) {
+          return COLORS.blue;
+        } else if (xProperty == FACTORS.Unemployment_rate || xProperty == FACTORS.Full_time) {
+          return COLORS.purple;
+        } else {
+          return COLORS.pink;
+        }
+      }); // If less group in the new dataset, I delete the ones not in use anymore
 
       u.exit().remove();
       this.svg.selectAll("rect").on("mouseover", function (d) {
@@ -29186,10 +29194,8 @@ function () {
     this.x = d3.scaleLinear().range([0, this.width]);
     this.xAxis = this.svg.append("g").attr("transform", "translate(0," + this.height + ")"); // Y axis
 
-    this.y = d3.scaleBand().range([0, this.height]) // .domain(data.map(function (d) { return d.Country; }))
-    .padding(.2);
-    this.yAxis = this.svg.append("g").attr("class", "myYaxis"); // .call(d3.axisLeft(y))
-
+    this.y = d3.scaleBand().range([0, this.height]).padding(.2);
+    this.yAxis = this.svg.append("g").attr("class", "myYaxis");
     this.tooltip = d3.select("body").append("div").style("position", "absolute").style("z-index", "10").style("color", "#fff5e6").style("background-color", "#3f546c").style("padding", "6px 10px").style("font-family", "formular-light").style("font-size", "0.8rem").style("visibility", "hidden");
   }
 
@@ -29242,7 +29248,13 @@ function () {
         return y(d[DATA_PROPERTIES.Major]);
       }).attr("width", function (d) {
         return x(d[xProperty]);
-      }).attr("height", y.bandwidth()).attr("fill", COLORS.pink); // If less group in the new dataset, I delete the ones not in use anymore
+      }).attr("height", y.bandwidth()).attr("fill", function () {
+        if (xProperty == FACTORS.Median) {
+          return COLORS.pink;
+        } else {
+          return COLORS.purple;
+        }
+      }); // If less group in the new dataset, I delete the ones not in use anymore
 
       u.exit().remove();
       this.svg.append("text").attr("text-anchor", "middle") // this makes it easy to centre the text as the transform is applied to the anchor
@@ -29375,18 +29387,11 @@ function () {
     this.padding = 30; // append the svg object to the body of the page
 
     this.svg = d3.select("#" + this.divName).append("svg").attr("width", this.width + this.margin.left + this.margin.right).attr("height", this.height + this.margin.top + this.margin.bottom + this.padding).append("g").attr("transform", "translate(" + this.margin.left + "," + this.margin.top + ")");
-    this.x = d3.scaleLinear() // .domain([0, 13000])
-    .range([0, this.width]);
-    this.xAxis = this.svg.append("g").attr("transform", "translate(0," + this.height + ")"); // .call(d3.axisBottom(x))
-    // .selectAll("text")
-    // .attr("transform", "translate(-10,0)rotate(-45)")
-    // .style("text-anchor", "end");
-    // Y axis
+    this.x = d3.scaleLinear().range([0, this.width]);
+    this.xAxis = this.svg.append("g").attr("transform", "translate(0," + this.height + ")"); // Y axis
 
-    this.y = d3.scaleBand().range([0, this.height]) // .domain(data.map(function (d) { return d.Country; }))
-    .padding(.2);
-    this.yAxis = this.svg.append("g").attr("class", "myYaxis"); // .call(d3.axisLeft(y))
-
+    this.y = d3.scaleBand().range([0, this.height]).padding(.2);
+    this.yAxis = this.svg.append("g").attr("class", "myYaxis");
     this.tooltip = d3.select("body").append("div").style("position", "absolute").style("z-index", "10").style("color", "#fff5e6").style("background-color", "#3f546c").style("padding", "6px 10px").style("font-family", "formular-light").style("font-size", "0.8rem").style("visibility", "hidden");
   }
 
@@ -29462,7 +29467,11 @@ function () {
         return x(d["Value"]);
       }).attr("height", y.bandwidth()).attr("fill", function (d) {
         if (d.Value == 100) {
-          return COLORS.blue;
+          if (xProperty == FACTORS.Men) {
+            return COLORS.blue;
+          } else {
+            return COLORS.purple;
+          }
         }
 
         return COLORS.pink;
@@ -37377,17 +37386,7 @@ function drawChart(chartId, chartData, factor, yAxisData) {
     });
     svg.append("g").attr("id", "x-axis").attr("transform", "translate(0," + height + ")").call(_xAxis);
     svg.append("g").attr("id", "y-axis").call(_yAxis);
-  } // Not sure that we should keep this x-axis label
-
-  /*
-  svg
-    .append("text")
-    .attr("y", "95%")
-    .attr("x", "33%")
-    .attr("id", "x-axis-label");
-   document.getElementById("x-axis-label").innerHTML = factorInfo[factor]["axis name"];
-  */
-
+  }
 }
 
 function updateCategoriesChart(factor) {
@@ -37589,7 +37588,6 @@ function deselectAll() {
 }
 
 function saveSelections() {
-  // TODO split
   if (currModal === "compare") {
     compareSelected = [];
     $("#sel > optgroup > option").each(function () {
@@ -37604,8 +37602,7 @@ function saveSelections() {
       if (isSelected(this)) {
         fewerMajorsSelected.push(this.value);
       }
-    }); // TODO update charts for this the section with this modal
-
+    });
     (0, _index.updateChartMajors)("multiChart", fewerMajorsSelected);
   } else {
     alert("problem with modal state / string comparisons");
@@ -37658,4 +37655,4 @@ function setWarning() {
   document.getElementById("max-warning").style.display = "none";
 }
 },{"./index.js":"Focm","fs":"rDCW"}]},{},["hR3q"], null)
-//# sourceMappingURL=https://uw-cse442-wi20.github.io/FP-college-majors/modal.1cb5013d.js.map
+//# sourceMappingURL=https://uw-cse442-wi20.github.io/FP-college-majors/modal.cf6c64c6.js.map
