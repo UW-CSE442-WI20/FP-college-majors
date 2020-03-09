@@ -52,7 +52,6 @@ class ScatterPlot {
   }
 
   drawChart(data, xProperty, yProperty) {
-    // console.log(data)
     let minX, minY, maxX, maxY;
     maxX = this.maxPropertyValue(xProperty, data);
     maxY = this.maxPropertyValue(yProperty, data);

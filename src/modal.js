@@ -71,7 +71,6 @@ function deselectAll() {
 }
 
 function saveSelections() {
-  // TODO split
   if (currModal === "compare") {
     compareSelected = [];
     $("#sel > optgroup > option").each(function() {
@@ -88,8 +87,6 @@ function saveSelections() {
         }
     });
 
-
-    // TODO update charts for this the section with this modal
     updateChartMajors("multiChart", fewerMajorsSelected);
   } else {
     alert("problem with modal state / string comparisons");

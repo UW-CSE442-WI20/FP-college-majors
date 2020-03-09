@@ -38,11 +38,9 @@ class SmallChartSingle {
     // Y axis
     this.y = d3.scaleBand()
       .range([0, this.height])
-      // .domain(data.map(function (d) { return d.Country; }))
       .padding(.2);
     this.yAxis = this.svg.append("g")
       .attr("class", "myYaxis")
-    // .call(d3.axisLeft(y))
     this.tooltip = d3.select("body")
       .append("div")
       .style("position", "absolute")
@@ -109,7 +107,13 @@ class SmallChartSingle {
       .attr("y", function (d) { return y(d[DATA_PROPERTIES.Major]); })
       .attr("width", function (d) { return x(d[xProperty]); })
       .attr("height", y.bandwidth())
-      .attr("fill", COLORS.pink)
+      .attr("fill", () => {
+        if (xProperty == FACTORS.Median) {
+          return COLORS.pink;
+        } else {
+          return COLORS.purple;
+        }
+      })
     // If less group in the new dataset, I delete the ones not in use anymore
     u
       .exit()

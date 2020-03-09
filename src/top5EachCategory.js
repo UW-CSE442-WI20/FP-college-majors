@@ -93,7 +93,15 @@ class TopFiveCategory {
       .attr("y", function (d) { return y(d[DATA_PROPERTIES.Major]); })
       .attr("width", function (d) { return x(d[xProperty]); })
       .attr("height", y.bandwidth())
-      .attr("fill", COLORS.pink)
+      .attr("fill", () => {
+        if (xProperty == FACTORS.Men) {
+          return COLORS.blue;
+        } else if (xProperty == FACTORS.Unemployment_rate || xProperty == FACTORS.Full_time) {
+          return COLORS.purple;
+        } else {
+          return COLORS.pink;
+        }
+      })
     // If less group in the new dataset, I delete the ones not in use anymore
     u
       .exit()

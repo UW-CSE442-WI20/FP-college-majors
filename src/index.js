@@ -490,17 +490,6 @@ function drawChart(chartId, chartData, factor, yAxisData) {
       .call(yAxis);
   }
 
-  // Not sure that we should keep this x-axis label
-  /*
-  svg
-    .append("text")
-    .attr("y", "95%")
-    .attr("x", "33%")
-    .attr("id", "x-axis-label");
-
-  document.getElementById("x-axis-label").innerHTML = factorInfo[factor]["axis name"];
-  */
-
 }
 
 

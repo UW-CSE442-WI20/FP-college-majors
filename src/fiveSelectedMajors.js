@@ -29,23 +29,16 @@ class FiveSelectedMajors {
       .attr("transform",
         "translate(" + this.margin.left + "," + this.margin.top + ")");
     this.x = d3.scaleLinear()
-      // .domain([0, 13000])
       .range([0, this.width]);
     this.xAxis = this.svg.append("g")
       .attr("transform", "translate(0," + this.height + ")")
-    // .call(d3.axisBottom(x))
-    // .selectAll("text")
-    // .attr("transform", "translate(-10,0)rotate(-45)")
-    // .style("text-anchor", "end");
 
     // Y axis
     this.y = d3.scaleBand()
       .range([0, this.height])
-      // .domain(data.map(function (d) { return d.Country; }))
       .padding(.2);
     this.yAxis = this.svg.append("g")
       .attr("class", "myYaxis")
-    // .call(d3.axisLeft(y))
     this.tooltip = d3.select("body")
       .append("div")
       .style("position", "absolute")
@@ -111,7 +104,15 @@ class FiveSelectedMajors {
       .attr("y", function (d) { return y(d[DATA_PROPERTIES.Major]); })
       .attr("width", function (d) { return x(d[xProperty]); })
       .attr("height", y.bandwidth())
-      .attr("fill", COLORS.pink)
+      .attr("fill", () => {
+        if (xProperty == FACTORS.Men) {
+          return COLORS.blue;
+        } else if (xProperty == FACTORS.Unemployment_rate || xProperty == FACTORS.Full_time) {
+          return COLORS.purple;
+        } else {
+          return COLORS.pink;
+        }
+      })
     // If less group in the new dataset, I delete the ones not in use anymore
     u
       .exit()
